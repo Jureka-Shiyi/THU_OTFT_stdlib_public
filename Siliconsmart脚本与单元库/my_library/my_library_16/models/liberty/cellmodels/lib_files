@@ -1,0 +1,1 @@
+inputLibertyFile /data/zhengyj/OTFT_stdlib/lib_template/OTFT_stdlib_ref16_woBackslash.lib cells {BUFD2 BUFD4 BUFD8 DFFD1 INVD1 INVD2 INVD4 INVD8 NAND2D1 NAND2D2 NAND2D4 NAND2D8 NOR2D1 NOR2D2 NOR2D4 NOR2D8} use_default_whens 0 inputLibMultiRailFormat v1 inputCellLeakagePower present importWithSkeleton 0 use_default_loads 0 use_default_slews 1

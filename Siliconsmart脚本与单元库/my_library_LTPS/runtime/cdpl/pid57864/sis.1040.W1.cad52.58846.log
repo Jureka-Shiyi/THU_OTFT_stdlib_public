@@ -1,0 +1,50 @@
+----------------------------------------------------------------------
+SiliconSmart version T-2022.03-SP2-1
+Build date: Jun 27, 2022 10:33:00
+Path: /tools/Synopsys/siliconsmart/T-2022.03-SP2-1/linux64/bin/siliconsmart
+Host: cad52, User: , PID: 58846 (PPID: 58843)
+CPU: 128 x 2600 MHz, Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz (2 socket, 64 core)
+Memory: 644 GB RAM (69.1 GB free), 33 GB Swap (32.5 GB free)
+System load average: 0.14, 0.07, 0.06 (3930 processes)
+Directory: /data/zhengyj/OTFT_stdlib
+Command-line: /tools/Synopsys/siliconsmart/T-2022.03-SP2-1/linux64/bin/siliconsmart -server /data/zhengyj/OTFT_stdlib/my_library_LTPS/runtime/cdpl/pid57864/driver_57864.tcl
+Fri Dec 19 13:06:24 2025: Establishing connection to license server
+Fri Dec 19 13:06:25 2025: Testing server connection using feature SIS_CORE
+Fri Dec 19 13:06:45 2025: License server connection established
+The char directory is /data/zhengyj/OTFT_stdlib/my_library_LTPS
+Loading /data/zhengyj/OTFT_stdlib/my_library_LTPS/etc/cell.stat.gz
+Fri Dec 19 13:06:45 CST 2025: Sourcing environment settings
+Warning: Operating condition 'LTPS_TFT_stdlib' already exists, skipped.
+Fri Dec 19 13:06:45 CST 2025: Environment set up done (0 seconds)
+Create and link tmpdir /var/tmp/sis.cad52.1040.58843 -> /var/tmp/siliconsmart.cad52.1040.58846 
+[CDPL] Loading settings for stage: characterization.0
+The char directory is /data/zhengyj/OTFT_stdlib/my_library_LTPS
+Fri Dec 19 13:06:45 CST 2025: Sourcing environment settings
+Warning: Operating condition 'LTPS_TFT_stdlib' already exists, skipped.
+Fri Dec 19 13:06:45 CST 2025: Environment set up done (0 seconds)
+[CDPL] Done loading settings for stage: characterization.0
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN1__lh__OUT__lh__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Host cad52 load average 0.06 (1min) 0.05 (5min) 0.05 (15min)
+Error:   Simulation delay__IN1__lh__OUT__lh__ACQ_1.sif for cell AND2D1 failed: deck.lis: **error** (/data/zhengyj/OTFT_stdlib/my_library_LTPS/netlists/AND2D1.cdl:6) unable to open file "subckts/AND2D1.cdl.pex" . Either the file doesn't exist or the path is wrong. Please enter the correct file location.  . (SC-59) (SMSC-95)
+----------------------
+__recordTaskStats__ AND2D1 delay__IN1__lh__OUT__lh__ACQ_1 0.12 0.02 1.13 0.14 1 53.4123139381 cad52 1766120805.57 1766120858.99 1
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN1__hl__OUT__hl__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Host cad52 load average 0.09 (1min) 0.06 (5min) 0.05 (15min)
+Error:   Simulation delay__IN1__hl__OUT__hl__ACQ_1.sif for cell AND2D1 failed: deck.lis: **error** (/data/zhengyj/OTFT_stdlib/my_library_LTPS/netlists/AND2D1.cdl:6) unable to open file "subckts/AND2D1.cdl.pex" . Either the file doesn't exist or the path is wrong. Please enter the correct file location.  . (SC-59) (SMSC-95)
+----------------------
+__recordTaskStats__ AND2D1 delay__IN1__hl__OUT__hl__ACQ_1 0.06 0.0 1.09 0.1 1 53.2599449158 cad52 1766120858.99 1766120912.25 1
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN2__lh__OUT__lh__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Host cad52 load average 0.04 (1min) 0.05 (5min) 0.05 (15min)
+Error:   Simulation delay__IN2__lh__OUT__lh__ACQ_1.sif for cell AND2D1 failed: deck.lis: **error** (/data/zhengyj/OTFT_stdlib/my_library_LTPS/netlists/AND2D1.cdl:6) unable to open file "subckts/AND2D1.cdl.pex" . Either the file doesn't exist or the path is wrong. Please enter the correct file location.  . (SC-59) (SMSC-95)
+----------------------
+__recordTaskStats__ AND2D1 delay__IN2__lh__OUT__lh__ACQ_1 0.07 0.01 1.09 0.1 1 53.257365942 cad52 1766120912.25 1766120965.51 1
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN2__hl__OUT__hl__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Exit status 255

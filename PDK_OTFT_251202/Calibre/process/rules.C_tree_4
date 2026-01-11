@@ -1,0 +1,1016 @@
+
+#ENCRYPT
+//
+//  model: 202  target: intrinsicp  profile: ultra  layers: ultra_base,XCALIBRATE__M1
+//
+CAPACITANCE INTRINSIC PLATE XCALIBRATE__M1 MASK
+[
+    PROPERTY C
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    dm1(1) = {0 }
+    dm1val = get_value ("dm1", corner_index())
+    model = 202
+    C = 4.4271e-05 * area()
+    didm1 = 4.43821e-08 * area()
+    dcdb  = 4.43821e-08 * area()
+    if (PLATE_LOADING > 0) {
+	    maxw = 60
+    	maxd = 1202.5
+        if (THK_D_ACT_XCALIBRATE__M1 > 0 ) {
+			bmax = lookup1 ("THICKNESS_D_ACT",layer1(), corner_index(), maxw, maxd)
+		} else {    
+			bmax = lookup1 ("THICKNESS_D",layer1(), corner_index(), maxw, maxd)
+        }
+	    C = C - (didm1 * dm1val) - (dcdb * bmax) * LOADING_FACTOR
+    } else {
+	    C = C - didm1 * dm1val
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 202  target: intrinsicp  profile: ultra  layers: ultra_base,XCALIBRATE__M2
+//
+CAPACITANCE INTRINSIC PLATE XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    dm1(1) = {0 }
+    dm1val = get_value ("dm1", corner_index())
+    model = 202
+    C = 4.4232e-05 * area()
+    didm1 = 4.43153e-08 * area()
+    dcdb  = 4.43153e-08 * area()
+    if (PLATE_LOADING > 0) {
+	    maxw = 60
+    	maxd = 1206
+        if (THK_D_ACT_XCALIBRATE__M2 > 0 ) {
+			bmax = lookup1 ("THICKNESS_D_ACT",layer1(), corner_index(), maxw, maxd)
+		} else {    
+			bmax = lookup1 ("THICKNESS_D",layer1(), corner_index(), maxw, maxd)
+        }
+	    C = C - (didm1 * dm1val) - (dcdb * bmax) * LOADING_FACTOR
+    } else {
+	    C = C - didm1 * dm1val
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 202  target: intrinsicp  profile: ultra  layers: ultra_base,XCALIBRATE__MC
+//
+CAPACITANCE INTRINSIC PLATE XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    dm1(1) = {0 }
+    dm1val = get_value ("dm1", corner_index())
+    model = 202
+    C = 4.4202e-05 * area()
+    didm1 = 4.42648e-08 * area()
+    dcdb  = 4.42648e-08 * area()
+    if (PLATE_LOADING > 0) {
+	    maxw = 60
+    	maxd = 1202.5
+        if (THK_D_ACT_XCALIBRATE__MC > 0 ) {
+			bmax = lookup1 ("THICKNESS_D_ACT",layer1(), corner_index(), maxw, maxd)
+		} else {    
+			bmax = lookup1 ("THICKNESS_D",layer1(), corner_index(), maxw, maxd)
+        }
+	    C = C - (didm1 * dm1val) - (dcdb * bmax) * LOADING_FACTOR
+    } else {
+	    C = C - didm1 * dm1val
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 34  target: intrinsic  profile: ultra layers: ultra_base,XCALIBRATE__M1
+//
+CAPACITANCE INTRINSIC FRINGE XCALIBRATE__M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 60 // For reference
+    max_caldistance = 1202.5 // For reference
+    max2_calwidth = 28 // For reference
+    max2_caldistance = 642.63 // For reference
+    max_calrad1 = 1000.07 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M1
+    max_distance = MAXDISTANCE_XCALIBRATE__M1
+    max_radius = MAXRADIUS_XCALIBRATE__M1
+    height = 1000
+    scaleunits = 1e-15/1e-15 
+    profile = ultra_profileid
+    dm1(1) = {0 }
+	current_width = width()
+	current_width2 = width2()
+	corner = corner_index()
+    dm1val = get_value ("dm1", corner)
+    if (distance() <= 0.0) {
+	dist = max_caldistance
+    } else {
+	dist = distance()
+    }
+    distb = distance_behind() - current_width	  
+    if (MULTI_BIAS_XCALIBRATE__M1 > 0 ) {
+    	act_delta_right = lookup1 (bias1_tbl(),layer1(), corner, current_width, dist)
+    	act_delta_left = lookup1 (bias1_tbl(),layer1(), corner, current_width, distb)
+    	act_delta2 = lookup1 (bias1_tbl(),layer1(), corner, current_width2, dist)
+    	act_delta = (act_delta_left + act_delta_right)
+    	act_width1 = current_width + act_delta
+    	act_width2 = current_width2 + 2 * act_delta2
+    	act_dist = dist - (act_delta_right + act_delta2)
+    	act_distb = distb - 2 * act_delta_left 
+    	act_delta_right = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_dist)
+    	act_delta_left = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distb)
+    	act_delta2 = lookup1 (bias2_tbl(),layer1(), corner, act_width2, act_dist)
+    	act_delta = act_delta + (act_delta_left + act_delta_right)
+    	act_width = current_width + act_delta
+    	act_distance = act_dist - (act_delta_right + act_delta2) 
+    } else {
+    	act_delta_right = lookup1 (delta_tbl(),layer1(), corner, current_width, dist)
+    	act_delta_left = lookup1 (delta_tbl(),layer1(), corner, current_width, distb)
+    	act_delta2 = lookup1 (delta_tbl(),layer1(), corner, current_width2, dist)
+    	act_delta = 0.5 * (act_delta_left + act_delta_right)
+        act_width = current_width + act_delta 
+        act_distance = dist - 0.5 * (act_delta_right + act_delta2)
+    }
+if ( mask_offset() != -1 ) { 
+    act_distance = act_distance + mask_offset()	
+} 
+    nrval = 0 
+    nlval = 0 
+    rval = 0 
+    lval = 0 
+    if (PEX_USE_K_VARIATION > 0) {
+ 	if (PEX_XCALIBRATE__M1_USE_BOTTOM_K_VARIATION > 0) {
+	nrval = lookup1 ("BOTTOM_K",layer1(), 0,current_width, dist) 
+ 	nlval = lookup1 ("BOTTOM_K",layer1(), 0,current_width, distb) 
+ 	rval = lookup1 ("BOTTOM_K",layer1(), corner,current_width, dist) 
+ 	lval = lookup1 ("BOTTOM_K",layer1(), corner,current_width, distb) 
+	act_width  = act_width + current_width*((rval+lval)/(nrval+nlval)-1) 
+    } 
+	} 
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance	
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth	
+    }
+    model = 34
+    C = 0.0
+    didm1 = 0.0
+    dcdb = 0.0
+    sf4r1 = (1 - m34RS * exp((-m43ink1 * radius_down()) / (m43ink2 * act_distance + m43ink3 * height))) 
+    sf4r2 = (1 - m34RS * exp((-m43ink4 * radius_up()) / (m43ink5 * act_distance + m43ink6 * height))) 
+    sf4 = m34IN_COEF * sf4r1 * sf4r2
+	current_distance = distance()
+	current_length = length()
+    if ((current_distance > 0.0) && (same_net() == 0)) {
+ 	model = 4
+	
+           if(act_distance >= 1205.27 ) {
+    		max_thr_distance = 1205.27 
+    		value1 = (0.0159428 * (1 - exp(-0.00807303 * (max2_caldistance + 41.3869))) * pow(act_width , -0.00131428 * max2_caldistance + 0.0366743) )
+    		value2 = (0.0159428 * (1 - exp(-0.00807303 * (max_caldistance + 41.3869))) * pow(act_width , -0.00131428 * max_caldistance + 0.0366743) )
+    		intr = value1 - (value2 - value1) * ((max2_caldistance - act_distance) / (max2_caldistance - max_caldistance))
+    		didm1 = (-6.48654e-05 * (1 - exp(--0.00052155 * (max_thr_distance + 44.1536))) * pow(act_width , -0.00080861 * max_thr_distance + -0.104257) )
+    		dcdb  = (3.41303e-06 * (1 - exp(-0.025207 * (max_thr_distance + 25.2379))) * pow(act_width , 0.000584461 * max_thr_distance + -0.145434) )
+    	}
+    	else if(act_width >= 600 )   {
+    		max_thr_width = 600 
+    		value1 = (0.0159428 * (1 - exp(-0.00807303 * (act_distance + 41.3869))) * pow(max2_calwidth , -0.00131428 * act_distance + 0.0366743) )
+    		value2 = (0.0159428 * (1 - exp(-0.00807303 * (act_distance + 41.3869))) * pow(max_calwidth , -0.00131428 * act_distance + 0.0366743) )
+    		intr = value1 - (value2 - value1) * ((max2_calwidth - act_width) / (max2_calwidth- max_calwidth))
+    		didm1 = (-6.48654e-05 * (1 - exp(--0.00052155 * (act_distance + 44.1536))) * pow(max_thr_width , -0.00080861 * act_distance + -0.104257) )
+    		dcdb  = (3.41303e-06 * (1 - exp(-0.025207 * (act_distance + 25.2379))) * pow(max_thr_width , 0.000584461 * act_distance + -0.145434) )
+    	}
+    	else {
+    		intr = (0.0159428 * (1 - exp(-0.00807303 * (act_distance + 41.3869))) * pow(act_width , -0.00131428 * act_distance + 0.0366743) )
+    		didm1 = (-6.48654e-05 * (1 - exp(--0.00052155 * (act_distance + 44.1536))) * pow(act_width , -0.00080861 * act_distance + -0.104257) )
+    		dcdb  = (3.41303e-06 * (1 - exp(-0.025207 * (act_distance + 25.2379))) * pow(act_width , 0.000584461 * act_distance + -0.145434) )
+    	}
+        C = current_length * ( intr + 0.5 * 4.4271e-05 * act_delta) 
+        didm1 = current_length * ( didm1 + 0.5 * 4.43821e-08 * act_delta) 
+        dcdb = current_length *( dcdb + 0.5 * 4.43821e-08 * act_delta)  
+	
+    }
+    if ((current_distance > 0.0) && (same_net() == 0) && ((radius_up() < max_radius) || (radius_down() < max_radius)) && (radius_up_behind() > max_calrad1) && (radius_down_behind() > max_calrad1)) {
+ 	model = 42
+        C = current_length * (0.0159428 * (1.0 - exp( -0.00807303 * (act_distance + 41.3869))) * pow(act_width,-0.00131428*act_distance+0.0366743) * (1.0 - exp(-1.64632 - 0.1 * radius_down())) * (1.0 - exp(-0.521062 - 0.604378 * radius_up())) + 0.5 * 4.4271e-05 * act_delta)
+    }
+    if ((current_distance > 0.0) && (same_net() == 1)) {
+        model = 40
+	model = 43 
+        C = current_length * (0.0140655 * (1 - exp(-0.00251306 * (act_distance + 59.2151))) + 0.5 * 4.4271e-05 * act_delta) * sf4 
+    }
+    if (current_distance <= 0.0) {
+        model = 0 
+        C = current_length * (0.0123193 * pow(act_width , 0.128101) + 0.5 * 4.4271e-05 * act_delta) 
+        didm1 = current_length * (2.13847e-06 * pow(act_width , 0.171113) + 0.5 * 4.43821e-08 * act_delta)
+        dcdb  = current_length * (2.13847e-06 * pow(act_width , 0.171113) + 0.5 * 4.43821e-08 * act_delta)
+    }
+    if ((current_distance <= 0.0) && (radius_up() < max_radius) && (radius_down() >= max_radius)) {
+        model = 714
+	C = current_length * ((0.0126868 * pow(act_width,0.0383106) * (1 - 0.6452 * exp(-0.00334734 * radius_up()))) + 0.5 * 4.4271e-05 * act_delta)
+    } 
+    if ((current_distance <= 0.0) && ((radius_up() < max_radius) && (radius_down() < max_radius) || ( (radius_up() >= max_radius) && (radius_down() < max_radius) ) ) && (radius_up_behind() > max_calrad1) && (radius_down_behind() > max_calrad1)) {
+        model = 41
+	C = current_length * (0.0137573 * (1 - 0 * exp(-1 * radius_down())) * (1 - 0.611683 * exp(-0.00315118 * radius_up())) + 0.5 * 4.4271e-05 * act_delta)
+	C2 = 0
+	if((radius_down() <= max_radius) && (radius_down_behind() < max_radius) && (radius_up() >= max_radius) && (radius_up_behind() >= max_radius)) {
+  	    model = 5 
+	    C2 = current_length * ((0.0123193 * pow(act_width,0.128101) * (1 - 0 * exp(-2.06652 * radius_down_behind()))) + 0.5 * 4.4271e-05 * act_delta)
+	}
+	if(C2 > 0 && C2 < C) {
+	    C = C2
+	}
+    }
+    if ((current_distance <= 0.0) && (radius_up() >= max_radius) && (radius_down() >= max_radius) && (radius_up_behind() >= max_radius) && (radius_down_behind() < max_calrad1)){
+        model = 5 
+	C = current_length * ((0.0123193 * pow(act_width,0.128101) * (1 - 0 * exp(-2.06652 * radius_down_behind()))) + 0.5 * 4.4271e-05 * act_delta)
+    }
+    if (C < 0) {
+	C = 0
+    }
+    if ( XCAL_SOI_TECH > 0 && distance_shield() > 0 && distance_shield() < max_caldistance && (same_net() == 0) ) { 
+       C = m34_SOI_RATIO * C 
+    } 
+    if (didm1 < 0) {
+	didm1 = 0
+    }
+    if (dcdb < 0) {
+	dcdb = 0
+    }
+    if (THK_D_ACT_XCALIBRATE__M1 > 0 ) {
+	bval = lookup1 ("THICKNESS_D_ACT",layer1(), corner,act_width, act_distance)
+        bmax = lookup1 ("THICKNESS_D_ACT",layer1(), corner, max_calwidth, max_caldistance)
+    } else {	
+	bval = lookup1 ("THICKNESS_D",layer1(), corner,current_width, dist)
+        bmax = lookup1 ("THICKNESS_D",layer1(), corner,max_calwidth, max_caldistance)
+    }	
+    if (PLATE_LOADING > 0) {
+	    C = C - (didm1 * dm1val) - (dcdb * bval) - 0.5 * (bval - bmax) * LOADING_FACTOR * current_length * current_width * 4.43821e-08
+    } else {
+	    C = C - (didm1 * dm1val) - (dcdb * bval) - 0.5 * bval * current_length * current_width * 4.43821e-08
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 34  target: nearbody  profile: ultra layers: ultra_base,M1
+//
+CAPACITANCE NEARBODY XCALIBRATE__M1 MASK
+[
+    PROPERTY C
+    max_calwidth = 60 // For reference
+    max_caldistance = 1202.5 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M1
+    max_distance = MAXDISTANCE_XCALIBRATE__M1
+    max_radius = MAXRADIUS_XCALIBRATE__M1
+    max_calrad1 = 1000.07 // For reference
+    max_calrad2 = 6187.65 // For reference
+    height = 1000
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    dt(1) = {0 }
+	current_width1 = width1()
+	current_width2 = width2()
+	corner = corner_index()
+	current_distance = distance()
+	current_length = length()
+    dtval = get_value ("dt", corner)
+    cor_thickness = lookup1 ("NOM_THICKNESS",layer1(), corner, -1, -1)
+    dtindie = thickness1() - cor_thickness
+    distanceb = distance_behind() - current_width1	  
+    if (MULTI_BIAS_XCALIBRATE__M1 > 0 ) {
+    	act_delta_right = lookup1 (bias1_tbl(),layer1(), corner, current_width1, current_distance)
+    	act_delta_left = lookup1 (bias1_tbl(),layer1(), corner, current_width1, distanceb)
+    	act_delta = lookup1 (bias1_tbl(),layer1(), corner, current_width2, current_distance)
+    	act_width1 = current_width1 + (act_delta_left + act_delta_right)
+    	act_width2 = current_width2 + 2 * act_delta
+    	act_distance1 = current_distance - (act_delta_right + act_delta)
+    	act_distanceb = distanceb - 2 * act_delta_left 
+    	act_delta_right = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distance1)
+    	act_delta_left = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distanceb)
+    	act_delta = lookup1 (bias2_tbl(),layer1(), corner, act_width2, act_distance1)
+    	act_distance = act_distance1 - (act_delta_right + act_delta) 
+    	act_width12 = act_width1 + (act_delta_left + act_delta_right)
+    	act_width22 = act_width2 + 2 * act_delta
+    	act_width = 2 * act_width12 * act_width22 / (act_width12 + act_width22)
+    } else {
+    	act_delta_right = lookup1 (delta_tbl(),layer1(), corner, current_width1, current_distance)
+    	act_delta_left = lookup1 (delta_tbl(),layer1(), corner, current_width1, distanceb)
+    	act_delta = lookup1 (delta_tbl(),layer1(), corner, current_width2, current_distance)
+    	act_width1 = current_width1 + 0.5 * (act_delta_left + act_delta_right)
+    	act_width2 = current_width2 + act_delta
+    	act_distance = current_distance - 0.5 * (act_delta_right + act_delta)
+    	act_width = 2 * act_width1 * act_width2 / (act_width1 + act_width2)
+    }
+ 	if ( mask_offset() != -1 ) { 
+    act_distance = act_distance + mask_offset()	
+	} 
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance	
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth          
+    }
+    if (max_calrad2 > max_radius) { 
+	max_calrad2 = max_radius
+    }
+    nval = 0 
+    sval = 0 
+    if ( PEX_USE_K_VARIATION > 0 ) { 
+	if (PEX_XCALIBRATE__M1_USE_SIDEWALL_K_VARIATION > 0) {
+  	   if ( mask_offset() == -1 ) { 
+			  	      if (PEX_XCALIBRATE__M1_SIDEWALL_K_DRAWN > 0) {
+ 	         nval = lookup1 ("SIDEWALL_K",layer1(), 0, current_width1, current_distance) 
+  	         sval = lookup1 ("SIDEWALL_K",layer1(), corner,current_width1, current_distance) 
+	      } else { 
+  	         nval = lookup1 ("SIDEWALL_K_ACT",layer1(), 0, act_width, act_distance) 
+  	         sval = lookup1 ("SIDEWALL_K_ACT",layer1(), corner,act_width, act_distance) 
+	      } 
+ 	      dtindie  = dtindie + thickness1() * ((sval/nval) - 1) 
+           } 
+	} 
+    } 
+    model = 34
+    mlength = current_length 
+    if (length_shield() > 0) {
+       mlength = length_shield() 
+    }
+        nb = (0.5*exp(-4.99 * act_distance ) + 0.0530002 * pow(act_distance,-0.40004)) * pow(act_width, 0.269862) 
+    dndt = ((-1.50026*exp(-48.4977 * act_distance ) + 0.041663 * pow(act_distance,-0.84133))*pow(act_width, -0.0743406))
+    dndb = ((0.0209752*exp(-5.13828 * act_distance ) + 1.09046e-06 * pow(act_distance,-0.080744))*pow(act_width, 0.0620834))
+    //if(radius_up_behind() <= max_calrad1) { 
+     //  model = 1000 
+       //C = mlength * (0.151*exp(-4.02 * act_distance ) + 0.0820025 * pow(act_distance,-0.744773)) * pow(act_width, 0.38889)
+    if (((radius_up() < max_radius) || (radius_down() < max_radius)) && (radius_down_behind() > max_calrad1) && (radius_up_behind() > max_calrad1)) { 
+       model = 42 
+       C = mlength * (((0.5*exp(-4.99 * act_distance) + 0.0530002*pow(act_distance,-0.40004))* pow(act_width,0.269862)) * (1.0 - exp(-3.06997- 0.1 * radius_down())) * (1.0 - exp(-0.199754 - 0.788585 * radius_up())))
+    } else { 
+       model = 4 
+       C = mlength * nb 
+       
+       if ((current_length > 0) && (distance_shield() > 0)) { 
+              nbr = DFM_EVAL ("XCAL_nearbody_ratio_4_5m_ultra_M1", act_distance, -1, -1, -1, -1, -1, -1, -1)
+	      if (nbr < 0.9 ) {
+	      	nbr = 0.9
+	      } else if ( nbr > 1 ) {
+	      	nbr = 1
+	      }
+              C = C * (nbr / 0.9)
+       } 
+       if (length_shield() > 0) { 
+       	      snbr = DFM_EVAL ("XCAL_shield_nearbody_ratio_4_5m_ultra_M1", act_distance, -1, -1, -1, -1, -1, -1, -1)
+	      if (snbr < 0.001 ) {
+	      	snbr = 0.001
+	      } else if ( snbr > 0.1 ) {
+	      	snbr = 0.1
+	      }
+       	      C = C * (snbr / 0.1) * 0.5
+       } 
+       
+    } 
+    C = C + mlength * dndt * (dtval + dtindie)
+    C = C * scaleunits
+    if ((current_length > 0) && (distance_shield() > 0)) { 
+       C = 0.9 * C 
+    } 
+    if (length_shield() > 0) { 
+       C = 0.1 * C 
+    } 
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 34  target: intrinsic  profile: ultra layers: ultra_base,XCALIBRATE__M2
+//
+CAPACITANCE INTRINSIC FRINGE XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 60 // For reference
+    max_caldistance = 1206 // For reference
+    max2_calwidth = 28 // For reference
+    max2_caldistance = 644.266 // For reference
+    max_calrad1 = 12.0104 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M2
+    max_distance = MAXDISTANCE_XCALIBRATE__M2
+    max_radius = MAXRADIUS_XCALIBRATE__M2
+    height = 1000.55
+    scaleunits = 1e-15/1e-15 
+    profile = ultra_profileid
+    dm1(1) = {0 }
+	current_width = width()
+	current_width2 = width2()
+	corner = corner_index()
+    dm1val = get_value ("dm1", corner)
+    if (distance() <= 0.0) {
+	dist = max_caldistance
+    } else {
+	dist = distance()
+    }
+    distb = distance_behind() - current_width	  
+    if (MULTI_BIAS_XCALIBRATE__M2 > 0 ) {
+    	act_delta_right = lookup1 (bias1_tbl(),layer1(), corner, current_width, dist)
+    	act_delta_left = lookup1 (bias1_tbl(),layer1(), corner, current_width, distb)
+    	act_delta2 = lookup1 (bias1_tbl(),layer1(), corner, current_width2, dist)
+    	act_delta = (act_delta_left + act_delta_right)
+    	act_width1 = current_width + act_delta
+    	act_width2 = current_width2 + 2 * act_delta2
+    	act_dist = dist - (act_delta_right + act_delta2)
+    	act_distb = distb - 2 * act_delta_left 
+    	act_delta_right = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_dist)
+    	act_delta_left = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distb)
+    	act_delta2 = lookup1 (bias2_tbl(),layer1(), corner, act_width2, act_dist)
+    	act_delta = act_delta + (act_delta_left + act_delta_right)
+    	act_width = current_width + act_delta
+    	act_distance = act_dist - (act_delta_right + act_delta2) 
+    } else {
+    	act_delta_right = lookup1 (delta_tbl(),layer1(), corner, current_width, dist)
+    	act_delta_left = lookup1 (delta_tbl(),layer1(), corner, current_width, distb)
+    	act_delta2 = lookup1 (delta_tbl(),layer1(), corner, current_width2, dist)
+    	act_delta = 0.5 * (act_delta_left + act_delta_right)
+        act_width = current_width + act_delta 
+        act_distance = dist - 0.5 * (act_delta_right + act_delta2)
+    }
+if ( mask_offset() != -1 ) { 
+    act_distance = act_distance + mask_offset()	
+} 
+    nrval = 0 
+    nlval = 0 
+    rval = 0 
+    lval = 0 
+    if (PEX_USE_K_VARIATION > 0) {
+ 	if (PEX_XCALIBRATE__M2_USE_BOTTOM_K_VARIATION > 0) {
+	nrval = lookup1 ("BOTTOM_K",layer1(), 0,current_width, dist) 
+ 	nlval = lookup1 ("BOTTOM_K",layer1(), 0,current_width, distb) 
+ 	rval = lookup1 ("BOTTOM_K",layer1(), corner,current_width, dist) 
+ 	lval = lookup1 ("BOTTOM_K",layer1(), corner,current_width, distb) 
+	act_width  = act_width + current_width*((rval+lval)/(nrval+nlval)-1) 
+    } 
+	} 
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance	
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth	
+    }
+    model = 34
+    C = 0.0
+    didm1 = 0.0
+    dcdb = 0.0
+    sf4r1 = (1 - m34RS * exp((-m43ink1 * radius_down()) / (m43ink2 * act_distance + m43ink3 * height))) 
+    sf4r2 = (1 - m34RS * exp((-m43ink4 * radius_up()) / (m43ink5 * act_distance + m43ink6 * height))) 
+    sf4 = m34IN_COEF * sf4r1 * sf4r2
+	current_distance = distance()
+	current_length = length()
+    if ((current_distance > 0.0) && (same_net() == 0)) {
+ 	model = 4
+	
+           if(act_distance >= 1208.78 ) {
+    		max_thr_distance = 1208.78 
+    		value1 = (0.0171662 * (1 - exp(-0.00847346 * (max2_caldistance + 27.1572))) * pow(act_width , -0.00336616 * max2_caldistance + 0.0505416) )
+    		value2 = (0.0171662 * (1 - exp(-0.00847346 * (max_caldistance + 27.1572))) * pow(act_width , -0.00336616 * max_caldistance + 0.0505416) )
+    		intr = value1 - (value2 - value1) * ((max2_caldistance - act_distance) / (max2_caldistance - max_caldistance))
+    		didm1 = (6.82911e-05 * (1 - exp(-0.000860847 * (max_thr_distance + 18.7288))) * pow(act_width , -0.00326842 * max_thr_distance + -0.165046) )
+    		dcdb  = (3.97517e-05 * (1 - exp(-0.000984287 * (max_thr_distance + 36.8907))) * pow(act_width , 0.00126466 * max_thr_distance + -0.235249) )
+    	}
+    	else {
+    		intr = (0.0171662 * (1 - exp(-0.00847346 * (act_distance + 27.1572))) * pow(act_width , -0.00336616 * act_distance + 0.0505416) )
+    		didm1 = (6.82911e-05 * (1 - exp(-0.000860847 * (act_distance + 18.7288))) * pow(act_width , -0.00326842 * act_distance + -0.165046) )
+    		dcdb  = (3.97517e-05 * (1 - exp(-0.000984287 * (act_distance + 36.8907))) * pow(act_width , 0.00126466 * act_distance + -0.235249) )
+    	}
+        C = current_length * ( intr + 0.5 * 4.4232e-05 * act_delta) 
+        didm1 = current_length * ( didm1 + 0.5 * 4.43153e-08 * act_delta) 
+        dcdb = current_length *( dcdb + 0.5 * 4.43153e-08 * act_delta)  
+	
+    }
+    if ((current_distance > 0.0) && (same_net() == 0) && ((radius_up() < max_radius) || (radius_down() < max_radius)) && (radius_up_behind() > max_calrad1) && (radius_down_behind() > max_calrad1)) {
+ 	model = 42
+        C = current_length * (0.0171662 * (1.0 - exp( -0.00847346 * (act_distance + 27.1572))) * pow(act_width,-0.00336616*act_distance+0.0505416) * (1.0 - exp(-0.627509 - 0.00172055 * radius_down())) * (1.0 - exp(-0.933162 - 0.0036639 * radius_up())) + 0.5 * 4.4232e-05 * act_delta)
+    }
+    if ((current_distance > 0.0) && (same_net() == 1)) {
+        model = 40
+	model = 43 
+        C = current_length * (0.013444 * (1 - exp(-0.00252032 * (act_distance + 56.6871))) + 0.5 * 4.4232e-05 * act_delta) * sf4 
+    }
+    if (current_distance <= 0.0) {
+        model = 0 
+        C = current_length * (0.011128 * pow(act_width , 0.130842) + 0.5 * 4.4232e-05 * act_delta) 
+        didm1 = current_length * (1.82713e-06 * pow(act_width , 0.168118) + 0.5 * 4.43153e-08 * act_delta)
+        dcdb  = current_length * (1.82713e-06 * pow(act_width , 0.168118) + 0.5 * 4.43153e-08 * act_delta)
+    }
+    if ((current_distance <= 0.0) && (radius_up() < max_radius) && (radius_down() >= max_radius)) {
+        model = 714
+	C = current_length * ((0.01184 * pow(act_width,0.0413854) * (1 - 0.675117 * exp(-0.00316095 * radius_up()))) + 0.5 * 4.4232e-05 * act_delta)
+    } 
+    if ((current_distance <= 0.0) && ((radius_up() < max_radius) && (radius_down() < max_radius) || ( (radius_up() >= max_radius) && (radius_down() < max_radius) ) ) && (radius_up_behind() > max_calrad1) && (radius_down_behind() > max_calrad1)) {
+        model = 41
+	C = current_length * (0.0101239 * (1 - 0.718261 * exp(-0.00569638 * radius_down())) * (1 - 0.659368 * exp(-0.00513241 * radius_up())) + 0.5 * 4.4232e-05 * act_delta)
+	C2 = 0
+	if((radius_down() <= max_radius) && (radius_down_behind() < max_radius) && (radius_up() >= max_radius) && (radius_up_behind() >= max_radius)) {
+  	    model = 5 
+	    C2 = current_length * ((0.011128 * pow(act_width,0.130842) * (1 - 1 * exp(-2.17352 * radius_down_behind()))) + 0.5 * 4.4232e-05 * act_delta)
+	}
+	if(C2 > 0 && C2 < C) {
+	    C = C2
+	}
+    }
+    if ((current_distance <= 0.0) && (radius_up() >= max_radius) && (radius_down() >= max_radius) && (radius_up_behind() >= max_radius) && (radius_down_behind() < max_calrad1)){
+        model = 5 
+	C = current_length * ((0.011128 * pow(act_width,0.130842) * (1 - 1 * exp(-2.17352 * radius_down_behind()))) + 0.5 * 4.4232e-05 * act_delta)
+    }
+    if (C < 0) {
+	C = 0
+    }
+    if ( XCAL_SOI_TECH > 0 && distance_shield() > 0 && distance_shield() < max_caldistance && (same_net() == 0) ) { 
+       C = m34_SOI_RATIO * C 
+    } 
+    if (didm1 < 0) {
+	didm1 = 0
+    }
+    if (dcdb < 0) {
+	dcdb = 0
+    }
+    if (THK_D_ACT_XCALIBRATE__M2 > 0 ) {
+	bval = lookup1 ("THICKNESS_D_ACT",layer1(), corner,act_width, act_distance)
+        bmax = lookup1 ("THICKNESS_D_ACT",layer1(), corner, max_calwidth, max_caldistance)
+    } else {	
+	bval = lookup1 ("THICKNESS_D",layer1(), corner,current_width, dist)
+        bmax = lookup1 ("THICKNESS_D",layer1(), corner,max_calwidth, max_caldistance)
+    }	
+    if (PLATE_LOADING > 0) {
+	    C = C - (didm1 * dm1val) - (dcdb * bval) - 0.5 * (bval - bmax) * LOADING_FACTOR * current_length * current_width * 4.43153e-08
+    } else {
+	    C = C - (didm1 * dm1val) - (dcdb * bval) - 0.5 * bval * current_length * current_width * 4.43153e-08
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 34  target: nearbody  profile: ultra layers: ultra_base,M2
+//
+CAPACITANCE NEARBODY XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 60 // For reference
+    max_caldistance = 1206 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M2
+    max_distance = MAXDISTANCE_XCALIBRATE__M2
+    max_radius = MAXRADIUS_XCALIBRATE__M2
+    max_calrad1 = 12.0104 // For reference
+    max_calrad2 = 6244.01 // For reference
+    height = 1000.55
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    dt(1) = {0 }
+	current_width1 = width1()
+	current_width2 = width2()
+	corner = corner_index()
+	current_distance = distance()
+	current_length = length()
+    dtval = get_value ("dt", corner)
+    cor_thickness = lookup1 ("NOM_THICKNESS",layer1(), corner, -1, -1)
+    dtindie = thickness1() - cor_thickness
+    distanceb = distance_behind() - current_width1	  
+    if (MULTI_BIAS_XCALIBRATE__M2 > 0 ) {
+    	act_delta_right = lookup1 (bias1_tbl(),layer1(), corner, current_width1, current_distance)
+    	act_delta_left = lookup1 (bias1_tbl(),layer1(), corner, current_width1, distanceb)
+    	act_delta = lookup1 (bias1_tbl(),layer1(), corner, current_width2, current_distance)
+    	act_width1 = current_width1 + (act_delta_left + act_delta_right)
+    	act_width2 = current_width2 + 2 * act_delta
+    	act_distance1 = current_distance - (act_delta_right + act_delta)
+    	act_distanceb = distanceb - 2 * act_delta_left 
+    	act_delta_right = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distance1)
+    	act_delta_left = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distanceb)
+    	act_delta = lookup1 (bias2_tbl(),layer1(), corner, act_width2, act_distance1)
+    	act_distance = act_distance1 - (act_delta_right + act_delta) 
+    	act_width12 = act_width1 + (act_delta_left + act_delta_right)
+    	act_width22 = act_width2 + 2 * act_delta
+    	act_width = 2 * act_width12 * act_width22 / (act_width12 + act_width22)
+    } else {
+    	act_delta_right = lookup1 (delta_tbl(),layer1(), corner, current_width1, current_distance)
+    	act_delta_left = lookup1 (delta_tbl(),layer1(), corner, current_width1, distanceb)
+    	act_delta = lookup1 (delta_tbl(),layer1(), corner, current_width2, current_distance)
+    	act_width1 = current_width1 + 0.5 * (act_delta_left + act_delta_right)
+    	act_width2 = current_width2 + act_delta
+    	act_distance = current_distance - 0.5 * (act_delta_right + act_delta)
+    	act_width = 2 * act_width1 * act_width2 / (act_width1 + act_width2)
+    }
+ 	if ( mask_offset() != -1 ) { 
+    act_distance = act_distance + mask_offset()	
+	} 
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance	
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth          
+    }
+    if (max_calrad2 > max_radius) { 
+	max_calrad2 = max_radius
+    }
+    nval = 0 
+    sval = 0 
+    if ( PEX_USE_K_VARIATION > 0 ) { 
+	if (PEX_XCALIBRATE__M2_USE_SIDEWALL_K_VARIATION > 0) {
+  	   if ( mask_offset() == -1 ) { 
+			  	      if (PEX_XCALIBRATE__M2_SIDEWALL_K_DRAWN > 0) {
+ 	         nval = lookup1 ("SIDEWALL_K",layer1(), 0, current_width1, current_distance) 
+  	         sval = lookup1 ("SIDEWALL_K",layer1(), corner,current_width1, current_distance) 
+	      } else { 
+  	         nval = lookup1 ("SIDEWALL_K_ACT",layer1(), 0, act_width, act_distance) 
+  	         sval = lookup1 ("SIDEWALL_K_ACT",layer1(), corner,act_width, act_distance) 
+	      } 
+ 	      dtindie  = dtindie + thickness1() * ((sval/nval) - 1) 
+           } 
+	} 
+    } 
+    model = 34
+    mlength = current_length 
+    if (length_shield() > 0) {
+       mlength = length_shield() 
+    }
+        nb = (0.5*exp(-4.99 * act_distance ) + 0.0461997 * pow(act_distance,-0.354153)) * pow(act_width, 0.267369) 
+    dndt = ((0.000958937*exp(-0.0380682 * act_distance ) + 0.0349046 * pow(act_distance,-0.917139))*pow(act_width, -0.0433454))
+    dndb = ((100*exp(-100 * act_distance ) + 4.05632e-06 * pow(act_distance,-0.950086))*pow(act_width, 0.223454))
+    //if(radius_up_behind() <= max_calrad1) { 
+     //  model = 1000 
+       //C = mlength * (0.151*exp(-4.02 * act_distance ) + 0.0499795 * pow(act_distance,-0.763338)) * pow(act_width, 0.518023)
+    if (((radius_up() < max_radius) || (radius_down() < max_radius)) && (radius_down_behind() > max_calrad1) && (radius_up_behind() > max_calrad1)) { 
+       model = 42 
+       C = mlength * (((0.5*exp(-4.99 * act_distance) + 0.0461997*pow(act_distance,-0.354153))* pow(act_width,0.267369)) * (1.0 - exp(-0.303988- 0.359792 * radius_down())) * (1.0 - exp(-0.301736 - 0.920609 * radius_up())))
+    } else { 
+       model = 4 
+       C = mlength * nb 
+       
+       if ((current_length > 0) && (distance_shield() > 0)) { 
+              nbr = DFM_EVAL ("XCAL_nearbody_ratio_4_5m_ultra_M2", act_distance, -1, -1, -1, -1, -1, -1, -1)
+	      if (nbr < 0.9 ) {
+	      	nbr = 0.9
+	      } else if ( nbr > 1 ) {
+	      	nbr = 1
+	      }
+              C = C * (nbr / 0.9)
+       } 
+       if (length_shield() > 0) { 
+       	      snbr = DFM_EVAL ("XCAL_shield_nearbody_ratio_4_5m_ultra_M2", act_distance, -1, -1, -1, -1, -1, -1, -1)
+	      if (snbr < 0.001 ) {
+	      	snbr = 0.001
+	      } else if ( snbr > 0.1 ) {
+	      	snbr = 0.1
+	      }
+       	      C = C * (snbr / 0.1) * 0.5
+       } 
+       
+    } 
+    C = C + mlength * dndt * (dtval + dtindie)
+    C = C * scaleunits
+    if ((current_length > 0) && (distance_shield() > 0)) { 
+       C = 0.9 * C 
+    } 
+    if (length_shield() > 0) { 
+       C = 0.1 * C 
+    } 
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 34  target: intrinsic  profile: ultra layers: ultra_base,XCALIBRATE__MC
+//
+CAPACITANCE INTRINSIC FRINGE XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    max_calwidth = 60 // For reference
+    max_caldistance = 1202.5 // For reference
+    max2_calwidth = 28 // For reference
+    max2_caldistance = 642.63 // For reference
+    max_calrad1 = 12.0037 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__MC
+    max_distance = MAXDISTANCE_XCALIBRATE__MC
+    max_radius = MAXRADIUS_XCALIBRATE__MC
+    height = 1000.97
+    scaleunits = 1e-15/1e-15 
+    profile = ultra_profileid
+    dm1(1) = {0 }
+	current_width = width()
+	current_width2 = width2()
+	corner = corner_index()
+    dm1val = get_value ("dm1", corner)
+    if (distance() <= 0.0) {
+	dist = max_caldistance
+    } else {
+	dist = distance()
+    }
+    distb = distance_behind() - current_width	  
+    if (MULTI_BIAS_XCALIBRATE__MC > 0 ) {
+    	act_delta_right = lookup1 (bias1_tbl(),layer1(), corner, current_width, dist)
+    	act_delta_left = lookup1 (bias1_tbl(),layer1(), corner, current_width, distb)
+    	act_delta2 = lookup1 (bias1_tbl(),layer1(), corner, current_width2, dist)
+    	act_delta = (act_delta_left + act_delta_right)
+    	act_width1 = current_width + act_delta
+    	act_width2 = current_width2 + 2 * act_delta2
+    	act_dist = dist - (act_delta_right + act_delta2)
+    	act_distb = distb - 2 * act_delta_left 
+    	act_delta_right = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_dist)
+    	act_delta_left = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distb)
+    	act_delta2 = lookup1 (bias2_tbl(),layer1(), corner, act_width2, act_dist)
+    	act_delta = act_delta + (act_delta_left + act_delta_right)
+    	act_width = current_width + act_delta
+    	act_distance = act_dist - (act_delta_right + act_delta2) 
+    } else {
+    	act_delta_right = lookup1 (delta_tbl(),layer1(), corner, current_width, dist)
+    	act_delta_left = lookup1 (delta_tbl(),layer1(), corner, current_width, distb)
+    	act_delta2 = lookup1 (delta_tbl(),layer1(), corner, current_width2, dist)
+    	act_delta = 0.5 * (act_delta_left + act_delta_right)
+        act_width = current_width + act_delta 
+        act_distance = dist - 0.5 * (act_delta_right + act_delta2)
+    }
+if ( mask_offset() != -1 ) { 
+    act_distance = act_distance + mask_offset()	
+} 
+    nrval = 0 
+    nlval = 0 
+    rval = 0 
+    lval = 0 
+    if (PEX_USE_K_VARIATION > 0) {
+ 	if (PEX_XCALIBRATE__MC_USE_BOTTOM_K_VARIATION > 0) {
+	nrval = lookup1 ("BOTTOM_K",layer1(), 0,current_width, dist) 
+ 	nlval = lookup1 ("BOTTOM_K",layer1(), 0,current_width, distb) 
+ 	rval = lookup1 ("BOTTOM_K",layer1(), corner,current_width, dist) 
+ 	lval = lookup1 ("BOTTOM_K",layer1(), corner,current_width, distb) 
+	act_width  = act_width + current_width*((rval+lval)/(nrval+nlval)-1) 
+    } 
+	} 
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance	
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth	
+    }
+    model = 34
+    C = 0.0
+    didm1 = 0.0
+    dcdb = 0.0
+    sf4r1 = (1 - m34RS * exp((-m43ink1 * radius_down()) / (m43ink2 * act_distance + m43ink3 * height))) 
+    sf4r2 = (1 - m34RS * exp((-m43ink4 * radius_up()) / (m43ink5 * act_distance + m43ink6 * height))) 
+    sf4 = m34IN_COEF * sf4r1 * sf4r2
+	current_distance = distance()
+	current_length = length()
+    if ((current_distance > 0.0) && (same_net() == 0)) {
+ 	model = 4
+	
+           if(act_distance >= 1205.27 ) {
+    		max_thr_distance = 1205.27 
+    		value1 = (0.01489 * (1 - exp(-0.00879479 * (max2_caldistance + 41.8573))) * pow(act_width , -0.00124738 * max2_caldistance + 0.0364393) )
+    		value2 = (0.01489 * (1 - exp(-0.00879479 * (max_caldistance + 41.8573))) * pow(act_width , -0.00124738 * max_caldistance + 0.0364393) )
+    		intr = value1 - (value2 - value1) * ((max2_caldistance - act_distance) / (max2_caldistance - max_caldistance))
+    		didm1 = (-5.64308e-05 * (1 - exp(--0.000613857 * (max_thr_distance + 41.499))) * pow(act_width , -0.000993497 * max_thr_distance + -0.0964725) )
+    		dcdb  = (3.48147e-06 * (1 - exp(-0.023794 * (max_thr_distance + 24.9261))) * pow(act_width , 0.000432721 * max_thr_distance + -0.138722) )
+    	}
+    	else {
+    		intr = (0.01489 * (1 - exp(-0.00879479 * (act_distance + 41.8573))) * pow(act_width , -0.00124738 * act_distance + 0.0364393) )
+    		didm1 = (-5.64308e-05 * (1 - exp(--0.000613857 * (act_distance + 41.499))) * pow(act_width , -0.000993497 * act_distance + -0.0964725) )
+    		dcdb  = (3.48147e-06 * (1 - exp(-0.023794 * (act_distance + 24.9261))) * pow(act_width , 0.000432721 * act_distance + -0.138722) )
+    	}
+        C = current_length * ( intr + 0.5 * 4.4202e-05 * act_delta) 
+        didm1 = current_length * ( didm1 + 0.5 * 4.42648e-08 * act_delta) 
+        dcdb = current_length *( dcdb + 0.5 * 4.42648e-08 * act_delta)  
+	
+    }
+    if ((current_distance > 0.0) && (same_net() == 0) && ((radius_up() < max_radius) || (radius_down() < max_radius)) && (radius_up_behind() > max_calrad1) && (radius_down_behind() > max_calrad1)) {
+ 	model = 42
+        C = current_length * (0.01489 * (1.0 - exp( -0.00879479 * (act_distance + 41.8573))) * pow(act_width,-0.00124738*act_distance+0.0364393) * (1.0 - exp(-0.406937 - 0.904949 * radius_down())) * (1.0 - exp(-1.60627 - 0.1 * radius_up())) + 0.5 * 4.4202e-05 * act_delta)
+    }
+    if ((current_distance > 0.0) && (same_net() == 1)) {
+        model = 40
+	model = 43 
+        C = current_length * (0.01379 * (1 - exp(-0.0025577 * (act_distance + 61.1788))) + 0.5 * 4.4202e-05 * act_delta) * sf4 
+    }
+    if (current_distance <= 0.0) {
+        model = 0 
+        C = current_length * (0.0118264 * pow(act_width , 0.135286) + 0.5 * 4.4202e-05 * act_delta) 
+        didm1 = current_length * (2.10652e-06 * pow(act_width , 0.173197) + 0.5 * 4.42648e-08 * act_delta)
+        dcdb  = current_length * (2.10652e-06 * pow(act_width , 0.173197) + 0.5 * 4.42648e-08 * act_delta)
+    }
+    if ((current_distance <= 0.0) && (radius_up() < max_radius) && (radius_down() >= max_radius)) {
+        model = 714
+	C = current_length * ((0.012722 * pow(act_width,0.136405) * (1 - 0 * exp(-4.10832e-06 * radius_up()))) + 0.5 * 4.4202e-05 * act_delta)
+    } 
+    if ((current_distance <= 0.0) && ((radius_up() < max_radius) && (radius_down() < max_radius) || ( (radius_up() >= max_radius) && (radius_down() < max_radius) ) ) && (radius_up_behind() > max_calrad1) && (radius_down_behind() > max_calrad1)) {
+        model = 41
+	C = current_length * (0.0131412 * (1 - 0.664619 * exp(-0.00388824 * radius_down())) * (1 - 4.62721e-12 * exp(-1 * radius_up())) + 0.5 * 4.4202e-05 * act_delta)
+	C2 = 0
+	if((radius_down() <= max_radius) && (radius_down_behind() < max_radius) && (radius_up() >= max_radius) && (radius_up_behind() >= max_radius)) {
+  	    model = 5 
+	    C2 = current_length * ((0.0118264 * pow(act_width,0.135286) * (1 - 1 * exp(-3.7839 * radius_down_behind()))) + 0.5 * 4.4202e-05 * act_delta)
+	}
+	if(C2 > 0 && C2 < C) {
+	    C = C2
+	}
+    }
+    if ((current_distance <= 0.0) && (radius_up() >= max_radius) && (radius_down() >= max_radius) && (radius_up_behind() >= max_radius) && (radius_down_behind() < max_calrad1)){
+        model = 5 
+	C = current_length * ((0.0118264 * pow(act_width,0.135286) * (1 - 1 * exp(-3.7839 * radius_down_behind()))) + 0.5 * 4.4202e-05 * act_delta)
+    }
+    if (C < 0) {
+	C = 0
+    }
+    if ( XCAL_SOI_TECH > 0 && distance_shield() > 0 && distance_shield() < max_caldistance && (same_net() == 0) ) { 
+       C = m34_SOI_RATIO * C 
+    } 
+    if (didm1 < 0) {
+	didm1 = 0
+    }
+    if (dcdb < 0) {
+	dcdb = 0
+    }
+    if (THK_D_ACT_XCALIBRATE__MC > 0 ) {
+	bval = lookup1 ("THICKNESS_D_ACT",layer1(), corner,act_width, act_distance)
+        bmax = lookup1 ("THICKNESS_D_ACT",layer1(), corner, max_calwidth, max_caldistance)
+    } else {	
+	bval = lookup1 ("THICKNESS_D",layer1(), corner,current_width, dist)
+        bmax = lookup1 ("THICKNESS_D",layer1(), corner,max_calwidth, max_caldistance)
+    }	
+    if (PLATE_LOADING > 0) {
+	    C = C - (didm1 * dm1val) - (dcdb * bval) - 0.5 * (bval - bmax) * LOADING_FACTOR * current_length * current_width * 4.42648e-08
+    } else {
+	    C = C - (didm1 * dm1val) - (dcdb * bval) - 0.5 * bval * current_length * current_width * 4.42648e-08
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 34  target: nearbody  profile: ultra layers: ultra_base,MC
+//
+CAPACITANCE NEARBODY XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    max_calwidth = 60 // For reference
+    max_caldistance = 1202.5 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__MC
+    max_distance = MAXDISTANCE_XCALIBRATE__MC
+    max_radius = MAXRADIUS_XCALIBRATE__MC
+    max_calrad1 = 12.0037 // For reference
+    max_calrad2 = 6193.65 // For reference
+    height = 1000.97
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    dt(1) = {0 }
+	current_width1 = width1()
+	current_width2 = width2()
+	corner = corner_index()
+	current_distance = distance()
+	current_length = length()
+    dtval = get_value ("dt", corner)
+    cor_thickness = lookup1 ("NOM_THICKNESS",layer1(), corner, -1, -1)
+    dtindie = thickness1() - cor_thickness
+    distanceb = distance_behind() - current_width1	  
+    if (MULTI_BIAS_XCALIBRATE__MC > 0 ) {
+    	act_delta_right = lookup1 (bias1_tbl(),layer1(), corner, current_width1, current_distance)
+    	act_delta_left = lookup1 (bias1_tbl(),layer1(), corner, current_width1, distanceb)
+    	act_delta = lookup1 (bias1_tbl(),layer1(), corner, current_width2, current_distance)
+    	act_width1 = current_width1 + (act_delta_left + act_delta_right)
+    	act_width2 = current_width2 + 2 * act_delta
+    	act_distance1 = current_distance - (act_delta_right + act_delta)
+    	act_distanceb = distanceb - 2 * act_delta_left 
+    	act_delta_right = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distance1)
+    	act_delta_left = lookup1 (bias2_tbl(),layer1(), corner, act_width1, act_distanceb)
+    	act_delta = lookup1 (bias2_tbl(),layer1(), corner, act_width2, act_distance1)
+    	act_distance = act_distance1 - (act_delta_right + act_delta) 
+    	act_width12 = act_width1 + (act_delta_left + act_delta_right)
+    	act_width22 = act_width2 + 2 * act_delta
+    	act_width = 2 * act_width12 * act_width22 / (act_width12 + act_width22)
+    } else {
+    	act_delta_right = lookup1 (delta_tbl(),layer1(), corner, current_width1, current_distance)
+    	act_delta_left = lookup1 (delta_tbl(),layer1(), corner, current_width1, distanceb)
+    	act_delta = lookup1 (delta_tbl(),layer1(), corner, current_width2, current_distance)
+    	act_width1 = current_width1 + 0.5 * (act_delta_left + act_delta_right)
+    	act_width2 = current_width2 + act_delta
+    	act_distance = current_distance - 0.5 * (act_delta_right + act_delta)
+    	act_width = 2 * act_width1 * act_width2 / (act_width1 + act_width2)
+    }
+ 	if ( mask_offset() != -1 ) { 
+    act_distance = act_distance + mask_offset()	
+	} 
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance	
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth          
+    }
+    if (max_calrad2 > max_radius) { 
+	max_calrad2 = max_radius
+    }
+    nval = 0 
+    sval = 0 
+    if ( PEX_USE_K_VARIATION > 0 ) { 
+	if (PEX_XCALIBRATE__MC_USE_SIDEWALL_K_VARIATION > 0) {
+  	   if ( mask_offset() == -1 ) { 
+			  	      if (PEX_XCALIBRATE__MC_SIDEWALL_K_DRAWN > 0) {
+ 	         nval = lookup1 ("SIDEWALL_K",layer1(), 0, current_width1, current_distance) 
+  	         sval = lookup1 ("SIDEWALL_K",layer1(), corner,current_width1, current_distance) 
+	      } else { 
+  	         nval = lookup1 ("SIDEWALL_K_ACT",layer1(), 0, act_width, act_distance) 
+  	         sval = lookup1 ("SIDEWALL_K_ACT",layer1(), corner,act_width, act_distance) 
+	      } 
+ 	      dtindie  = dtindie + thickness1() * ((sval/nval) - 1) 
+           } 
+	} 
+    } 
+    model = 34
+    mlength = current_length 
+    if (length_shield() > 0) {
+       mlength = length_shield() 
+    }
+        nb = (0.5*exp(-4.99 * act_distance ) + 0.044794 * pow(act_distance,-0.384003)) * pow(act_width, 0.286838) 
+    dndt = ((-19.3009*exp(-100 * act_distance ) + 0.0426146 * pow(act_distance,-0.845983))*pow(act_width, -0.0710188))
+    dndb = ((0.0206319*exp(-5.09876 * act_distance ) + 1.07832e-06 * pow(act_distance,-0.0802907))*pow(act_width, 0.0638951))
+    //if(radius_up_behind() <= max_calrad1) { 
+     //  model = 1000 
+       //C = mlength * (0.151*exp(-4.02 * act_distance ) + 0.0419178 * pow(act_distance,-0.765172)) * pow(act_width, 0.555952)
+    if (((radius_up() < max_radius) || (radius_down() < max_radius)) && (radius_down_behind() > max_calrad1) && (radius_up_behind() > max_calrad1)) { 
+       model = 42 
+       C = mlength * (((0.5*exp(-4.99 * act_distance) + 0.044794*pow(act_distance,-0.384003))* pow(act_width,0.286838)) * (1.0 - exp(-0.268904- 0.743668 * radius_down())) * (1.0 - exp(-2.9633 - 0.1 * radius_up())))
+    } else { 
+       model = 4 
+       C = mlength * nb 
+       
+       if ((current_length > 0) && (distance_shield() > 0)) { 
+              nbr = DFM_EVAL ("XCAL_nearbody_ratio_4_5m_ultra_MC", act_distance, -1, -1, -1, -1, -1, -1, -1)
+	      if (nbr < 0.9 ) {
+	      	nbr = 0.9
+	      } else if ( nbr > 1 ) {
+	      	nbr = 1
+	      }
+              C = C * (nbr / 0.9)
+       } 
+       if (length_shield() > 0) { 
+       	      snbr = DFM_EVAL ("XCAL_shield_nearbody_ratio_4_5m_ultra_MC", act_distance, -1, -1, -1, -1, -1, -1, -1)
+	      if (snbr < 0.001 ) {
+	      	snbr = 0.001
+	      } else if ( snbr > 0.1 ) {
+	      	snbr = 0.1
+	      }
+       	      C = C * (snbr / 0.1) * 0.5
+       } 
+       
+    } 
+    C = C + mlength * dndt * (dtval + dtindie)
+    C = C * scaleunits
+    if ((current_length > 0) && (distance_shield() > 0)) { 
+       C = 0.9 * C 
+    } 
+    if (length_shield() > 0) { 
+       C = 0.1 * C 
+    } 
+]
+
+#ENDCRYPT
+

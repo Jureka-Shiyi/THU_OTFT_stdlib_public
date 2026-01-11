@@ -1,0 +1,22 @@
+* File: BUFD2.cdl
+* Created: Fri Dec  6 17:08:19 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/BUFD2.cdl.pex"
+.subckt BUFD2  IN VSS VDD OUT
+* 
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+* IN	IN
+XMI1 N_net1_MI1_d N_IN_MI1_g N_VSS_MI1_s ntft L=4e-06 W=2e-05
+XMI3 N_OUT_MI3_d N_net1_MI3_g N_VSS_MI3_s ntft L=4e-06 W=6e-05
+XMI0 N_net1_MI0_d N_IN_MI0_g N_VDD_MI0_s ptft L=4e-06 W=1e-05
+XMI2 N_OUT_MI2_d N_net1_MI2_g N_VDD_MI2_s ptft L=4e-06 W=3e-05
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/BUFD2.cdl.BUFD2.pxi"
+*
+.ends
+*
+*

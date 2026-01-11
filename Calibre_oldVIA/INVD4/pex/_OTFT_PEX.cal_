@@ -1,0 +1,25 @@
+//
+//  Rule file generated on Sat Dec 13 10:55:34 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+LAYOUT PATH "INVD4.calibre.db"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "INVD4"
+
+SOURCE PATH "INVD4.src.net"
+SOURCE SYSTEM SPICE
+SOURCE PRIMARY "INVD4"
+
+PEX NETLIST "INVD4.pex.netlist" ELDO SOURCENAMES
+
+MASK SVDB DIRECTORY "svdb" QUERY XRC
+
+LVS REPORT "INVD4.lvs.report"
+
+DRC ICSTATION YES
+
+INCLUDE "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_PEX.cal"

@@ -1,0 +1,203 @@
+* File: AND2D8.cdl.AND2D8.pxi
+* Created: Wed Jan 15 18:48:53 2025
+* 
+x_PM_AND2D8%net11 N_net11_MI0_d N_net11_MI1_d N_net11_MI9_g N_net11_MI4_g
++ N_net11_MI8_d N_net11_MI7@2_d N_net11_MI7_d N_net11_MI8@2_d N_net11_MI2_g
++ N_net11_MI5@2_g N_net11_MI5_g N_net11_MI2@2_g N_net11_c_7_p N_net11_c_12_p
++ N_net11_c_75_p N_net11_c_55_p N_net11_c_20_p N_net11_c_45_p N_net11_c_8_p
++ N_net11_c_25_p N_net11_c_21_p N_net11_c_46_p N_net11_c_48_p N_net11_c_71_p
++ N_net11_c_22_p N_net11_c_13_p N_net11_c_9_p N_net11_c_10_p N_net11_c_15_p
++ PM_AND2D8%net11
+x_PM_AND2D8%IN1 N_IN1_MI0_g N_IN1_MI3_g N_IN1_MI6@2_g N_IN1_MI6_g N_IN1_MI3@2_g
++ IN1 N_IN1_c_111_p N_IN1_c_96_p N_IN1_c_105_p N_IN1_c_109_p PM_AND2D8%IN1
+x_PM_AND2D8%IN2 N_IN2_MI1_g N_IN2_MI8_g N_IN2_MI7@2_g N_IN2_MI7_g N_IN2_MI8@2_g
++ IN2 N_IN2_c_131_n N_IN2_c_141_p N_IN2_c_132_n N_IN2_c_136_n PM_AND2D8%IN2
+x_PM_AND2D8%VDD N_VDD_MI0_s N_VDD_MI1_s N_VDD_MI9_s N_VDD_MI4_s VDD
++ N_VDD_c_161_n PM_AND2D8%VDD
+x_PM_AND2D8%net12 N_net12_MI3_d N_net12_MI6_d N_net12_MI8_s N_net12_MI7_s
++ N_net12_c_194_n N_net12_c_205_n N_net12_c_195_n N_net12_c_196_n
++ N_net12_c_198_n N_net12_c_216_n PM_AND2D8%net12
+x_PM_AND2D8%VSS N_VSS_MI3_s N_VSS_MI6@2_s N_VSS_MI6_s N_VSS_MI3@2_s N_VSS_MI2_s
++ N_VSS_MI5@2_s N_VSS_MI5_s N_VSS_MI2@2_s VSS N_VSS_c_275_n N_VSS_c_250_n
++ N_VSS_c_279_n N_VSS_c_255_n N_VSS_c_281_n N_VSS_c_257_n N_VSS_c_258_n
++ N_VSS_c_266_n N_VSS_c_269_n PM_AND2D8%VSS
+x_PM_AND2D8%OUT N_OUT_MI9_d N_OUT_MI4_d N_OUT_MI2_d N_OUT_MI5_d OUT
++ N_OUT_c_336_n N_OUT_c_337_n N_OUT_c_339_n N_OUT_c_356_n PM_AND2D8%OUT
+cc_1 N_net11_MI0_d N_IN1_MI0_g 6.54492f
+cc_2 N_net11_MI7@2_d N_IN1_MI3@2_g 0.0316869f
+cc_3 N_net11_MI0_d IN1 0.79445f
+cc_4 N_net11_MI8_d N_IN2_MI8_g 4.44726f
+cc_5 N_net11_MI7@2_d N_IN2_MI7@2_g 4.49287f
+cc_6 N_net11_MI7_d N_IN2_MI7_g 4.44726f
+cc_7 N_net11_c_7_p N_IN2_MI7_g 0.099165f
+cc_8 N_net11_c_8_p N_IN2_MI7_g 0.00543853f
+cc_9 N_net11_c_9_p N_IN2_MI7_g 0.147279f
+cc_10 N_net11_c_10_p N_IN2_MI7_g 4.44726f
+cc_11 N_net11_MI8@2_d N_IN2_MI8@2_g 4.49287f
+cc_12 N_net11_c_12_p N_IN2_MI8@2_g 0.086192f
+cc_13 N_net11_c_13_p N_IN2_MI8@2_g 0.0716063f
+cc_14 N_net11_c_9_p N_IN2_MI8@2_g 0.203208f
+cc_15 N_net11_c_15_p N_IN2_MI8@2_g 4.49287f
+cc_16 N_net11_MI1_d N_IN2_c_131_n 6.72836f
+cc_17 N_net11_MI7@2_d N_IN2_c_132_n 3.09084f
+cc_18 N_net11_MI0_d N_VDD_MI0_s 2.03911f
+cc_19 N_net11_MI1_d N_VDD_MI1_s 4.07821f
+cc_20 N_net11_c_20_p N_VDD_MI9_s 3.91429f
+cc_21 N_net11_c_21_p N_VDD_MI9_s 0.091785f
+cc_22 N_net11_c_22_p N_VDD_MI9_s 0.0228533f
+cc_23 N_net11_c_13_p N_VDD_MI9_s 2.03911f
+cc_24 N_net11_MI4_g N_VDD_MI4_s 3.91429f
+cc_25 N_net11_c_25_p N_VDD_MI4_s 3.91429f
+cc_26 N_net11_MI8@2_d VDD 2.03911f
+cc_27 N_net11_c_15_p N_VDD_c_161_n 2.03911f
+cc_28 N_net11_MI0_d N_net12_MI3_d 0.197295f
+cc_29 N_net11_MI1_d N_net12_MI6_d 0.394589f
+cc_30 N_net11_MI7_d N_net12_MI8_s 1.16924f
+cc_31 N_net11_MI8@2_d N_net12_MI8_s 1.56354f
+cc_32 N_net11_MI7_d N_net12_MI7_s 1.16924f
+cc_33 N_net11_c_9_p N_net12_MI7_s 0.332527f
+cc_34 N_net11_c_10_p N_net12_MI7_s 1.16924f
+cc_35 N_net11_c_15_p N_net12_MI7_s 1.56354f
+cc_36 N_net11_MI8_d N_net12_c_194_n 0.0778396f
+cc_37 N_net11_MI7@2_d N_net12_c_195_n 0.0880992f
+cc_38 N_net11_MI8_d N_net12_c_196_n 1.16924f
+cc_39 N_net11_MI7@2_d N_net12_c_196_n 1.56354f
+cc_40 N_net11_MI8_d N_net12_c_198_n 0.253065f
+cc_41 N_net11_MI7@2_d N_net12_c_198_n 0.197295f
+cc_42 N_net11_MI0_d N_VSS_MI3_s 0.021655f
+cc_43 N_net11_MI1_d N_VSS_MI3@2_s 1.61015f
+cc_44 N_net11_MI7@2_d N_VSS_MI3@2_s 1.61015f
+cc_45 N_net11_c_45_p N_VSS_MI2_s 2.76756f
+cc_46 N_net11_c_46_p N_VSS_MI2_s 0.0996318f
+cc_47 N_net11_c_25_p N_VSS_MI5@2_s 0.0316869f
+cc_48 N_net11_c_48_p N_VSS_MI5@2_s 3.35121f
+cc_49 N_net11_MI2_g N_VSS_MI5_s 2.76756f
+cc_50 N_net11_MI5_g N_VSS_MI5_s 5.53511f
+cc_51 N_net11_MI5@2_g N_VSS_MI2@2_s 3.35121f
+cc_52 N_net11_MI2@2_g N_VSS_MI2@2_s 3.35121f
+cc_53 N_net11_c_8_p N_VSS_MI2@2_s 3.35121f
+cc_54 N_net11_MI7_d N_VSS_c_250_n 3.53214f
+cc_55 N_net11_c_55_p N_VSS_c_250_n 0.348813f
+cc_56 N_net11_c_21_p N_VSS_c_250_n 0.0319333f
+cc_57 N_net11_c_22_p N_VSS_c_250_n 0.26152f
+cc_58 N_net11_c_13_p N_VSS_c_250_n 0.0166444f
+cc_59 N_net11_MI8_d N_VSS_c_255_n 3.53214f
+cc_60 N_net11_MI7@2_d N_VSS_c_255_n 0.021655f
+cc_61 N_net11_MI1_d N_VSS_c_257_n 1.61015f
+cc_62 N_net11_c_7_p N_VSS_c_258_n 1.10864f
+cc_63 N_net11_c_12_p N_VSS_c_258_n 0.773293f
+cc_64 N_net11_c_45_p N_VSS_c_258_n 0.094891f
+cc_65 N_net11_c_8_p N_VSS_c_258_n 0.0639285f
+cc_66 N_net11_c_46_p N_VSS_c_258_n 1.23402f
+cc_67 N_net11_c_48_p N_VSS_c_258_n 1.19092f
+cc_68 N_net11_c_22_p N_VSS_c_258_n 0.167074f
+cc_69 N_net11_c_10_p N_VSS_c_258_n 0.127754f
+cc_70 N_net11_c_21_p N_VSS_c_266_n 0.103622f
+cc_71 N_net11_c_71_p N_VSS_c_266_n 0.0361354f
+cc_72 N_net11_c_9_p N_VSS_c_266_n 0.167074f
+cc_73 N_net11_MI0_d N_VSS_c_269_n 1.61015f
+cc_74 N_net11_MI9_g N_OUT_MI9_d 4.3627f
+cc_75 N_net11_c_75_p N_OUT_MI9_d 0.0384287f
+cc_76 N_net11_c_21_p N_OUT_MI9_d 0.723104f
+cc_77 N_net11_c_15_p N_OUT_MI9_d 0.0367547f
+cc_78 N_net11_MI4_g N_OUT_MI4_d 8.72541f
+cc_79 N_net11_MI2_g N_OUT_MI2_d 4.08098f
+cc_80 N_net11_MI5@2_g N_OUT_MI2_d 4.13439f
+cc_81 N_net11_c_10_p N_OUT_MI2_d 0.0221468f
+cc_82 N_net11_MI5_g N_OUT_MI5_d 8.16197f
+cc_83 N_net11_MI2@2_g N_OUT_MI5_d 4.13439f
+cc_84 N_net11_MI2@2_g OUT 0.379564f
+cc_85 N_net11_MI5_g N_OUT_c_336_n 0.0493999f
+cc_86 N_net11_MI4_g N_OUT_c_337_n 0.0608504f
+cc_87 N_net11_MI2@2_g N_OUT_c_337_n 0.0294362f
+cc_88 N_net11_MI2@2_g N_OUT_c_339_n 4.13439f
+cc_89 N_IN1_MI0_g N_IN2_c_131_n 0.245397f
+cc_90 N_IN1_MI6_g N_IN2_c_131_n 0.2167f
+cc_91 N_IN1_MI3@2_g N_IN2_c_131_n 1.46608f
+cc_92 N_IN1_MI3@2_g N_IN2_c_136_n 0.163001f
+cc_93 N_IN1_c_96_p N_VDD_MI0_s 2.92655f
+cc_94 N_IN1_MI0_g N_VDD_MI1_s 2.92655f
+cc_95 N_IN1_MI3_g N_net12_MI3_d 4.08098f
+cc_96 N_IN1_MI6@2_g N_net12_MI3_d 4.13439f
+cc_97 N_IN1_MI6_g N_net12_MI6_d 8.16197f
+cc_98 N_IN1_MI3@2_g N_net12_MI6_d 4.13439f
+cc_99 N_IN1_MI6_g N_net12_c_194_n 0.0493999f
+cc_100 N_IN1_MI3@2_g N_net12_c_205_n 0.230687f
+cc_101 N_IN1_MI3@2_g N_net12_c_198_n 4.13439f
+cc_102 N_IN1_c_105_p N_VSS_MI3_s 2.92132f
+cc_103 N_IN1_MI3_g N_VSS_MI6_s 2.76756f
+cc_104 N_IN1_MI6_g N_VSS_MI6_s 2.76756f
+cc_105 N_IN1_MI3@2_g N_VSS_MI3@2_s 6.74623f
+cc_106 N_IN1_c_109_p N_VSS_MI2@2_s 3.37311f
+cc_107 IN1 N_VSS_c_275_n 2.11293f
+cc_108 N_IN1_c_111_p N_VSS_c_275_n 3.61218f
+cc_109 N_IN1_c_105_p N_VSS_c_275_n 1.19111f
+cc_110 N_IN1_c_109_p N_VSS_c_275_n 0.97723f
+cc_111 N_IN1_c_105_p N_VSS_c_279_n 0.0508489f
+cc_112 N_IN1_MI6_g N_VSS_c_255_n 2.76756f
+cc_113 N_IN1_MI0_g N_VSS_c_281_n 0.0316018f
+cc_114 IN1 N_VSS_c_281_n 0.944719f
+cc_115 N_IN1_MI6@2_g N_VSS_c_257_n 3.37311f
+cc_116 N_IN2_c_131_n N_VDD_MI1_s 5.78499f
+cc_117 N_IN2_MI8@2_g N_net12_MI8_s 4.08101f
+cc_118 N_IN2_MI7_g N_net12_MI7_s 6.25965f
+cc_119 N_IN2_MI8@2_g N_net12_MI7_s 4.08101f
+cc_120 N_IN2_c_141_p N_net12_c_205_n 0.464382f
+cc_121 N_IN2_c_136_n N_net12_c_205_n 0.973093f
+cc_122 N_IN2_c_141_p N_net12_c_195_n 0.740242f
+cc_123 N_IN2_MI8_g N_net12_c_196_n 3.12982f
+cc_124 N_IN2_MI7@2_g N_net12_c_196_n 4.08101f
+cc_125 N_IN2_c_141_p N_net12_c_196_n 0.347323f
+cc_126 N_IN2_MI7@2_g N_net12_c_216_n 0.086424f
+cc_127 N_IN2_c_141_p N_net12_c_216_n 0.328467f
+cc_128 N_IN2_c_136_n N_net12_c_216_n 3.12982f
+cc_129 N_IN2_c_141_p N_VSS_MI3@2_s 0.421869f
+cc_130 N_IN2_c_136_n N_VSS_c_255_n 0.0836883f
+cc_131 N_VDD_c_161_n N_net12_MI8_s 0.235563f
+cc_132 N_VDD_MI9_s N_net12_MI7_s 0.235563f
+cc_133 VDD N_net12_c_194_n 0.0136798f
+cc_134 VDD N_net12_c_195_n 0.0213553f
+cc_135 VDD N_net12_c_196_n 0.235563f
+cc_136 N_VDD_MI0_s N_VSS_MI3_s 0.0146231f
+cc_137 N_VDD_MI1_s N_VSS_MI6@2_s 0.210745f
+cc_138 VDD N_VSS_MI3@2_s 0.210745f
+cc_139 N_VDD_MI9_s N_VSS_MI2_s 0.10656f
+cc_140 N_VDD_MI4_s N_VSS_MI5@2_s 0.287197f
+cc_141 N_VDD_MI4_s N_VSS_MI5_s 0.10656f
+cc_142 N_VDD_MI4_s N_VSS_MI2@2_s 0.287197f
+cc_143 N_VDD_MI9_s N_VSS_c_250_n 0.0146231f
+cc_144 N_VDD_MI0_s N_VSS_c_279_n 0.047028f
+cc_145 N_VDD_MI0_s N_VSS_c_281_n 0.210745f
+cc_146 N_VDD_MI9_s N_VSS_c_266_n 0.287197f
+cc_147 N_VDD_MI1_s N_VSS_c_269_n 0.210745f
+cc_148 N_VDD_MI9_s N_OUT_MI9_d 1.74443f
+cc_149 N_VDD_MI4_s N_OUT_MI4_d 3.48887f
+cc_150 N_VDD_MI4_s N_OUT_c_336_n 0.0094462f
+cc_151 N_VDD_MI4_s N_OUT_c_337_n 0.179401f
+cc_152 N_net12_MI3_d N_VSS_MI3_s 1.30829f
+cc_153 N_net12_MI6_d N_VSS_MI6@2_s 1.17149f
+cc_154 N_net12_MI6_d N_VSS_MI6_s 2.61657f
+cc_155 N_net12_MI6_d N_VSS_MI3@2_s 1.17149f
+cc_156 N_net12_c_195_n N_VSS_MI3@2_s 0.0733415f
+cc_157 N_net12_c_196_n N_VSS_MI3@2_s 0.245463f
+cc_158 N_net12_c_198_n N_VSS_MI3@2_s 1.17149f
+cc_159 N_net12_MI3_d N_VSS_c_275_n 0.394925f
+cc_160 N_net12_MI7_s N_VSS_c_250_n 0.41423f
+cc_161 N_net12_c_194_n N_VSS_c_255_n 0.195885f
+cc_162 N_net12_c_198_n N_VSS_c_255_n 1.30829f
+cc_163 N_net12_c_216_n N_VSS_c_255_n 0.41423f
+cc_164 N_net12_MI3_d N_VSS_c_257_n 1.17149f
+cc_165 N_net12_MI7_s N_VSS_c_258_n 0.0439054f
+cc_166 N_VSS_MI5@2_s N_OUT_MI9_d 1.57984f
+cc_167 N_VSS_MI2@2_s N_OUT_MI4_d 3.15969f
+cc_168 N_VSS_MI2_s N_OUT_MI2_d 1.30829f
+cc_169 N_VSS_MI5@2_s N_OUT_MI2_d 1.16927f
+cc_170 N_VSS_c_258_n N_OUT_MI2_d 0.421236f
+cc_171 N_VSS_MI5_s N_OUT_MI5_d 2.61657f
+cc_172 N_VSS_MI2@2_s N_OUT_MI5_d 2.33855f
+cc_173 N_VSS_MI2@2_s OUT 0.444083f
+cc_174 N_VSS_MI5_s N_OUT_c_336_n 0.179401f
+cc_175 N_VSS_MI5_s N_OUT_c_337_n 0.00978227f
+cc_176 N_VSS_MI5_s N_OUT_c_339_n 1.30829f
+cc_177 N_VSS_MI2@2_s N_OUT_c_339_n 1.16927f
+cc_178 N_VSS_MI2@2_s N_OUT_c_356_n 1.57984f

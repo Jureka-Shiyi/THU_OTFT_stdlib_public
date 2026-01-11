@@ -1,0 +1,34 @@
+//  Runset file generated on Sat Dec 27 12:58:08 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+xrc.rulesFile.value = "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_PEX.cal"
+xrc.runDir.value = "/data/zhengyj/cadence/Calibre/BUFD2/pex_cdl"
+xrc.layout.layoutFile.value = "BUFD2.calibre.db"
+cmn.layout.defFiles.value = [ "BUFD2.def" ]
+xrc.layout.topCellLibrary.value = "OTFT_stdlib_cells"
+cmn.layout.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+xrc.layout.topCell.value = "BUFD2"
+xrc.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+xrc.source.sourceFile.value = "BUFD2.src.net"
+xrc.source.topCellLibrary.value = "OTFT_stdlib_cells"
+xrc.source.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+xrc.source.topCell.value = "BUFD2"
+xrc.source.topCellFDI.value = "BUFD2"
+xrc.source.topCellView.value = "schematic"
+xrc.source.topCellViewFDI.value = "schematic"
+xrc.pexNetlist.netlistFile.value = "BUFD2.cdl"
+xrc.pexNetlist.netlistFormat.value = "HSPICE"
+xrc.reports.lvsReport.value = "BUFD2.lvs.report"
+xrc.reports.pexReport.value = "BUFD2.pex.report"
+
+xrc.blockExtraction.setADMSNetlistOutputFiles("{BUFD2 BUFD2.cdl} ")
+xrc.blockExtraction.setADMSNetlistOutputVerilogModules("{BUFD2 BUFD2} ")
+
+cmn.runsetPrefs.saveOnClose.value = "AUTOSAVE"
+cmn.miscPrefs.overwriteLayoutPref.value = false
+cmn.miscPrefs.overwriteSourcePref.value = false

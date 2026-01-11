@@ -1,0 +1,20 @@
+* File: INVD1.cdl
+* Created: Sat Aug 17 14:27:25 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/INVD1.cdl.pex"
+.subckt INVD1  IN VSS VDD OUT
+* 
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+* IN	IN
+XMI1 N_OUT_MI1_d N_IN_MI1_g N_VSS_MI1_s ntft L=4e-06 W=2e-05
+XMI6 N_OUT_MI6_d N_IN_MI6_g N_VDD_MI6_s ptft L=4e-06 W=1e-05
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/INVD1.cdl.INVD1.pxi"
+*
+.ends
+*
+*

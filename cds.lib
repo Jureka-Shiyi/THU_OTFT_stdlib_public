@@ -1,0 +1,24 @@
+# File Created by  at Tue Dec  2 16:51:26 2025
+# assisted by CdsLibEditor
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/dfII/cds.lib
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/hdl/cds.lib
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/pic/cds.lib
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/sg/cds.lib
+
+DEFINE logic_TFT /data/zhengyj/cadence/logic_TFT
+DEFINE TFTmodel /data/zhengyj/cadence/TFTmodel
+DEFINE OTFT_PDK_2INT_2510 /data/zhengyj/cadence/OTFT_PDK_2INT_2510
+DEFINE avTech /tools/Cadence/ASSURA41/tools.lnx86/assura/etc/avtech/avTech
+
+DEFINE TEST_2INT_2510 /data/zhengyj/cadence/TEST_2INT_2510
+#DEFINE THU_PDK_LTPS_TFT /data/zhengyj/cadence/THU_PDK_LTPS_TFT
+DEFINE logic_TFT_tri_layer /data/zhengyj/cadence/logic_TFT_tri_layer
+#DEFINE PDK_OTFT_251202 PDK_CJ_OTFT/PDK_CJ_OTFT20251202/model/
+
+#INCLUDE /data/houyk/PDK_CJ_OTFT/PDK_CJ_OTFT2024/cds.lib
+#DEFINE dataconverter_lib dataconverter_lib
+#DEFINE ISCAS2025 /data/zhengyj/cadence/ISCAS2025
+#DEFINE PDK_CJ_OTFT2024_copy20241120 /data/zhengyj/cadence/PDK_CJ_OTFT2024_copy20241120
+#Removed by ddDeleteObj: DEFINE OTFT_stdlib_cells /data/zhengyj/cadence/OTFT_stdlib_cells
+DEFINE PDK_OTFT_251202 /data/zhengyj/cadence/PDK_OTFT_251202
+DEFINE OTFT_stdlib_cells /data/zhengyj/cadence/OTFT_stdlib_cells

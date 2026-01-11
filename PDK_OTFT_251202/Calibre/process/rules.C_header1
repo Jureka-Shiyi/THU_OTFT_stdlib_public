@@ -1,0 +1,132 @@
+//
+// Generated on Sat Jun 14 14:03:07 2025 by xCalibrate v2023.1_18.8
+//
+
+//info section: 
+PEX XCALIBRATE VERSION  XACT v2023.1_18.8 MIPT2
+
+// Comments: 
+
+
+//----- [# USER CONTROL OPTIONS] -----
+
+// UNIT CAPACITANCE                                ff
+// UNIT INDUCTANCE                                 ph
+
+// UNIT LENGTH                                     um
+
+// PEX VIA CAPACITANCE                             YES // 'YES' (or omitting statement) turns on extraction of all vias and contacts - some test structures require 'NO'
+
+
+// LAYER INFORMATION                               use 'PEX MAP cal_layer lvs_layer' to map conductor (not contact/via) names, where cal_layer is conductor layer from this calibration and lvs_layer is layer from LVS connectivity extraction
+//                                                 Layer names are case-insensitive so it is not necessary to use PEX MAP to map case differences
+//                                                 Also, when mapping with 'PEX MAP' you still need connectivity for all aliased conductor cal_layers.  You may need to create a dummy cal_layer in the LVS section
+// M1                                              conductor layer must have connectivity. 
+// M2                                              conductor layer must have connectivity. 
+// MC                                              conductor layer must have connectivity. 
+// Via1_12                                         via layer must connect M1 and M2
+// Via1_2C                                         via layer must connect M2 and MC
+
+// PROFILE INFORMATION 
+                         // #define $XCAL_EXCL_PROF_ultra                   // define this to remove profile or set 		XCAL_EXCL_PROF_ultra environment variable beforehand
+
+
+// #define $XCAL_EXCL_INDIE                        // uncomment this line to switch off indie variation (widths, thicknesses, etc)
+                                                   // or set XCAL_EXCL_INDIE environment variable before invoking calibre
+
+// #define $XCAL_EXCL_CAP_RULES                    // uncomment this line to switch off capacitance rules for PERC or xACT3D flow
+                                                   // or set XCAL_EXCL_CAP_RULES environment variable before invoking calibre
+
+// #define $XCAL_EXCL_gate_fringe                  // uncomment this line to switch off fringe table
+                                                   // or set XCAL_EXCL_gate_fringe environment variable before invoking calibre
+
+//Environment variables
+//XCAL_ENABLE_MTFLEX=on
+//XCAL_ISOLATED_NEARBODY=on
+//XCAL_SHIELDED_NEARBODY=on
+//XCAL_USE_DNDB_FOR_SWK=on
+//XCAL_ENABLE_ULTRA_PROFILE=on
+//XCAL_ENABLE_NEW_CURVEFITTER=on
+//XCAL_ENABLE_FILE_DB=1
+//XCAL_LOCAL_NEW_MAPPER_AND_CHECKER=1
+//XCAL_MIN_MAX_LOADING=on
+
+//----- [# END USER CONTROL OPTIONS] -----
+//
+
+// 
+// OTFT_PEX.mipt
+// 
+//# MIPT file for 2024 CJ OTFT process
+//mipt_version = 2.0
+//process = OTFT
+//calibration_type = ALL # where ALL is one of 4 keyword choices
+//# base layer:
+//
+//dielectric = Glass {
+//    diel_type = planar
+//    thickness = 1000
+//    eps = 5
+//}
+//conductor = M1 {
+//    thickness = 0.05
+//    min_width = 12
+//    min_spacing = 8
+//    r_sheet = 0.5
+//}
+//dielectric = ParC1 {
+//    diel_type = planar
+//    thickness = 0.55
+//    eps = 3.1
+//}
+//conductor = M2 {
+//    thickness = 0.12
+//    min_width = 12
+//    min_spacing = 8
+//    r_sheet = 0.5
+//}
+//dielectric = ParC2 {
+//    diel_type = planar
+//    thickness = 0.42
+//    eps = 3.1
+//}
+//conductor = MC {
+//    thickness = 0.05
+//    min_width = 12
+//    min_spacing = 8
+//    r_sheet = 0.5
+//}
+//dielectric = SU8 {
+//    diel_type = planar
+//    thickness = 10
+//    eps = 3.2
+//}
+//
+//via = Via1_12 {
+//    measured_from = M1
+//    measured_to = M2
+//    min_width = 8
+//    min_spacing = 5
+//    resistance = 100
+//    enclosure_down = 6
+//    enclosure_up = 6
+//}
+//via = Via1_2C {
+//    measured_from = M2
+//    measured_to = MC
+//    min_width = 8
+//    min_spacing = 5
+//    resistance = 100
+//    enclosure_down = 6
+//    enclosure_up = 6
+//}
+//
+
+
+// 
+// Begin Aux Data 
+// 
+// 
+// Aux Data Done 
+// 
+

@@ -1,0 +1,57 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 11/15/2022 19:27 (cpgbld01) $
+          : sub-version  IC6.1.8-64b.500.29 
+Started at: 22-Dec-2025  19:54:30
+User Name : zhengyj
+Host Name : cad52
+Directory : /data/zhengyj/cadence
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/data/zhengyj/cadence/Calibre/INVD1/pex_cdl/INVD1.calibre.db' already exists. It will be overwritten.
+INFO (XSTRM-288): Performing automatic layer mapping because either the layer mapping information is not provided or the XST_AUTO_LM  value is used with the '-layerMap' option. Additionally, the  'xStrmOut_layerMap.txt' file has been generated and the mapping information has been added to it.
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 OTFT_stdlib_cells
+strmFile                                /data/zhengyj/cadence/Calibre/INVD1/pex_cdl/INVD1.calibre.db
+topCell                                 INVD1
+view                                    layout
+runDir                                  /data/zhengyj/cadence/Calibre/INVD1/pex_cdl/
+logFile                                 PIPO.LOG.INVD1
+summaryFile                             PIPO.SUM.INVD1
+case                                    Preserve
+convertDot                              node
+convertPcellPin                         geometry
+
+INFO (XSTRM-223): 1. Translating cellView OTFT_stdlib_cells/INVD1/layout as STRUCTURE INVD1.
+
+Summary of Objects Translated:
+	Scalar Instances:                       0
+	Array Instances:                        0
+	Polygons:                               7
+	Paths:                                  0
+	Rectangles:                             32
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           0
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   4
+	TextDisplay:                            0
+	Cells:                                  1
+
+Elapsed Time: 10.2s   User Time: 0.1s   CPU Time: 0.0s   Peak VM: 2992KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '1' warning(s) found.

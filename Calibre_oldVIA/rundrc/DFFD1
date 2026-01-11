@@ -1,0 +1,23 @@
+//  Runset file generated on Wed Dec 24 15:29:41 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+drc.rulesFile.value = "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_DRC.cal"
+drc.runDir.value = "/data/zhengyj/cadence/Calibre/DFFD1/drc"
+drc.layout.layoutFile.value = "DFFD1.calibre.db"
+cmn.layout.defFiles.value = [ "DFFD1.def" ]
+drc.layout.topCellLibrary.value = "OTFT_stdlib_cells"
+cmn.layout.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+drc.layout.topCell.value = "DFFD1"
+drc.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+drc.drcdb.resultsFile.value = "DFFD1.drc.results"
+drc.reports.drcSummaryReport.value = "DFFD1.drc.summary"
+drc.rhdb.fileName.value = "DFFD1.rhdb"
+drc.dfmDefaults.resultsFile.value = "DFFD1.dfmDefaults.db"
+
+cmn.runsetPrefs.saveOnClose.value = "AUTOSAVE"
+cmn.miscPrefs.overwriteLayoutPref.value = false

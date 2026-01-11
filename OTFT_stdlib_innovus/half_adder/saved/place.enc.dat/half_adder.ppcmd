@@ -1,0 +1,69 @@
+# PPCMD 1 
+# sroute -connect { corePin } -layerChangeRange { M1 M2 } -blockPinTarget { nearestTarget } -allowJogging false -crossoverViaLayerRange { M1 M2 }
+# 4 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# addStripe -nets { VDD VSS } -layer M2 -direction vertical -width 60 -spacing 200 -set_to_set_distance 3000 -start_from left -start_offset 300 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None -stacked_via_bottom_layer M1 -stacked_via_top_layer M2 -via_using_exact_crossover_size false
+# 3 
+# 2 
+# 1 
+# 0 
+# 0 
+# 1 
+# BOX_LIST 
+# 18000 18000 1368000 828000 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VSS 6000 2 0 74000 1368000 300000 0 0 
+# VDD 6000 2 0 48000 1368000 300000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# addStripe -nets { VSS VDD  } -layer M1 -direction horizontal -width 30 -spacing 870 -set_to_set_distance 1800 -start_from bottom -start_offset -15 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None -stacked_via_bottom_layer M1 -stacked_via_top_layer M2 -via_using_exact_crossover_size false
+# 2 
+# 2 
+# 1 
+# 0 
+# 0 
+# 1 
+# BOX_LIST 
+# 18000 18000 1368000 828000 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# VDD 3000 1 0 106500 828000 180000 0 0 
+# VSS 3000 1 0 16500 828000 180000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
+# PPCMD 4 
+# setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer M2 -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog {
+    padcore_ring
+    block_ring
+  } -skip_via_on_pin {
+    standardcell
+  } -skip_via_on_wire_shape {
+    noshape
+  }
+# 1 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 4 
+

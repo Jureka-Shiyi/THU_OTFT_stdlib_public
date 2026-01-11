@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /data/zhengyj/cadence/Calibre/NOR2D4/pex
+pex_PexParam LAYOUT_PRIMARY NOR2D4
+pex_PexParam TOOL xRC
+pex_PexParam CORNER_PDBS { {NOR2D4 "" NOR2D4.pdb "" } } 

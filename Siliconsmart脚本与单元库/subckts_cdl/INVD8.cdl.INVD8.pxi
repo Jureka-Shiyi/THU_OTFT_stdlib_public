@@ -1,0 +1,352 @@
+* File: INVD8.cdl.INVD8.pxi
+* Created: Mon Dec 22 20:56:18 2025
+* 
+x_PM_INVD8%net10 N_net10_c_151_p N_net10_c_152_p N_net10_c_1_p N_net10_c_65_p
++ N_net10_c_17_p N_net10_c_18_p N_net10_c_19_p N_net10_c_20_p N_net10_c_66_p
++ N_net10_c_23_p N_net10_c_24_p N_net10_c_25_p N_net10_c_26_p N_net10_c_67_p
++ N_net10_c_29_p N_net10_c_30_p N_net10_c_31_p N_net10_c_32_p N_net10_c_68_p
++ N_net10_c_35_p N_net10_c_36_p N_net10_c_37_p N_net10_c_38_p N_net10_c_69_p
++ N_net10_c_41_p N_net10_c_42_p N_net10_c_43_p N_net10_c_44_p N_net10_c_70_p
++ N_net10_c_47_p N_net10_c_48_p N_net10_c_49_p N_net10_c_50_p N_net10_c_71_p
++ N_net10_c_53_p N_net10_c_54_p N_net10_c_55_p N_net10_c_56_p N_net10_c_72_p
++ N_net10_c_59_p N_net10_c_60_p N_net10_c_61_p N_net10_c_62_p N_net10_MI7_g
++ N_net10_MI7@16_g N_net10_MI7@15_g N_net10_MI7@14_g N_net10_MI7@13_g
++ N_net10_MI7@12_g N_net10_MI7@11_g N_net10_MI7@10_g N_net10_MI7@9_g
++ N_net10_MI7@8_g N_net10_MI7@7_g N_net10_MI7@6_g N_net10_MI7@5_g
++ N_net10_MI7@4_g N_net10_MI7@3_g N_net10_MI7@2_g N_net10_MI5_s N_net10_MI4_d
++ N_net10_MI5@7_s N_net10_MI4@8_d N_net10_MI5@5_s N_net10_MI4@6_d
++ N_net10_MI4@4_d N_net10_MI5@3_s N_net10_MI4@2_d PM_INVD8%net10
+x_PM_INVD8%VSS VSS N_VSS_MI5_g N_VSS_MI5@8_g N_VSS_MI5@7_g N_VSS_MI5@6_g
++ N_VSS_MI5@5_g N_VSS_MI5@4_g N_VSS_MI5@3_g N_VSS_MI5@2_g N_VSS_MI5_d
++ N_VSS_MI5@8_d N_VSS_MI5@6_d N_VSS_MI5@4_d N_VSS_MI5@2_d N_VSS_MI7_d
++ N_VSS_MI7@15_d N_VSS_MI7@13_d N_VSS_MI7@11_d N_VSS_MI7@9_d N_VSS_MI7@7_d
++ N_VSS_MI7@5_d N_VSS_MI7@3_d PM_INVD8%VSS
+x_PM_INVD8%VDD VDD N_VDD_c_221_p N_VDD_c_226_p N_VDD_c_231_p N_VDD_c_236_p
++ N_VDD_c_241_p N_VDD_c_246_p N_VDD_c_251_p N_VDD_c_256_p N_VDD_c_261_p
++ N_VDD_c_266_p N_VDD_c_271_p N_VDD_c_276_p N_VDD_MI4_s N_VDD_MI4@7_s
++ N_VDD_MI4@5_s N_VDD_MI4@3_s N_VDD_MI6_s N_VDD_MI6@15_s N_VDD_MI6@13_s
++ N_VDD_MI6@11_s N_VDD_MI6@9_s N_VDD_MI6@7_s N_VDD_MI6@5_s N_VDD_MI6@3_s
++ PM_INVD8%VDD
+x_PM_INVD8%OUT OUT N_OUT_c_303_n N_OUT_c_304_n N_OUT_c_305_n N_OUT_c_306_n
++ N_OUT_c_307_n N_OUT_c_308_n N_OUT_c_309_n N_OUT_c_310_n N_OUT_c_391_p
++ N_OUT_MI7_s N_OUT_MI6_d N_OUT_MI7@16_s N_OUT_MI6@16_d N_OUT_MI7@14_s
++ N_OUT_MI6@14_d N_OUT_MI7@12_s N_OUT_MI6@12_d N_OUT_MI7@10_s N_OUT_MI6@10_d
++ N_OUT_MI7@8_s N_OUT_MI6@8_d N_OUT_MI7@6_s N_OUT_MI6@6_d N_OUT_MI7@4_s
++ N_OUT_MI6@4_d N_OUT_MI7@2_s N_OUT_MI6@2_d PM_INVD8%OUT
+x_PM_INVD8%IN N_IN_c_423_n N_IN_c_424_n N_IN_c_459_n N_IN_c_425_n N_IN_c_426_n
++ N_IN_c_427_n N_IN_c_428_n N_IN_c_464_n N_IN_c_429_n N_IN_c_430_n N_IN_c_431_n
++ N_IN_c_432_n N_IN_c_469_n N_IN_c_433_n N_IN_c_434_n N_IN_c_435_n N_IN_c_436_n
++ N_IN_c_474_n N_IN_c_437_n N_IN_c_438_n N_IN_c_477_n N_IN_c_478_n N_IN_c_479_n
++ N_IN_c_480_n N_IN_c_481_n N_IN_c_482_n N_IN_c_483_n N_IN_c_484_n N_IN_c_485_n
++ N_IN_c_486_n N_IN_c_487_n N_IN_c_488_n N_IN_c_489_n N_IN_c_490_n N_IN_c_491_n
++ N_IN_c_492_n N_IN_c_493_n N_IN_c_494_n N_IN_c_495_n N_IN_c_496_n N_IN_c_497_n
++ N_IN_c_498_n N_IN_c_499_n N_IN_c_500_n N_IN_c_501_n N_IN_c_502_n N_IN_c_503_n
++ N_IN_c_504_n N_IN_c_505_n N_IN_c_506_n N_IN_c_507_n N_IN_c_508_n N_IN_c_509_n
++ N_IN_c_510_n N_IN_c_511_n N_IN_c_512_n N_IN_c_513_n N_IN_c_514_n N_IN_c_515_n
++ N_IN_c_516_n N_IN_MI4_g N_IN_MI4@8_g N_IN_MI4@7_g N_IN_MI4@6_g N_IN_MI4@5_g
++ N_IN_MI4@4_g N_IN_MI4@3_g N_IN_MI4@2_g N_IN_MI6_g N_IN_MI6@16_g N_IN_MI6@15_g
++ N_IN_MI6@14_g N_IN_MI6@13_g N_IN_MI6@12_g N_IN_MI6@11_g N_IN_MI6@10_g
++ N_IN_MI6@9_g N_IN_MI6@8_g N_IN_MI6@7_g N_IN_MI6@6_g N_IN_MI6@5_g N_IN_MI6@4_g
++ N_IN_MI6@3_g N_IN_MI6@2_g IN PM_INVD8%IN
+cc_1 N_net10_c_1_p N_VSS_MI5_g 5.18119f
+cc_2 N_net10_MI5_s N_VSS_MI5_g 20.7245f
+cc_3 N_net10_c_1_p N_VSS_MI5@8_g 5.18119f
+cc_4 N_net10_MI5_s N_VSS_MI5@8_g 20.7245f
+cc_5 N_net10_c_1_p N_VSS_MI5@7_g 5.18119f
+cc_6 N_net10_MI5@7_s N_VSS_MI5@7_g 20.7245f
+cc_7 N_net10_c_1_p N_VSS_MI5@6_g 5.18119f
+cc_8 N_net10_MI5@7_s N_VSS_MI5@6_g 20.7245f
+cc_9 N_net10_c_1_p N_VSS_MI5@5_g 5.18119f
+cc_10 N_net10_MI5@5_s N_VSS_MI5@5_g 20.7245f
+cc_11 N_net10_c_1_p N_VSS_MI5@4_g 5.18119f
+cc_12 N_net10_MI5@5_s N_VSS_MI5@4_g 20.7245f
+cc_13 N_net10_c_1_p N_VSS_MI5@3_g 5.18119f
+cc_14 N_net10_MI5@3_s N_VSS_MI5@3_g 20.7245f
+cc_15 N_net10_c_1_p N_VSS_MI5@2_g 5.18119f
+cc_16 N_net10_MI5@3_s N_VSS_MI5@2_g 20.7245f
+cc_17 N_net10_c_17_p N_VSS_MI7_d 6.90834f
+cc_18 N_net10_c_18_p N_VSS_MI7_d 9.49868f
+cc_19 N_net10_c_19_p N_VSS_MI7_d 6.90834f
+cc_20 N_net10_c_20_p N_VSS_MI7_d 9.49868f
+cc_21 N_net10_MI7_g N_VSS_MI7_d 35.4036f
+cc_22 N_net10_MI7@16_g N_VSS_MI7_d 35.4036f
+cc_23 N_net10_c_23_p N_VSS_MI7@15_d 6.90834f
+cc_24 N_net10_c_24_p N_VSS_MI7@15_d 9.49868f
+cc_25 N_net10_c_25_p N_VSS_MI7@15_d 6.90834f
+cc_26 N_net10_c_26_p N_VSS_MI7@15_d 9.49868f
+cc_27 N_net10_MI7@15_g N_VSS_MI7@15_d 35.4036f
+cc_28 N_net10_MI7@14_g N_VSS_MI7@15_d 35.4036f
+cc_29 N_net10_c_29_p N_VSS_MI7@13_d 6.90834f
+cc_30 N_net10_c_30_p N_VSS_MI7@13_d 9.49868f
+cc_31 N_net10_c_31_p N_VSS_MI7@13_d 6.90834f
+cc_32 N_net10_c_32_p N_VSS_MI7@13_d 9.49868f
+cc_33 N_net10_MI7@13_g N_VSS_MI7@13_d 35.4036f
+cc_34 N_net10_MI7@12_g N_VSS_MI7@13_d 35.4036f
+cc_35 N_net10_c_35_p N_VSS_MI7@11_d 6.90834f
+cc_36 N_net10_c_36_p N_VSS_MI7@11_d 9.49868f
+cc_37 N_net10_c_37_p N_VSS_MI7@11_d 6.90834f
+cc_38 N_net10_c_38_p N_VSS_MI7@11_d 9.49868f
+cc_39 N_net10_MI7@11_g N_VSS_MI7@11_d 35.4036f
+cc_40 N_net10_MI7@10_g N_VSS_MI7@11_d 35.4036f
+cc_41 N_net10_c_41_p N_VSS_MI7@9_d 6.90834f
+cc_42 N_net10_c_42_p N_VSS_MI7@9_d 9.49868f
+cc_43 N_net10_c_43_p N_VSS_MI7@9_d 6.90834f
+cc_44 N_net10_c_44_p N_VSS_MI7@9_d 9.49868f
+cc_45 N_net10_MI7@9_g N_VSS_MI7@9_d 35.4036f
+cc_46 N_net10_MI7@8_g N_VSS_MI7@9_d 35.4036f
+cc_47 N_net10_c_47_p N_VSS_MI7@7_d 6.90834f
+cc_48 N_net10_c_48_p N_VSS_MI7@7_d 9.49868f
+cc_49 N_net10_c_49_p N_VSS_MI7@7_d 6.90834f
+cc_50 N_net10_c_50_p N_VSS_MI7@7_d 9.49868f
+cc_51 N_net10_MI7@7_g N_VSS_MI7@7_d 35.4036f
+cc_52 N_net10_MI7@6_g N_VSS_MI7@7_d 35.4036f
+cc_53 N_net10_c_53_p N_VSS_MI7@5_d 6.90834f
+cc_54 N_net10_c_54_p N_VSS_MI7@5_d 9.49868f
+cc_55 N_net10_c_55_p N_VSS_MI7@5_d 6.90834f
+cc_56 N_net10_c_56_p N_VSS_MI7@5_d 9.49868f
+cc_57 N_net10_MI7@5_g N_VSS_MI7@5_d 35.4036f
+cc_58 N_net10_MI7@4_g N_VSS_MI7@5_d 35.4036f
+cc_59 N_net10_c_59_p N_VSS_MI7@3_d 6.90834f
+cc_60 N_net10_c_60_p N_VSS_MI7@3_d 9.49868f
+cc_61 N_net10_c_61_p N_VSS_MI7@3_d 6.90834f
+cc_62 N_net10_c_62_p N_VSS_MI7@3_d 9.49868f
+cc_63 N_net10_MI7@3_g N_VSS_MI7@3_d 35.4036f
+cc_64 N_net10_MI7@2_g N_VSS_MI7@3_d 35.4036f
+cc_65 N_net10_c_65_p N_OUT_c_303_n 12.9523f
+cc_66 N_net10_c_66_p N_OUT_c_304_n 15.5415f
+cc_67 N_net10_c_67_p N_OUT_c_305_n 15.5415f
+cc_68 N_net10_c_68_p N_OUT_c_306_n 15.5415f
+cc_69 N_net10_c_69_p N_OUT_c_307_n 15.5415f
+cc_70 N_net10_c_70_p N_OUT_c_308_n 15.5415f
+cc_71 N_net10_c_71_p N_OUT_c_309_n 15.5415f
+cc_72 N_net10_c_72_p N_OUT_c_310_n 15.5415f
+cc_73 N_net10_c_17_p N_OUT_MI7_s 6.90808f
+cc_74 N_net10_c_18_p N_OUT_MI7_s 9.49868f
+cc_75 N_net10_MI7_g N_OUT_MI7_s 35.4039f
+cc_76 N_net10_c_19_p N_OUT_MI7@16_s 6.90808f
+cc_77 N_net10_c_20_p N_OUT_MI7@16_s 9.49868f
+cc_78 N_net10_c_23_p N_OUT_MI7@16_s 6.90808f
+cc_79 N_net10_c_24_p N_OUT_MI7@16_s 9.49868f
+cc_80 N_net10_MI7@16_g N_OUT_MI7@16_s 35.4039f
+cc_81 N_net10_MI7@15_g N_OUT_MI7@16_s 35.4039f
+cc_82 N_net10_c_25_p N_OUT_MI7@14_s 6.90808f
+cc_83 N_net10_c_26_p N_OUT_MI7@14_s 9.49868f
+cc_84 N_net10_c_29_p N_OUT_MI7@14_s 6.90808f
+cc_85 N_net10_c_30_p N_OUT_MI7@14_s 9.49868f
+cc_86 N_net10_MI7@14_g N_OUT_MI7@14_s 35.4039f
+cc_87 N_net10_MI7@13_g N_OUT_MI7@14_s 35.4039f
+cc_88 N_net10_c_31_p N_OUT_MI7@12_s 6.90808f
+cc_89 N_net10_c_32_p N_OUT_MI7@12_s 9.49868f
+cc_90 N_net10_c_35_p N_OUT_MI7@12_s 6.90808f
+cc_91 N_net10_c_36_p N_OUT_MI7@12_s 9.49868f
+cc_92 N_net10_MI7@12_g N_OUT_MI7@12_s 35.4039f
+cc_93 N_net10_MI7@11_g N_OUT_MI7@12_s 35.4039f
+cc_94 N_net10_c_37_p N_OUT_MI7@10_s 6.90808f
+cc_95 N_net10_c_38_p N_OUT_MI7@10_s 9.49868f
+cc_96 N_net10_c_41_p N_OUT_MI7@10_s 6.90808f
+cc_97 N_net10_c_42_p N_OUT_MI7@10_s 9.49868f
+cc_98 N_net10_MI7@10_g N_OUT_MI7@10_s 35.4039f
+cc_99 N_net10_MI7@9_g N_OUT_MI7@10_s 35.4039f
+cc_100 N_net10_c_43_p N_OUT_MI7@8_s 6.90808f
+cc_101 N_net10_c_44_p N_OUT_MI7@8_s 9.49868f
+cc_102 N_net10_c_47_p N_OUT_MI7@8_s 6.90808f
+cc_103 N_net10_c_48_p N_OUT_MI7@8_s 9.49868f
+cc_104 N_net10_MI7@8_g N_OUT_MI7@8_s 35.4039f
+cc_105 N_net10_MI7@7_g N_OUT_MI7@8_s 35.4039f
+cc_106 N_net10_c_49_p N_OUT_MI7@6_s 6.90808f
+cc_107 N_net10_c_50_p N_OUT_MI7@6_s 9.49868f
+cc_108 N_net10_c_53_p N_OUT_MI7@6_s 6.90808f
+cc_109 N_net10_c_54_p N_OUT_MI7@6_s 9.49868f
+cc_110 N_net10_MI7@6_g N_OUT_MI7@6_s 35.4039f
+cc_111 N_net10_MI7@5_g N_OUT_MI7@6_s 35.4039f
+cc_112 N_net10_c_55_p N_OUT_MI7@4_s 6.90808f
+cc_113 N_net10_c_56_p N_OUT_MI7@4_s 9.49868f
+cc_114 N_net10_c_59_p N_OUT_MI7@4_s 6.90808f
+cc_115 N_net10_c_60_p N_OUT_MI7@4_s 9.49868f
+cc_116 N_net10_MI7@4_g N_OUT_MI7@4_s 35.4039f
+cc_117 N_net10_MI7@3_g N_OUT_MI7@4_s 35.4039f
+cc_118 N_net10_c_61_p N_OUT_MI7@2_s 6.90808f
+cc_119 N_net10_c_62_p N_OUT_MI7@2_s 9.49868f
+cc_120 N_net10_MI7@2_g N_OUT_MI7@2_s 35.4039f
+cc_121 N_net10_MI4_d N_IN_c_423_n 6.90834f
+cc_122 N_net10_MI4_d N_IN_c_424_n 9.49868f
+cc_123 N_net10_MI4@8_d N_IN_c_425_n 6.90834f
+cc_124 N_net10_MI4@8_d N_IN_c_426_n 9.49868f
+cc_125 N_net10_MI4@8_d N_IN_c_427_n 6.90834f
+cc_126 N_net10_MI4@8_d N_IN_c_428_n 9.49868f
+cc_127 N_net10_MI4@6_d N_IN_c_429_n 6.90834f
+cc_128 N_net10_MI4@6_d N_IN_c_430_n 9.49868f
+cc_129 N_net10_MI4@6_d N_IN_c_431_n 6.90834f
+cc_130 N_net10_MI4@6_d N_IN_c_432_n 9.49868f
+cc_131 N_net10_MI4@4_d N_IN_c_433_n 6.90834f
+cc_132 N_net10_MI4@4_d N_IN_c_434_n 9.49868f
+cc_133 N_net10_MI4@4_d N_IN_c_435_n 6.90834f
+cc_134 N_net10_MI4@4_d N_IN_c_436_n 9.49868f
+cc_135 N_net10_MI4@2_d N_IN_c_437_n 6.90834f
+cc_136 N_net10_MI4@2_d N_IN_c_438_n 9.49868f
+cc_137 N_net10_c_1_p N_IN_MI4_g 5.18119f
+cc_138 N_net10_MI4_d N_IN_MI4_g 30.2224f
+cc_139 N_net10_c_1_p N_IN_MI4@8_g 5.18119f
+cc_140 N_net10_MI4@8_d N_IN_MI4@8_g 30.2224f
+cc_141 N_net10_c_1_p N_IN_MI4@7_g 5.18119f
+cc_142 N_net10_MI4@8_d N_IN_MI4@7_g 30.2224f
+cc_143 N_net10_c_1_p N_IN_MI4@6_g 5.18119f
+cc_144 N_net10_MI4@6_d N_IN_MI4@6_g 30.2224f
+cc_145 N_net10_c_1_p N_IN_MI4@5_g 5.18119f
+cc_146 N_net10_MI4@6_d N_IN_MI4@5_g 30.2224f
+cc_147 N_net10_c_1_p N_IN_MI4@4_g 5.18119f
+cc_148 N_net10_MI4@4_d N_IN_MI4@4_g 30.2224f
+cc_149 N_net10_c_1_p N_IN_MI4@3_g 5.18119f
+cc_150 N_net10_MI4@4_d N_IN_MI4@3_g 30.2224f
+cc_151 N_net10_c_151_p N_IN_MI4@2_g 10.3613f
+cc_152 N_net10_c_152_p N_IN_MI4@2_g 12.3053f
+cc_153 N_net10_c_1_p N_IN_MI4@2_g 6.47649f
+cc_154 N_net10_MI4@2_d N_IN_MI4@2_g 6.25992f
+cc_155 N_VDD_MI4_s N_IN_c_423_n 6.90808f
+cc_156 N_VDD_MI4_s N_IN_c_424_n 9.49868f
+cc_157 N_VDD_c_221_p N_IN_c_459_n 15.5423f
+cc_158 N_VDD_MI4_s N_IN_c_425_n 6.90808f
+cc_159 N_VDD_MI4_s N_IN_c_426_n 9.49868f
+cc_160 N_VDD_MI4@7_s N_IN_c_427_n 6.90808f
+cc_161 N_VDD_MI4@7_s N_IN_c_428_n 9.49868f
+cc_162 N_VDD_c_226_p N_IN_c_464_n 15.5423f
+cc_163 N_VDD_MI4@7_s N_IN_c_429_n 6.90808f
+cc_164 N_VDD_MI4@7_s N_IN_c_430_n 9.49868f
+cc_165 N_VDD_MI4@5_s N_IN_c_431_n 6.90808f
+cc_166 N_VDD_MI4@5_s N_IN_c_432_n 9.49868f
+cc_167 N_VDD_c_231_p N_IN_c_469_n 15.5423f
+cc_168 N_VDD_MI4@5_s N_IN_c_433_n 6.90808f
+cc_169 N_VDD_MI4@5_s N_IN_c_434_n 9.49868f
+cc_170 N_VDD_MI4@3_s N_IN_c_435_n 6.90808f
+cc_171 N_VDD_MI4@3_s N_IN_c_436_n 9.49868f
+cc_172 N_VDD_c_236_p N_IN_c_474_n 15.5423f
+cc_173 N_VDD_MI4@3_s N_IN_c_437_n 6.90808f
+cc_174 N_VDD_MI4@3_s N_IN_c_438_n 9.49868f
+cc_175 N_VDD_MI6_s N_IN_c_477_n 6.90808f
+cc_176 N_VDD_MI6_s N_IN_c_478_n 9.49868f
+cc_177 N_VDD_c_241_p N_IN_c_479_n 15.5423f
+cc_178 N_VDD_MI6_s N_IN_c_480_n 6.90808f
+cc_179 N_VDD_MI6_s N_IN_c_481_n 9.49868f
+cc_180 N_VDD_MI6@15_s N_IN_c_482_n 6.90808f
+cc_181 N_VDD_MI6@15_s N_IN_c_483_n 9.49868f
+cc_182 N_VDD_c_246_p N_IN_c_484_n 15.5423f
+cc_183 N_VDD_MI6@15_s N_IN_c_485_n 6.90808f
+cc_184 N_VDD_MI6@15_s N_IN_c_486_n 9.49868f
+cc_185 N_VDD_MI6@13_s N_IN_c_487_n 6.90808f
+cc_186 N_VDD_MI6@13_s N_IN_c_488_n 9.49868f
+cc_187 N_VDD_c_251_p N_IN_c_489_n 15.5423f
+cc_188 N_VDD_MI6@13_s N_IN_c_490_n 6.90808f
+cc_189 N_VDD_MI6@13_s N_IN_c_491_n 9.49868f
+cc_190 N_VDD_MI6@11_s N_IN_c_492_n 6.90808f
+cc_191 N_VDD_MI6@11_s N_IN_c_493_n 9.49868f
+cc_192 N_VDD_c_256_p N_IN_c_494_n 15.5423f
+cc_193 N_VDD_MI6@11_s N_IN_c_495_n 6.90808f
+cc_194 N_VDD_MI6@11_s N_IN_c_496_n 9.49868f
+cc_195 N_VDD_MI6@9_s N_IN_c_497_n 6.90808f
+cc_196 N_VDD_MI6@9_s N_IN_c_498_n 9.49868f
+cc_197 N_VDD_c_261_p N_IN_c_499_n 15.5423f
+cc_198 N_VDD_MI6@9_s N_IN_c_500_n 6.90808f
+cc_199 N_VDD_MI6@9_s N_IN_c_501_n 9.49868f
+cc_200 N_VDD_MI6@7_s N_IN_c_502_n 6.90808f
+cc_201 N_VDD_MI6@7_s N_IN_c_503_n 9.49868f
+cc_202 N_VDD_c_266_p N_IN_c_504_n 15.5423f
+cc_203 N_VDD_MI6@7_s N_IN_c_505_n 6.90808f
+cc_204 N_VDD_MI6@7_s N_IN_c_506_n 9.49868f
+cc_205 N_VDD_MI6@5_s N_IN_c_507_n 6.90808f
+cc_206 N_VDD_MI6@5_s N_IN_c_508_n 9.49868f
+cc_207 N_VDD_c_271_p N_IN_c_509_n 15.5423f
+cc_208 N_VDD_MI6@5_s N_IN_c_510_n 6.90808f
+cc_209 N_VDD_MI6@5_s N_IN_c_511_n 9.49868f
+cc_210 N_VDD_MI6@3_s N_IN_c_512_n 6.90808f
+cc_211 N_VDD_MI6@3_s N_IN_c_513_n 9.49868f
+cc_212 N_VDD_c_276_p N_IN_c_514_n 15.5423f
+cc_213 N_VDD_MI6@3_s N_IN_c_515_n 6.90808f
+cc_214 N_VDD_MI6@3_s N_IN_c_516_n 9.49868f
+cc_215 N_VDD_MI4_s N_IN_MI4_g 35.4039f
+cc_216 N_VDD_MI4_s N_IN_MI4@8_g 35.4039f
+cc_217 N_VDD_MI4@7_s N_IN_MI4@7_g 35.4039f
+cc_218 N_VDD_MI4@7_s N_IN_MI4@6_g 35.4039f
+cc_219 N_VDD_MI4@5_s N_IN_MI4@5_g 35.4039f
+cc_220 N_VDD_MI4@5_s N_IN_MI4@4_g 35.4039f
+cc_221 N_VDD_MI4@3_s N_IN_MI4@3_g 35.4039f
+cc_222 N_VDD_MI4@3_s N_IN_MI4@2_g 35.4039f
+cc_223 N_VDD_MI6_s N_IN_MI6_g 35.4039f
+cc_224 N_VDD_MI6_s N_IN_MI6@16_g 35.4039f
+cc_225 N_VDD_MI6@15_s N_IN_MI6@15_g 35.4039f
+cc_226 N_VDD_MI6@15_s N_IN_MI6@14_g 35.4039f
+cc_227 N_VDD_MI6@13_s N_IN_MI6@13_g 35.4039f
+cc_228 N_VDD_MI6@13_s N_IN_MI6@12_g 35.4039f
+cc_229 N_VDD_MI6@11_s N_IN_MI6@11_g 35.4039f
+cc_230 N_VDD_MI6@11_s N_IN_MI6@10_g 35.4039f
+cc_231 N_VDD_MI6@9_s N_IN_MI6@9_g 35.4039f
+cc_232 N_VDD_MI6@9_s N_IN_MI6@8_g 35.4039f
+cc_233 N_VDD_MI6@7_s N_IN_MI6@7_g 35.4039f
+cc_234 N_VDD_MI6@7_s N_IN_MI6@6_g 35.4039f
+cc_235 N_VDD_MI6@5_s N_IN_MI6@5_g 35.4039f
+cc_236 N_VDD_MI6@5_s N_IN_MI6@4_g 35.4039f
+cc_237 N_VDD_MI6@3_s N_IN_MI6@3_g 35.4039f
+cc_238 N_VDD_MI6@3_s N_IN_MI6@2_g 35.4039f
+cc_239 N_OUT_MI6_d N_IN_c_477_n 6.90834f
+cc_240 N_OUT_MI6_d N_IN_c_478_n 9.49868f
+cc_241 N_OUT_MI6@16_d N_IN_c_480_n 6.90834f
+cc_242 N_OUT_MI6@16_d N_IN_c_481_n 9.49868f
+cc_243 N_OUT_MI6@16_d N_IN_c_482_n 6.90834f
+cc_244 N_OUT_MI6@16_d N_IN_c_483_n 9.49868f
+cc_245 N_OUT_MI6@14_d N_IN_c_485_n 6.90834f
+cc_246 N_OUT_MI6@14_d N_IN_c_486_n 9.49868f
+cc_247 N_OUT_MI6@14_d N_IN_c_487_n 6.90834f
+cc_248 N_OUT_MI6@14_d N_IN_c_488_n 9.49868f
+cc_249 N_OUT_MI6@12_d N_IN_c_490_n 6.90834f
+cc_250 N_OUT_MI6@12_d N_IN_c_491_n 9.49868f
+cc_251 N_OUT_MI6@12_d N_IN_c_492_n 6.90834f
+cc_252 N_OUT_MI6@12_d N_IN_c_493_n 9.49868f
+cc_253 N_OUT_MI6@10_d N_IN_c_495_n 6.90834f
+cc_254 N_OUT_MI6@10_d N_IN_c_496_n 9.49868f
+cc_255 N_OUT_MI6@10_d N_IN_c_497_n 6.90834f
+cc_256 N_OUT_MI6@10_d N_IN_c_498_n 9.49868f
+cc_257 N_OUT_MI6@8_d N_IN_c_500_n 6.90834f
+cc_258 N_OUT_MI6@8_d N_IN_c_501_n 9.49868f
+cc_259 N_OUT_MI6@8_d N_IN_c_502_n 6.90834f
+cc_260 N_OUT_MI6@8_d N_IN_c_503_n 9.49868f
+cc_261 N_OUT_MI6@6_d N_IN_c_505_n 6.90834f
+cc_262 N_OUT_MI6@6_d N_IN_c_506_n 9.49868f
+cc_263 N_OUT_MI6@6_d N_IN_c_507_n 6.90834f
+cc_264 N_OUT_MI6@6_d N_IN_c_508_n 9.49868f
+cc_265 N_OUT_MI6@4_d N_IN_c_510_n 6.90834f
+cc_266 N_OUT_MI6@4_d N_IN_c_511_n 9.49868f
+cc_267 N_OUT_MI6@4_d N_IN_c_512_n 6.90834f
+cc_268 N_OUT_MI6@4_d N_IN_c_513_n 9.49868f
+cc_269 N_OUT_MI6@2_d N_IN_c_515_n 6.90834f
+cc_270 N_OUT_MI6@2_d N_IN_c_516_n 9.49868f
+cc_271 N_OUT_c_391_p N_IN_MI6_g 5.18119f
+cc_272 N_OUT_MI6_d N_IN_MI6_g 30.2224f
+cc_273 N_OUT_c_391_p N_IN_MI6@16_g 5.18119f
+cc_274 N_OUT_MI6@16_d N_IN_MI6@16_g 30.2224f
+cc_275 N_OUT_c_391_p N_IN_MI6@15_g 5.18119f
+cc_276 N_OUT_MI6@16_d N_IN_MI6@15_g 30.2224f
+cc_277 N_OUT_c_391_p N_IN_MI6@14_g 5.18119f
+cc_278 N_OUT_MI6@14_d N_IN_MI6@14_g 30.2224f
+cc_279 N_OUT_c_391_p N_IN_MI6@13_g 5.18119f
+cc_280 N_OUT_MI6@14_d N_IN_MI6@13_g 30.2224f
+cc_281 N_OUT_c_391_p N_IN_MI6@12_g 5.18119f
+cc_282 N_OUT_MI6@12_d N_IN_MI6@12_g 30.2224f
+cc_283 N_OUT_c_391_p N_IN_MI6@11_g 5.18119f
+cc_284 N_OUT_MI6@12_d N_IN_MI6@11_g 30.2224f
+cc_285 N_OUT_c_391_p N_IN_MI6@10_g 5.18119f
+cc_286 N_OUT_MI6@10_d N_IN_MI6@10_g 30.2224f
+cc_287 N_OUT_c_391_p N_IN_MI6@9_g 5.18119f
+cc_288 N_OUT_MI6@10_d N_IN_MI6@9_g 30.2224f
+cc_289 N_OUT_c_391_p N_IN_MI6@8_g 5.18119f
+cc_290 N_OUT_MI6@8_d N_IN_MI6@8_g 30.2224f
+cc_291 N_OUT_c_391_p N_IN_MI6@7_g 5.18119f
+cc_292 N_OUT_MI6@8_d N_IN_MI6@7_g 30.2224f
+cc_293 N_OUT_c_391_p N_IN_MI6@6_g 5.18119f
+cc_294 N_OUT_MI6@6_d N_IN_MI6@6_g 30.2224f
+cc_295 N_OUT_c_391_p N_IN_MI6@5_g 5.18119f
+cc_296 N_OUT_MI6@6_d N_IN_MI6@5_g 30.2224f
+cc_297 N_OUT_c_391_p N_IN_MI6@4_g 5.18119f
+cc_298 N_OUT_MI6@4_d N_IN_MI6@4_g 30.2224f
+cc_299 N_OUT_c_391_p N_IN_MI6@3_g 5.18119f
+cc_300 N_OUT_MI6@4_d N_IN_MI6@3_g 30.2224f
+cc_301 N_OUT_c_391_p N_IN_MI6@2_g 5.18119f
+cc_302 N_OUT_MI6@2_d N_IN_MI6@2_g 30.2224f

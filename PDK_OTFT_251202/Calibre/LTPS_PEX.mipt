@@ -1,0 +1,83 @@
+# MIPT file for 2021 TIANMA LTPS TFT process
+mipt_version = 2.0
+process = LTPS
+calibration_type = ALL # where ALL is one of 4 keyword choices
+# base layer:
+
+dielectric = Glass {
+    diel_type = planar
+    thickness = 1000
+    eps = 5
+}
+dielectric = GI {
+    diel_type = planar
+    thickness = 0.14
+    eps = 4.8
+}
+conductor = M1 {
+    thickness = 0.1
+    min_width = 3
+    min_spacing = 3
+    r_sheet = 0.5
+}
+dielectric = IMD {
+    diel_type = planar
+    thickness = 0.2
+    eps = 5.8
+}
+conductor = MC {
+    thickness = 0.1
+    min_width = 3
+    min_spacing = 3
+    r_sheet = 0.5
+}
+dielectric = ILD {
+    diel_type = planar
+    thickness = 0.6
+    eps = 4.7
+}
+conductor = M2 {
+    thickness = 0.4
+    min_width = 3
+    min_spacing = 3
+    r_sheet = 0.07
+}
+dielectric = PLN_D {
+    diel_type = planar
+    thickness = 2.6
+    eps = 3.5
+}
+conductor = ITO {
+    thickness = 0.1
+    min_width = 5
+    min_spacing = 3
+    r_sheet = 60
+}
+
+via = Via1_1C {
+    measured_from = M1
+    measured_to = MC
+    min_width = 3
+    min_spacing = 3
+    resistance = 0
+    enclosure_down = 3
+    enclosure_up = 3
+}
+via = Via1_C2 {
+    measured_from = MC
+    measured_to = M2
+    min_width = 3
+    min_spacing = 3
+    resistance = 0
+    enclosure_down = 3
+    enclosure_up = 3
+}
+via = PLN {
+    measured_from = M2
+    measured_to = ITO
+    min_width = 5
+    min_spacing = 3
+    resistance = 0
+    enclosure_down = 3.5
+    enclosure_up = 3.5
+}

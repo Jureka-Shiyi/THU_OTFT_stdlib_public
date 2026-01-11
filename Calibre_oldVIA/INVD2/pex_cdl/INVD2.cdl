@@ -1,0 +1,30 @@
+* File: INVD2.cdl
+* Created: Mon Dec 22 20:13:29 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "INVD2.cdl.pex"
+.subckt INVD2  VSS VDD OUT IN
+* 
+* IN	IN
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+XMI5 N_VSS_MI5_d N_VSS_MI5_g N_net10_MI5_s ptft L=4e-05 W=0.0001
+XMI4 N_net10_MI4_d N_IN_MI4_g N_VDD_MI4_s ptft L=1e-05 W=0.0002
+XMI5@2 N_VSS_MI5@2_d N_VSS_MI5@2_g N_net10_MI5_s ptft L=4e-05 W=0.0001
+XMI4@2 N_net10_MI4@2_d N_IN_MI4@2_g N_VDD_MI4_s ptft L=1e-05 W=0.0002
+XMI7 N_VSS_MI7_d N_net10_MI7_g N_OUT_MI7_s ptft L=1e-05 W=0.0002
+XMI6 N_OUT_MI6_d N_IN_MI6_g N_VDD_MI6_s ptft L=1e-05 W=0.0002
+XMI7@4 N_VSS_MI7_d N_net10_MI7@4_g N_OUT_MI7@4_s ptft L=1e-05 W=0.0002
+XMI6@4 N_OUT_MI6@4_d N_IN_MI6@4_g N_VDD_MI6_s ptft L=1e-05 W=0.0002
+XMI7@3 N_VSS_MI7@3_d N_net10_MI7@3_g N_OUT_MI7@4_s ptft L=1e-05 W=0.0002
+XMI6@3 N_OUT_MI6@4_d N_IN_MI6@3_g N_VDD_MI6@3_s ptft L=1e-05 W=0.0002
+XMI7@2 N_VSS_MI7@3_d N_net10_MI7@2_g N_OUT_MI7@2_s ptft L=1e-05 W=0.0002
+XMI6@2 N_OUT_MI6@2_d N_IN_MI6@2_g N_VDD_MI6@3_s ptft L=1e-05 W=0.0002
+*
+.include "INVD2.cdl.INVD2.pxi"
+*
+.ends
+*
+*

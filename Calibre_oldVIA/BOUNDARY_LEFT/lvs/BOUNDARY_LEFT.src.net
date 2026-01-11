@@ -1,0 +1,26 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  OTFT_stdlib_cells
+* Top Cell Name: BOUNDARY_LEFT
+* View Name:     schematic
+* Netlisted on:  Dec 23 08:29:55 2025
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: OTFT_stdlib_cells
+* Cell Name:    BOUNDARY_LEFT
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT BOUNDARY_LEFT VDD VSS
+*.PININFO VDD:B VSS:B
+.ENDS
+

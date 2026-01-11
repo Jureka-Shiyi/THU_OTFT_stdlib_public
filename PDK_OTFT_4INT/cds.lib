@@ -1,0 +1,10 @@
+# File Created by  at Tue Dec  2 16:51:26 2025
+# assisted by CdsLibEditor
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/dfII/cds.lib
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/hdl/cds.lib
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/pic/cds.lib
+SOFTINCLUDE /tools/Cadence/IC618/share/cdssetup/sg/cds.lib
+
+DEFINE basic $CDSHOME/tools/dfII/etc/cdslib/basic
+DEFINE analogLib $CDSHOME/tools/dfII/etc/cdslib/artist/analogLib
+DEFINE PDK_OTFT_4INT .

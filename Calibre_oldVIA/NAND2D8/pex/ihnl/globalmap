@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+OTFT_stdlib_cells/NAND2D8/schematic NAND2D8
+$endmodel
+$net
+$endnet
+$param
+$endparam

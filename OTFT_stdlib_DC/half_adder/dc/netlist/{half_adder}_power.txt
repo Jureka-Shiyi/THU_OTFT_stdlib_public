@@ -1,0 +1,37 @@
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort high
+Design : half_adder
+Version: T-2022.03-SP2
+Date   : Sat Dec 27 16:11:21 2025
+****************************************
+
+
+Library(s) Used:
+
+    OTFT_stdlib (File: /data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_13/OTFT_stdlib_13.db)
+
+
+Operating Conditions: OTFT_stdlib   Library: OTFT_stdlib
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 40   
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1mW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+half_adder                             1.33e-04 1.93e-03   23.940   23.942 100.0
+1

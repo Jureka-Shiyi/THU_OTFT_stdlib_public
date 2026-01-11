@@ -1,0 +1,74 @@
+* File: DFFSRD16.cdl
+* Created: Sat Aug 17 14:09:06 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/DFFSRD16.cdl.pex"
+.subckt DFFSRD16  D RN SN CK Q VSS QN VDD
+* 
+* VDD	VDD
+* QN	QN
+* VSS	VSS
+* Q	Q
+* CK	CK
+* SN	SN
+* RN	RN
+* D	D
+XMI16 N_Q_MI16_d N_qbint_MI16_g N_VDD_MI16_s ptft L=4e-06 W=8e-05
+XMI16@2 N_Q_MI16_d N_qbint_MI16@2_g N_VDD_MI16@2_s ptft L=4e-06 W=8e-05
+XMI18 N_QN_MI18_d N_qint_MI18_g N_VDD_MI18_s ptft L=4e-06 W=8e-05
+XMI18@2 N_QN_MI18_d N_qint_MI18@2_g N_VDD_MI18@2_s ptft L=4e-06 W=8e-05
+XMI38 N_Q_MI38_d N_qbint_MI38_g N_VSS_MI38_s ntft L=4e-06 W=8e-05
+XMI35@2 N_Q_MI38_d N_qbint_MI35@2_g N_VSS_MI35@2_s ntft L=4e-06 W=8e-05
+XMI35 N_Q_MI35_d N_qbint_MI35_g N_VSS_MI35_s ntft L=4e-06 W=8e-05
+XMI38@2 N_Q_MI35_d N_qbint_MI38@2_g N_VSS_MI38@2_s ntft L=4e-06 W=8e-05
+XMI39 N_QN_MI39_d N_qint_MI39_g N_VSS_MI39_s ntft L=4e-06 W=8e-05
+XMI37@2 N_QN_MI39_d N_qint_MI37@2_g N_VSS_MI37@2_s ntft L=4e-06 W=8e-05
+XMI37 N_QN_MI37_d N_qint_MI37_g N_VSS_MI37_s ntft L=4e-06 W=8e-05
+XMI39@2 N_QN_MI37_d N_qint_MI39@2_g N_VSS_MI39@2_s ntft L=4e-06 W=8e-05
+XMI11 N_qbint_MI11_d N_n35_MI11_g N_VDD_MI11_s ptft L=4e-06 W=4e-05
+XMI17 N_qint_MI17_d N_qbint_MI17_g N_VDD_MI17_s ptft L=4e-06 W=4e-05
+XMI30 N_qbint_MI30_d N_n35_MI30_g N_VSS_MI30_s ntft L=4e-06 W=8e-05
+XMI36 N_qint_MI36_d N_qbint_MI36_g N_VSS_MI36_s ntft L=4e-06 W=8e-05
+XMI0 N_CKb_MI0_d N_CK_MI0_g N_VDD_MI0_s ptft L=4e-06 W=1e-05
+XMI1 N_CKbb_MI1_d N_CKb_MI1_g N_VDD_MI1_s ptft L=4e-06 W=1e-05
+XMI3 N_n20_MI3_d N_CKbb_MI3_g n22 ptft L=4e-06 W=1e-05
+XMI2 n22 N_D_MI2_g N_VDD_MI2_s ptft L=4e-06 W=1e-05
+XMI4 N_RNb_MI4_d N_RN_MI4_g N_VDD_MI4_s ptft L=4e-06 W=1e-05
+XMI5 N_mout_MI5_d N_SN_MI5_g N_VDD_MI5_s ptft L=4e-06 W=1e-05
+XMI7 N_mout_MI7_d N_n20_MI7_g net72 ptft L=4e-06 W=1e-05
+XMI6 net72 N_RNb_MI6_g N_VDD_MI6_s ptft L=4e-06 W=1e-05
+XMI9 N_n20_MI9_d N_CKb_MI9_g n31 ptft L=4e-06 W=1e-05
+XMI8 n31 N_mout_MI8_g N_VDD_MI8_s ptft L=4e-06 W=1e-05
+XMI10 N_n35_MI10_d N_CKb_MI10_g N_mout_MI10_s ptft L=4e-06 W=1e-05
+XMI13 N_n35_MI13_d N_CKbb_MI13_g N_noxref_16_MI13_s ptft L=4e-06 W=1e-05
+XMI12 N_noxref_16_MI13_s N_SN_MI12_g N_VDD_MI12_s ptft L=4e-06 W=1e-05
+XMI15 N_noxref_16_MI15_d N_qbint_MI15_g noxref_24 ptft L=4e-06 W=1e-05
+XMI14 noxref_24 N_RNb_MI14_g N_VDD_MI14_s ptft L=4e-06 W=1e-05
+XMI19 N_CKb_MI19_d N_CK_MI19_g N_VSS_MI19_s ntft L=4e-06 W=2e-05
+XMI20 N_CKbb_MI20_d N_CKb_MI20_g N_VSS_MI20_s ntft L=4e-06 W=2e-05
+XMI21 n21 N_D_MI21_g N_VSS_MI21_s ntft L=4e-06 W=2e-05
+XMI22 N_n20_MI22_d N_CKb_MI22_g n21 ntft L=4e-06 W=2e-05
+XMI23 N_RNb_MI23_d N_RN_MI23_g N_VSS_MI23_s ntft L=4e-06 W=2e-05
+XMI24 N_mout_MI24_d N_RNb_MI24_g N_net41_MI24_s ntft L=4e-06 W=2e-05
+XMI25 N_net41_MI25_d N_SN_MI25_g N_VSS_MI25_s ntft L=4e-06 W=2e-05
+XMI26 N_mout_MI26_d N_n20_MI26_g N_net41_MI25_d ntft L=4e-06 W=2e-05
+XMI27 n30 N_mout_MI27_g N_VSS_MI27_s ntft L=4e-06 W=2e-05
+XMI28 N_n20_MI28_d N_CKbb_MI28_g n30 ntft L=4e-06 W=2e-05
+XMI29 N_n35_MI29_d N_CKbb_MI29_g N_mout_MI29_s ntft L=4e-06 W=2e-05
+XMI32 N_n42_MI32_d N_SN_MI32_g N_VSS_MI32_s ntft L=4e-06 W=2e-05
+XMI31 N_n40_MI31_d N_RNb_MI31_g N_n42_MI32_d ntft L=4e-06 W=2e-05
+XMI34 N_n40_MI34_d N_qbint_MI34_g N_n42_MI34_s ntft L=4e-06 W=2e-05
+XMI33 N_n35_MI33_d N_CKb_MI33_g N_n40_MI34_d ntft L=4e-06 W=2e-05
+c_3883 n22 0 0.113807f
+c_3894 net72 0 0.100161f
+c_3910 n31 0 0.0882727f
+c_3920 noxref_24 0 0.189662f
+c_3933 n21 0 0.149798f
+c_3946 n30 0 0.123988f
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/DFFSRD16.cdl.DFFSRD16.pxi"
+*
+.ends
+*
+*

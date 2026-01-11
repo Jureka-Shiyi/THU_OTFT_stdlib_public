@@ -1,0 +1,32 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  OTFT_stdlib_cells
+* Top Cell Name: NOR2D1
+* View Name:     schematic
+* Netlisted on:  Dec 13 11:17:07 2025
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: OTFT_stdlib_cells
+* Cell Name:    NOR2D1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT NOR2D1 IN1 IN2 OUT VDD VSS
+*.PININFO IN1:I IN2:I VDD:I VSS:I OUT:O
+MI5 VSS net11 OUT ptft W=100u L=10u
+MI4 VSS VSS net11 ptft W=100u L=10u
+MI3 OUT IN2 net12 ptft W=800u L=10u
+MI2 net12 IN1 VDD ptft W=800u L=10u
+MI1 net11 IN2 net10 ptft W=800u L=10u
+MI0 net10 IN1 VDD ptft W=800u L=10u
+.ENDS
+

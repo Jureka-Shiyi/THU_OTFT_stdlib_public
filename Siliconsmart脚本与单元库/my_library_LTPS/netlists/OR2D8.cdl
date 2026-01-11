@@ -1,0 +1,33 @@
+* File: OR2D8.cdl
+* Created: Wed Jan 15 20:36:24 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/OR2D8.cdl.pex"
+.subckt OR2D8  IN1 IN2 VDD VSS OUT
+* 
+* OUT	OUT
+* VSS	VSS
+* VDD	VDD
+* IN2	IN2
+* IN1	IN1
+XMI2 N_net11_MI2_d N_IN1_MI2_g N_VSS_MI2_s ntft L=4e-06 W=8e-05
+XMI3 N_net11_MI3_d N_IN1_MI3_g N_VSS_MI3_s ntft L=4e-06 W=8e-05
+XMI10 N_net11_MI2_d N_IN2_MI10_g N_net12_MI10_s ptft L=4e-06 W=8e-05
+XMI0 N_net12_MI10_s N_IN1_MI0_g N_VDD_MI0_s ptft L=4e-06 W=8e-05
+XMI6 N_net11_MI3_d N_IN2_MI6_g N_net12_MI6_s ptft L=4e-06 W=8e-05
+XMI9 N_net12_MI6_s N_IN1_MI9_g N_VDD_MI9_s ptft L=4e-06 W=8e-05
+XMI11 N_OUT_MI11_d N_net11_MI11_g N_VDD_MI11_s ptft L=4e-06 W=8e-05
+XMI7 N_OUT_MI7_d N_net11_MI7_g N_VDD_MI7_s ptft L=4e-06 W=8e-05
+XMI8 N_net11_MI8_d N_IN2_MI8_g N_VSS_MI8_s ntft L=4e-06 W=8e-05
+XMI8@2 N_net11_MI8_d N_IN2_MI8@2_g N_VSS_MI8@2_s ntft L=4e-06 W=8e-05
+XMI1 N_OUT_MI1_d N_net11_MI1_g N_VSS_MI1_s ntft L=4e-06 W=8e-05
+XMI5@2 N_OUT_MI1_d N_net11_MI5@2_g N_VSS_MI5@2_s ntft L=4e-06 W=8e-05
+XMI5 N_OUT_MI5_d N_net11_MI5_g N_VSS_MI5_s ntft L=4e-06 W=8e-05
+XMI1@2 N_OUT_MI5_d N_net11_MI1@2_g N_VSS_MI1@2_s ntft L=4e-06 W=8e-05
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/OR2D8.cdl.OR2D8.pxi"
+*
+.ends
+*
+*

@@ -1,0 +1,35 @@
+* File: XNOR2D4.cdl
+* Created: Wed Jan 15 21:19:09 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/XNOR2D4.cdl.pex"
+.subckt XNOR2D4  IN2 IN1 VSS VDD OUT
+* 
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+* IN1	IN1
+* IN2	IN2
+XMI1 N_net23_MI1_d N_IN1_MI1_g N_VSS_MI1_s ntft L=4e-06 W=8e-05
+XMI15 N_net2_MI15_d N_IN2_MI15_g N_VSS_MI15_s ntft L=4e-06 W=8e-05
+XMI9 N_net27_MI9_d N_net23_MI9_g N_VSS_MI9_s ntft L=4e-06 W=8e-05
+XMI8 N_net26_MI8_d N_net2_MI8_g N_net27_MI9_d ntft L=4e-06 W=8e-05
+XMI3 N_net27_MI3_d N_net23_MI3_g N_VSS_MI3_s ntft L=4e-06 W=8e-05
+XMI2 N_net26_MI2_d N_net2_MI2_g N_net27_MI3_d ntft L=4e-06 W=8e-05
+XMI11 N_net23_MI11_d N_IN2_MI11_g N_net26_MI11_s ntft L=4e-06 W=8e-05
+XMI13 N_OUT_MI13_d N_net26_MI13_g N_VSS_MI13_s ntft L=4e-06 W=8e-05
+XMI4 N_OUT_MI4_d N_net26_MI4_g N_VSS_MI4_s ntft L=4e-06 W=8e-05
+XMI0 N_net23_MI0_d N_IN1_MI0_g N_VDD_MI0_s ptft L=4e-06 W=4e-05
+XMI14 N_net2_MI14_d N_IN2_MI14_g N_VDD_MI14_s ptft L=4e-06 W=4e-05
+XMI10 N_net23_MI10_d N_net2_MI10_g N_net26_MI10_s ptft L=4e-06 W=4e-05
+XMI7 N_net26_MI7_d N_IN2_MI7_g net24 ptft L=4e-06 W=8e-05
+XMI6 net24 N_net23_MI6_g N_VDD_MI6_s ptft L=4e-06 W=8e-05
+XMI12 N_OUT_MI12_d N_net26_MI12_g N_VDD_MI12_s ptft L=4e-06 W=8e-05
+c_623 net24 0 0.420929f
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/XNOR2D4.cdl.XNOR2D4.pxi"
+*
+.ends
+*
+*

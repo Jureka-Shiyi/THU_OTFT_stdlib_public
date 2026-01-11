@@ -1,0 +1,72 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Sat Dec 13 11:01:19 2025
+Calibre Version:           v2023.1_18.8    Tue Jan 3 18:10:34 PST 2023
+Rule File Pathname:        _OTFT_DRC.cal_
+Rule File Title:           DRC Command File
+Layout System:             GDS
+Layout Path(s):            NAND2D1.calibre.db
+Layout Primary Cell:       NAND2D1
+Current Directory:         /data/zhengyj/cadence/Calibre/NAND2D1/drc
+User Name:                 zhengyj
+Maximum Results/RuleCheck: 1000
+Maximum Result Vertices:   4096
+DRC Results Database:      NAND2D1.drc.results (ASCII)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       NAND2D1.drc.summary (REPLACE)
+Geometry Flagging:         ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                           NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Excluded Cells:           
+CheckText Mapping:         COMMENT TEXT + RULE FILE INFORMATION
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         YES
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER MC ..... TOTAL Original Geometry Count = 57 (57)
+LAYER PTFT ... TOTAL Original Geometry Count = 17 (17)
+LAYER M1 ..... TOTAL Original Geometry Count = 72 (72)
+LAYER Via1 ... TOTAL Original Geometry Count = 42 (42)
+LAYER M2 ..... TOTAL Original Geometry Count = 9  (9)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK M1.W.1 ...... TOTAL Result Count = 0 (0)
+RULECHECK M2.W.1 ...... TOTAL Result Count = 0 (0)
+RULECHECK MC.W.1 ...... TOTAL Result Count = 0 (0)
+RULECHECK Via1.W.1 .... TOTAL Result Count = 0 (0)
+RULECHECK M1.S.1 ...... TOTAL Result Count = 0 (0)
+RULECHECK M1.S.2 ...... TOTAL Result Count = 0 (0)
+RULECHECK M2.S.1 ...... TOTAL Result Count = 0 (0)
+RULECHECK M2.S.1.1 .... TOTAL Result Count = 0 (0)
+RULECHECK M2.S.1.2 .... TOTAL Result Count = 0 (0)
+RULECHECK MC.S.1 ...... TOTAL Result Count = 0 (0)
+RULECHECK Via1.S.1 .... TOTAL Result Count = 0 (0)
+RULECHECK Via1.EN.1 ... TOTAL Result Count = 0 (0)
+RULECHECK Via1.EN.3 ... TOTAL Result Count = 0 (0)
+RULECHECK Via1.EN.4 ... TOTAL Result Count = 0 (0)
+RULECHECK M2.EN.1 ..... TOTAL Result Count = 0 (0)
+RULECHECK M2.EN.2 ..... TOTAL Result Count = 0 (0)
+RULECHECK M2.EN.3 ..... TOTAL Result Count = 0 (0)
+RULECHECK G.1.M1 ...... TOTAL Result Count = 0 (0)
+RULECHECK G.1.MC ...... TOTAL Result Count = 0 (0)
+RULECHECK G.1.Via1 .... TOTAL Result Count = 0 (0)
+RULECHECK G.1.M2 ...... TOTAL Result Count = 0 (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS (BY CELL)
+---
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  0
+TOTAL REAL Time:                 0
+TOTAL Original Layer Geometries: 197 (197)
+TOTAL DRC RuleChecks Executed:   21
+TOTAL DRC Results Generated:     0 (0)

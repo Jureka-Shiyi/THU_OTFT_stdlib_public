@@ -1,0 +1,67 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 11/15/2022 19:27 (cpgbld01) $
+          : sub-version  IC6.1.8-64b.500.29 
+Started at: 24-Dec-2025  15:24:15
+User Name : zhengyj
+Host Name : cad52
+Directory : /data/zhengyj/cadence
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+
+                       Individual Cell Statistics - Basic Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
+---------------------------------------------------------------------------------------------------------------------------------------
+OTFT_stdlib_cells/DFFD1/layout  0        0       1        974    0      0         6      0             0      0     0     0       0       
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Individual Cell Statistics - Advanced Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   CustVia   StdVia    CdsGenVia
+---------------------------------------------------------------------------------------------------------------------------------------
+OTFT_stdlib_cells/DFFD1/layout  0        0          0          0          0          0     0        0         0         0        
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Statistics of Layers 
+---------------------------------------------------------------------------------------------------------------------------------------
+Cadence         Cadence         Stream  Stream   
+Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
+---------------------------------------------------------------------------------------------------------------------------------------
+PTFT            drawing         90      0         0        60       0        0        0             0    0   0   0     0      0      
+M2              drawing         4       0         0        66       0        0        0             0    0   0   0     0      0      
+Via1            drawing         3       0         0        390      0        0        0             0    0   0   0     0      0      
+M1              drawing         5       0         0        283      0        0        0             0    0   0   0     0      0      
+M1              pin             5       251       0        0        0        6        0             0    0   0   0     0      0      
+MC              drawing         1       0         1        175      0        0        0             0    0   0   0     0      0      
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of Objects Translated:
+	Scalar Instances:		0
+	Array Instances:		0
+	Polygons:			1
+	Paths:				0
+	Rectangles:			974
+	Lines:				0
+	Arcs:				0
+	Donuts:				0
+	Dots:				0
+	Ellipses:			0
+	Boundaries:			0
+	Area Blockages:			0
+	Layer Blockages:		0
+	Area Halos:			0
+	Markers:			0
+	Rows:				0
+	Standard Vias:			0
+	Custom Vias:			0
+	CdsGen Vias:			0
+	Pathsegs:			0
+	Text:				6
+	TextDisplay:		0
+	Cells:				1
+Design Libraries: 
+
+DEFINE OTFT_stdlib_cells	/data/zhengyj/cadence/OTFT_stdlib_cells

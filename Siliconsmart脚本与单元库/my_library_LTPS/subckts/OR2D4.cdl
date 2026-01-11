@@ -1,0 +1,28 @@
+* File: OR2D4.cdl
+* Created: Wed Jan 15 20:19:54 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/OR2D4.cdl.pex"
+.subckt OR2D4  IN1 IN2 VDD VSS OUT
+* 
+* OUT	OUT
+* VSS	VSS
+* VDD	VDD
+* IN2	IN2
+* IN1	IN1
+XMI3 N_net11_MI6_d N_IN1_MI3_g N_VSS_MI3_s ntft L=4e-06 W=8e-05
+XMI4 N_net11_MI4_d N_IN2_MI4_g N_VSS_MI4_s ntft L=4e-06 W=4e-05
+XMI4@2 N_net11_MI4_d N_IN2_MI4@2_g N_VSS_MI4@2_s ntft L=4e-06 W=4e-05
+XMI5 N_OUT_MI5_d N_net11_MI5_g N_VSS_MI5_s ntft L=4e-06 W=8e-05
+XMI5@2 N_OUT_MI5_d N_net11_MI5@2_g N_VSS_MI5@2_s ntft L=4e-06 W=8e-05
+XMI6 N_net11_MI6_d N_IN2_MI6_g net12 ptft L=4e-06 W=8e-05
+XMI0 net12 N_IN1_MI0_g N_VDD_MI0_s ptft L=4e-06 W=8e-05
+XMI7 N_OUT_MI7_d N_net11_MI7_g N_VDD_MI7_s ptft L=4e-06 W=8e-05
+c_201 net12 0 0.385264f
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/OR2D4.cdl.OR2D4.pxi"
+*
+.ends
+*
+*

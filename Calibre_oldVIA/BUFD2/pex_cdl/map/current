@@ -1,0 +1,14 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "BUFD2"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/data/zhengyj/cadence/Calibre/BUFD2/pex_cdl"
+ )
+( model
+( "OTFT_stdlib_cells/BUFD2/schematic" "BUFD2" )
+ )
+( "BUFD2" "ihnl/cds0/map" )
+ )

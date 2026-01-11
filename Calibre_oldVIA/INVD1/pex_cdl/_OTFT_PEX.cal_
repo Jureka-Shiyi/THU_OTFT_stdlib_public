@@ -1,0 +1,21 @@
+//
+//  Rule file generated on Mon Dec 22 19:54:30 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+LAYOUT PATH "INVD1.calibre.db"
+LAYOUT SYSTEM GDSII
+LAYOUT PRIMARY "INVD1"
+
+PEX NETLIST "INVD1.cdl" HSPICE LAYOUTNAMES
+
+MASK SVDB DIRECTORY "svdb" QUERY XRC
+
+LVS REPORT "INVD1.lvs.report"
+
+DRC ICSTATION YES
+
+INCLUDE "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_PEX.cal"

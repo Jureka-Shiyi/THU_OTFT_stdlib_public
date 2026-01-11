@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      zhengyj
+HostName                       cad52
+ProcessIdentifier              104355
+ProcessCreationTime_UTC        1765677255
+ProcessCreationTime_Readable   Sun Dec 14 09:54:15 2025 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /data/zhengyj/cadence/OTFT_stdlib_cells/NAND2D8/layout/layout.oa.cdslck
+TimeEditLocked                 Sun Dec 14 10:10:02 2025 CST

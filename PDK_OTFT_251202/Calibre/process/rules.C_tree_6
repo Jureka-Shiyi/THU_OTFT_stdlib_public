@@ -1,0 +1,456 @@
+
+#ENCRYPT
+//
+//  model: 2026  target: up  profile: ultra  layers: ultra_base,Via1_12,XCALIBRATE__M1,XCALIBRATE__M2
+//
+CAPACITANCE NEARBODY COND2VIA XCALIBRATE__M2 XCALIBRATE__M1 XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 4 * 12 // For reference
+    max_caldistance = 4 * 8 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M2
+    max_distance = 4 * 0.5
+    scaleunits = 1e-15/1e-15
+    current_width1 = width1()
+    current_vlength = vlength()
+    current_vwidth = vwidth()
+    current_distance = distance()
+    corner = corner_index()
+    cond_delta = lookup1 (delta_tbl(),layer1(), corner,current_width1, current_distance)
+    if (current_vwidth <= current_vlength) {
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = vdistance() - vlen_delta
+    act_distance = current_distance - 0.5 * (cond_delta + vwid_delta)
+    act_width = current_width1 + cond_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth
+    }
+    overlapping_length = act_vlen
+    if (length() < act_vlen) {
+	overlapping_length = length()
+    }
+    model = 2026
+    C = overlapping_length * (2.45229e-05 * exp(-0.859849*act_distance) / pow(act_distance,0.600491) * pow(act_width,-0.395754))
+    k = 0.988808 / (1 + 0.000992755 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    if (vcount() > 1) {
+    	C = ((vcount() - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = Via1_12_C2V * C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2026  target: down  profile: ultra  layers: ultra_base,Via1_12,XCALIBRATE__M1,XCALIBRATE__M2
+//
+CAPACITANCE NEARBODY COND2VIA XCALIBRATE__M1 XCALIBRATE__M1 XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    max_calwidth = 4 * 12 // For reference
+    max_caldistance = 4 * 8 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M1
+    max_distance = 4 * 0.5
+    scaleunits = 1e-15/1e-15
+	current_width1 = width1()
+	current_vlength = vlength()
+	current_vwidth = vwidth()
+	current_distance = distance()
+	corner = corner_index()
+    cond_delta = lookup1 (delta_tbl(),layer1(), corner,current_width1, current_distance)
+    if (current_vwidth <= current_vlength) {	  
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = vdistance() - vlen_delta
+    act_distance = current_distance - 0.5 * (cond_delta + vwid_delta)
+    act_width = current_width1 + cond_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth
+    }
+    overlapping_length = act_vlen
+    if (length() < act_vlen) {
+	overlapping_length = length()
+    }
+    model = 2026
+    C = overlapping_length * (0 * exp(-0.997603*act_distance) / pow(act_distance,0.705456) * pow(act_width,0.00701195))
+    k = 0.988808 / (1 + 0.000992755 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    if (vcount() > 1) {	
+    	C = ((vcount() - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = Via1_12_C2V * C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2026  target: up  profile: ultra  layers: ultra_base,Via1_2C,XCALIBRATE__M2,XCALIBRATE__MC
+//
+CAPACITANCE NEARBODY COND2VIA XCALIBRATE__MC XCALIBRATE__M2 XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    max_calwidth = 4 * 12 // For reference
+    max_caldistance = 4 * 8 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__MC
+    max_distance = 4 * 0.3
+    scaleunits = 1e-15/1e-15
+    current_width1 = width1()
+    current_vlength = vlength()
+    current_vwidth = vwidth()
+    current_distance = distance()
+    corner = corner_index()
+    cond_delta = lookup1 (delta_tbl(),layer1(), corner,current_width1, current_distance)
+    if (current_vwidth <= current_vlength) {
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = vdistance() - vlen_delta
+    act_distance = current_distance - 0.5 * (cond_delta + vwid_delta)
+    act_width = current_width1 + cond_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth
+    }
+    overlapping_length = act_vlen
+    if (length() < act_vlen) {
+	overlapping_length = length()
+    }
+    model = 2026
+    C = overlapping_length * (0.00153319 * exp(-0.005213*act_distance) / pow(act_distance,0.463874) * pow(act_width,0.282486))
+    k = 0.983108 / (1 + 0.00012207 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    if (vcount() > 1) {
+    	C = ((vcount() - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = Via1_2C_C2V * C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2026  target: down  profile: ultra  layers: ultra_base,Via1_2C,XCALIBRATE__M2,XCALIBRATE__MC
+//
+CAPACITANCE NEARBODY COND2VIA XCALIBRATE__M2 XCALIBRATE__M2 XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    max_calwidth = 4 * 12 // For reference
+    max_caldistance = 4 * 8 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_width = MAXWIDTH_XCALIBRATE__M2
+    max_distance = 4 * 0.3
+    scaleunits = 1e-15/1e-15
+	current_width1 = width1()
+	current_vlength = vlength()
+	current_vwidth = vwidth()
+	current_distance = distance()
+	corner = corner_index()
+    cond_delta = lookup1 (delta_tbl(),layer1(), corner,current_width1, current_distance)
+    if (current_vwidth <= current_vlength) {	  
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer2(),layer3(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = vdistance() - vlen_delta
+    act_distance = current_distance - 0.5 * (cond_delta + vwid_delta)
+    act_width = current_width1 + cond_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth
+    }
+    overlapping_length = act_vlen
+    if (length() < act_vlen) {
+	overlapping_length = length()
+    }
+    model = 2026
+    C = overlapping_length * (0.00149525 * exp(-0.00557538*act_distance) / pow(act_distance,0.409741) * pow(act_width,0.32252))
+    k = 0.983108 / (1 + 0.00012207 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    if (vcount() > 1) {	
+    	C = ((vcount() - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = Via1_2C_C2V * C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2027  target: intrinsic  profile: ultra  layers: ultra_base,Via1_12,XCALIBRATE__M1,XCALIBRATE__M2
+//
+CAPACITANCE INTRINSIC VIA XCALIBRATE__M1 XCALIBRATE__M2
+[
+    PROPERTY C
+    max_caldistance = 4 * 5 // For reference
+    min_caldistance = 5 // For reference
+    max_distance = MAXDISTANCE_XCALIBRATE__M2
+    max_width = MAXWIDTH_XCALIBRATE__M1
+    max_enclose = MAXENCLOSE_XCALIBRATE__M1
+    scaleunits = 1e-15/1e-15
+	current_vlength = vlength()
+	current_vwidth = vwidth()
+	current_distance = distance()
+	current_vdistance = vdistance()
+	current_distance2 = distance2()
+	current_distance3 = distance3()
+	corner = corner_index()
+    if (current_vwidth <= current_vlength) {
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = current_vdistance - vlen_delta
+    act_distance = current_distance - vwid_delta
+    act_enclose = enclose() - 0.5 * vwid_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_enclose <= 0) {
+	act_enclose = 0
+    }
+    if (act_distance <= 0.0) {
+	act_distance = current_distance2
+    }
+    if (act_distance <= 0.0) {
+	act_distance = current_distance3
+    }
+    if (act_distance <= 0.0) {
+	act_distance = max_caldistance
+    }
+    model = 2027
+    C = 0.0
+    if ((distance_cond() <= 0.0 || distance_cond() > max_caldistance) && (current_distance <= 0.0 || current_distance > max_caldistance) && (current_distance2 <= 0.0 || current_distance2 > max_caldistance) && (current_distance3 <= 0.0 || current_distance3 > max_caldistance)) {
+    	C = act_vlen * (6.69381e-06 * exp(-0.190918 * act_enclose) + 3.58137e-07 * exp(-0 * act_enclose))
+    }
+    k = 0.988808 / (1 + 0.000274746 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    count = vcount()
+    if (count > 1) {
+    	C = ((count - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2027  target: intrinsic  profile: ultra  layers: ultra_base,Via1_2C,XCALIBRATE__M2,XCALIBRATE__MC
+//
+CAPACITANCE INTRINSIC VIA XCALIBRATE__M2 XCALIBRATE__MC
+[
+    PROPERTY C
+    max_caldistance = 4 * 5 // For reference
+    min_caldistance = 5 // For reference
+    max_distance = MAXDISTANCE_XCALIBRATE__MC
+    max_width = MAXWIDTH_XCALIBRATE__M2
+    max_enclose = MAXENCLOSE_XCALIBRATE__M2
+    scaleunits = 1e-15/1e-15
+	current_vlength = vlength()
+	current_vwidth = vwidth()
+	current_distance = distance()
+	current_vdistance = vdistance()
+	current_distance2 = distance2()
+	current_distance3 = distance3()
+	corner = corner_index()
+    if (current_vwidth <= current_vlength) {
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = current_vdistance - vlen_delta
+    act_distance = current_distance - vwid_delta
+    act_enclose = enclose() - 0.5 * vwid_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_enclose <= 0) {
+	act_enclose = 0
+    }
+    if (act_distance <= 0.0) {
+	act_distance = current_distance2
+    }
+    if (act_distance <= 0.0) {
+	act_distance = current_distance3
+    }
+    if (act_distance <= 0.0) {
+	act_distance = max_caldistance
+    }
+    model = 2027
+    C = 0.0
+    if ((distance_cond() <= 0.0 || distance_cond() > max_caldistance) && (current_distance <= 0.0 || current_distance > max_caldistance) && (current_distance2 <= 0.0 || current_distance2 > max_caldistance) && (current_distance3 <= 0.0 || current_distance3 > max_caldistance)) {
+    	C = act_vlen * (0.0107797 * exp(-0.261837 * act_enclose) + 0.00721268 * exp(-0.0170283 * act_enclose))
+    }
+    k = 0.983108 / (1 + 0.00012207 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    count = vcount()
+    if (count > 1) {
+    	C = ((count - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2023  target: via  profile: ultra  layers: ultra_base,Via1_12,XCALIBRATE__M1,XCALIBRATE__M2
+//
+CAPACITANCE NEARBODY VIA2VIA XCALIBRATE__M1 XCALIBRATE__M2 XCALIBRATE__M1 XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    min_caldistance = 8 // For reference
+    max_caldistance = 4 * 8 // For reference
+    max_distance = 4 * 0.5
+    scaleunits = 1e-15/1e-15
+	current_vlength = vlength()
+	current_vwidth = vwidth()
+	corner = corner_index()
+    if (current_vwidth <= current_vlength) {
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = vdistance() - vlen_delta
+    act_distance = distance() - vwid_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance
+    }
+    model = 2023
+    C = act_vlen * (0.000625103 * exp(-1.1662 * act_distance) + 0.000625103 * exp(-1.1662 * act_distance))
+    k = 0.988808 / (1 + 0.000274746 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    if (vcount() > 1) {
+    	C = ((vcount() - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = Via1_12_V2V * C * scaleunits
+]
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 2023  target: via  profile: ultra  layers: ultra_base,Via1_2C,XCALIBRATE__M2,XCALIBRATE__MC
+//
+CAPACITANCE NEARBODY VIA2VIA XCALIBRATE__M2 XCALIBRATE__MC XCALIBRATE__M2 XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    min_caldistance = 8 // For reference
+    max_caldistance = 4 * 8 // For reference
+    max_distance = 4 * 0.3
+    scaleunits = 1e-15/1e-15
+	current_vlength = vlength()
+	current_vwidth = vwidth()
+	corner = corner_index()
+    if (current_vwidth <= current_vlength) {
+    	vwid_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    	vlen_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vwidth,current_vlength)
+    } else {
+    	vlen_delta=lookup2 ("DELTA_VWIDTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    	vwid_delta=lookup2 ("DELTA_VLENGTH",layer1(),layer2(),corner,current_vlength,current_vwidth)
+    }
+    act_vlen = current_vlength + vlen_delta
+    act_vdistance = vdistance() - vlen_delta
+    act_distance = distance() - vwid_delta
+    if (act_vlen < 0) {
+	act_vlen = 0
+    }
+    if (act_vdistance < 0) {
+	act_vdistance = 0
+    }
+    if (act_distance < min_caldistance) {
+	act_distance = min_caldistance
+    }
+    model = 2023
+    C = act_vlen * (0.000317065 * exp(-0.00933087 * act_distance) + 0.000750089 * exp(-0.0621166 * act_distance))
+    k = 0.983108 / (1 + 0.00012207 * pow(act_distance,0.000274746)) * (1.0 - exp(-1 -10 * act_vdistance))
+    if (vcount() > 1) {
+    	C = ((vcount() - 2) * pow(k,2.0) + 2.0 * k) * C
+    }
+    C = Via1_2C_V2V * C * scaleunits
+]
+
+#ENDCRYPT
+

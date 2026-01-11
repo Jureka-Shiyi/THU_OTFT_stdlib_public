@@ -1,0 +1,34 @@
+//  Runset file generated on Mon Dec 22 21:14:43 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+xrc.rulesFile.value = "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_PEX.cal"
+xrc.runDir.value = "/data/zhengyj/cadence/Calibre/NOR2D1/pex_cdl"
+xrc.layout.layoutFile.value = "NOR2D1.calibre.db"
+cmn.layout.defFiles.value = [ "NOR2D1.def" ]
+xrc.layout.topCellLibrary.value = "OTFT_stdlib_cells"
+cmn.layout.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+xrc.layout.topCell.value = "NOR2D1"
+xrc.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+xrc.source.sourceFile.value = "NOR2D1.src.net"
+xrc.source.topCellLibrary.value = "OTFT_stdlib_cells"
+xrc.source.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+xrc.source.topCell.value = "NOR2D1"
+xrc.source.topCellFDI.value = "NOR2D1"
+xrc.source.topCellView.value = "schematic"
+xrc.source.topCellViewFDI.value = "schematic"
+xrc.pexNetlist.netlistFile.value = "NOR2D1.cdl"
+xrc.pexNetlist.netlistFormat.value = "HSPICE"
+xrc.reports.lvsReport.value = "NOR2D1.lvs.report"
+xrc.reports.pexReport.value = "NOR2D1.pex.report"
+
+xrc.blockExtraction.setADMSNetlistOutputFiles("{NOR2D1 NOR2D1.cdl} ")
+xrc.blockExtraction.setADMSNetlistOutputVerilogModules("{NOR2D1 NOR2D1} ")
+
+cmn.runsetPrefs.saveOnClose.value = "AUTOSAVE"
+cmn.miscPrefs.overwriteLayoutPref.value = false
+cmn.miscPrefs.overwriteSourcePref.value = false

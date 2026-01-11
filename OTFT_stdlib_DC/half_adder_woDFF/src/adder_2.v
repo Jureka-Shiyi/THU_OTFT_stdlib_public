@@ -1,0 +1,17 @@
+module adder_2(
+    input CLK,
+    input reset,
+    input [3:0] in1,
+    input [3:0] in2,
+    output reg [4:0] out
+);
+    always @(posedge CLK) begin
+        if (reset) begin
+            out <= 0;
+        end
+        else begin
+            out <= in1 + in2;
+        end
+    end
+endmodule
+

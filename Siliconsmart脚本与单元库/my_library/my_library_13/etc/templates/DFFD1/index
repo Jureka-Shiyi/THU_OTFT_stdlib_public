@@ -1,0 +1,345 @@
+cmpw_hbm__CK__lh__CK__hl__ACQ_1 {
+  measType cmpw_hbm
+  pred {
+    initialization__ACQ_1 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    cmpw_hbm__CK__lh__CK__hl
+  } 
+  template cmpw_hbm__CK__lh__CK__hl__ACQ_1.t
+  test cmpw_hbm__CK__lh__CK__hl
+  when {!D}
+} 
+delay__CK__lh__QN__hl__ACQ_1 {
+  measType delay
+  pred {
+    initialization__ACQ_2 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    delay__CK__lh__QN__hl
+    Cin__CK__lh
+    Tout__QN__hl
+    energy1__CK__lh__QN__hl__VDD
+    energy1__CK__lh__QN__hl__VSS
+    energy__CK__lh__QN__hl
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__Q__lh
+    cap_energy__QN__hl
+  } 
+  template delay__CK__lh__QN__hl__ACQ_1.t
+  test delay__CK__lh__QN__hl
+  when {1}
+} 
+delay__CK__lh__QN__lh__ACQ_1 {
+  measType delay
+  pred {
+    initialization__ACQ_1 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    delay__CK__lh__QN__lh
+    Cin__CK__lh
+    Tout__QN__lh
+    energy1__CK__lh__QN__lh__VDD
+    energy1__CK__lh__QN__lh__VSS
+    energy__CK__lh__QN__lh
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__Q__hl
+    cap_energy__QN__lh
+  } 
+  template delay__CK__lh__QN__lh__ACQ_1.t
+  test delay__CK__lh__QN__lh
+  when {1}
+} 
+delay__CK__lh__Q__hl__ACQ_1 {
+  measType delay
+  pred {
+    initialization__ACQ_1 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    delay__CK__lh__Q__hl
+    Cin__CK__lh
+    Tout__Q__hl
+    energy1__CK__lh__Q__hl__VDD
+    energy1__CK__lh__Q__hl__VSS
+    energy__CK__lh__Q__hl
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__Q__hl
+    cap_energy__QN__lh
+  } 
+  template delay__CK__lh__Q__hl__ACQ_1.t
+  test delay__CK__lh__Q__hl
+  when {1}
+} 
+delay__CK__lh__Q__lh__ACQ_1 {
+  measType delay
+  pred {
+    initialization__ACQ_2 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    delay__CK__lh__Q__lh
+    Cin__CK__lh
+    Tout__Q__lh
+    energy1__CK__lh__Q__lh__VDD
+    energy1__CK__lh__Q__lh__VSS
+    energy__CK__lh__Q__lh
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__Q__lh
+    cap_energy__QN__hl
+  } 
+  template delay__CK__lh__Q__lh__ACQ_1.t
+  test delay__CK__lh__Q__lh
+  when {1}
+} 
+energy__CK__hl__ACQ_1 {
+  measType energy
+  pred {
+    initialization__ACQ_3 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    energy__CK__hl
+    energy1__CK__hl__VDD
+    energy1__CK__hl__VSS
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+  } 
+  template energy__CK__hl__ACQ_1.t
+  test energy__CK__hl
+  when {1}
+} 
+energy__CK__lh__ACQ_1 {
+  measType energy
+  pred {
+    initialization__ACQ_4 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    energy__CK__lh
+    energy1__CK__lh__VDD
+    energy1__CK__lh__VSS
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+  } 
+  template energy__CK__lh__ACQ_1.t
+  test energy__CK__lh
+  when {1}
+} 
+energy__D__hl__ACQ_1 {
+  measType energy
+  pred {
+    initialization__ACQ_5 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    energy__D__hl
+    energy1__D__hl__VDD
+    energy1__D__hl__VSS
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+  } 
+  template energy__D__hl__ACQ_1.t
+  test energy__D__hl
+  when {1}
+} 
+energy__D__lh__ACQ_1 {
+  measType energy
+  pred {
+    initialization__ACQ_4 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    energy__D__lh
+    energy1__D__lh__VDD
+    energy1__D__lh__VSS
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+  } 
+  template energy__D__lh__ACQ_1.t
+  test energy__D__lh
+  when {1}
+} 
+hold_hbm__D__hl__CK__lh__ACQ_1 {
+  measType hold_hbm
+  pred {
+    initialization__ACQ_2 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    hold_hbm__D__hl__CK__lh
+  } 
+  template hold_hbm__D__hl__CK__lh__ACQ_1.t
+  test hold_hbm__D__hl__CK__lh
+  when {1}
+} 
+hold_hbm__D__lh__CK__lh__ACQ_1 {
+  measType hold_hbm
+  pred {
+    initialization__ACQ_1 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    hold_hbm__D__lh__CK__lh
+  } 
+  template hold_hbm__D__lh__CK__lh__ACQ_1.t
+  test hold_hbm__D__lh__CK__lh
+  when {1}
+} 
+initialization__ACQ_1 {
+  measType initialization
+  pred {
+  } 
+  targets {
+    initialization
+  } 
+  template initialization__ACQ_1.t
+  test initialization
+  when {1}
+} 
+initialization__ACQ_2 {
+  measType initialization
+  pred {
+  } 
+  targets {
+    initialization
+  } 
+  template initialization__ACQ_2.t
+  test initialization
+  when {1}
+} 
+initialization__ACQ_3 {
+  measType initialization
+  pred {
+  } 
+  targets {
+    initialization
+  } 
+  template initialization__ACQ_3.t
+  test initialization
+  when {1}
+} 
+initialization__ACQ_4 {
+  measType initialization
+  pred {
+  } 
+  targets {
+    initialization
+  } 
+  template initialization__ACQ_4.t
+  test initialization
+  when {1}
+} 
+initialization__ACQ_5 {
+  measType initialization
+  pred {
+  } 
+  targets {
+    initialization
+  } 
+  template initialization__ACQ_5.t
+  test initialization
+  when {1}
+} 
+initialization__ACQ_6 {
+  measType initialization
+  pred {
+  } 
+  targets {
+    initialization
+  } 
+  template initialization__ACQ_6.t
+  test initialization
+  when {1}
+} 
+leakage_power__ACQ_1 {
+  measType leakage_power
+  pred {
+    initialization__ACQ_4 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    leakage_power
+  } 
+  template leakage_power__ACQ_1.t
+  test leakage_power
+  when {1}
+} 
+ncmpw_hbm__CK__hl__CK__lh__ACQ_1 {
+  measType ncmpw_hbm
+  pred {
+    initialization__ACQ_6 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    ncmpw_hbm__CK__hl__CK__lh
+  } 
+  template ncmpw_hbm__CK__hl__CK__lh__ACQ_1.t
+  test ncmpw_hbm__CK__hl__CK__lh
+  when {!D}
+} 
+setup_hbm__D__hl__CK__lh__ACQ_1 {
+  measType setup_hbm
+  pred {
+    initialization__ACQ_5 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    setup_hbm__D__hl__CK__lh
+  } 
+  template setup_hbm__D__hl__CK__lh__ACQ_1.t
+  test setup_hbm__D__hl__CK__lh
+  when {1}
+} 
+setup_hbm__D__lh__CK__lh__ACQ_1 {
+  measType setup_hbm
+  pred {
+    initialization__ACQ_4 {
+      initialization_file initialization_file
+    } 
+  } 
+  targets {
+    setup_hbm__D__lh__CK__lh
+  } 
+  template setup_hbm__D__lh__CK__lh__ACQ_1.t
+  test setup_hbm__D__lh__CK__lh
+  when {1}
+} 
+

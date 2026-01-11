@@ -1,0 +1,2 @@
+INCLUDE "/data/zhengyj/cadence/PDK_OTFT_251202/cds.lib"
+INCLUDE $IC_HOME/share/cdssetup/cds.lib

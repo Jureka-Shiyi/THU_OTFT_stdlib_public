@@ -1,0 +1,147 @@
+
+#ENCRYPT
+//
+//  model: 3214  target: nearbody2  profile: ultra  layers: ultra_base,XCALIBRATE__M1,XCALIBRATE__M2,XCALIBRATE__MC
+//
+CAPACITANCE NEARBODY XCALIBRATE__M1 XCALIBRATE__M2 INSIDE OF XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    max_caldistance = 1202.5 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_distance = (MAXDISTANCE_XCALIBRATE__M1 + MAXDISTANCE_XCALIBRATE__M2) / 2
+    max_width = (MAXWIDTH_XCALIBRATE__M1 + MAXWIDTH_XCALIBRATE__M2) / 2
+    max_radius = MAXRADIUS_XCALIBRATE__M1
+    h1 = 0.5
+    h2 = 0.3
+	current_length = length()
+	current_width1 = width1()
+	current_width2 = width2()
+	current_distance = distance()
+	current_distance2 = distance2()
+	corner = corner_index()
+    mr1s = h1 * h1 + current_distance2 * current_distance2 
+    mr2s = h2 * h2 + current_distance2 * current_distance2 
+    mr3s = (h1 + h2 + thickness1()) * (h1 + h2 + thickness1()) + current_distance2 * current_distance2
+    rus= radius_up() * radius_up()
+    rubs = radius_up_behind() * radius_up_behind() 
+    rds= radius_down() * radius_down()
+    rdbs = radius_down_behind() * radius_down_behind()    
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    model = 3214
+    if (current_distance2 <= 0) {
+    	act_delta1 = lookup1 (delta_tbl(),layer1(), corner, current_width1, max_caldistance)
+    	act_delta2 = lookup1 (delta_tbl(),layer2(), corner, current_width2, max_caldistance)
+    } else {
+    	act_delta1 = lookup1 (delta_tbl(),layer1(), corner, current_width1, current_distance2)
+        real_distance3 = current_distance + distance3()
+    	act_delta2 = lookup1 (delta_tbl(),layer2(), corner, current_width2, real_distance3)
+    }
+    act_width1 = current_width1 + act_delta1
+    act_width2 = current_width2 + act_delta2
+    act_width = 2 * act_width1 * act_width2 / (act_width1 + act_width2)
+    act_distance = current_distance - 0.5 * (act_delta1 + act_delta2)
+    act_distance2 = current_distance2 - act_delta1
+    if (act_distance2 < min_caldistance) {
+	act_distance2 = min_caldistance 
+    }
+    if (act_distance < 0) {
+	act_distance = 0
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth 
+    }
+    C = 0
+    if (current_distance2 > 0 ) {
+        model = 214
+	model = 514
+        C = current_length * (0.00256875 * exp(-0.0130431 * act_distance) + 0.0455466 * exp(-1000 * act_distance)) * pow(act_width,0.167658) * (1 - exp((-m514k1 * act_distance2) / (act_distance + m514k2)))
+    }
+    if ((current_distance2 > 0) && (current_distance < current_distance2) && (radius_down() >= max_radius) && (radius_down_behind() >= max_radius) && (rubs < mr3s)) {
+	model = 814
+        C = current_length * (0.052849 * exp(-0.0536295 * act_distance) * (1 - exp((-217.415 * act_distance2) / (act_distance + 999.592))) * pow(act_width,0.137387))
+    }
+    if (current_distance2 <= 0 ) {
+	model = 214
+	C = current_length * (0.00256875 * exp(-0.0130431 * act_distance) + 0.0455466 * exp(-1000 * act_distance)) * pow(act_width,0.167658)  
+    }
+    if ((distance2_behind() > 0.0) && (distance2_behind() < max_distance) && (current_distance2 > 0) && (current_distance2 < current_distance)) {
+	C = 0
+    } 
+    C = C * scaleunits
+]
+
+CAPACITANCE NEARBODY XCALIBRATE__M2 XCALIBRATE__M1 INSIDE OF XCALIBRATE__MC MASK
+[
+    PROPERTY C
+    max_caldistance = 1202.5 // For reference
+    min_calwidth = 12 // For reference
+    min_caldistance = 8 // For reference
+    max_distance = (MAXDISTANCE_XCALIBRATE__M1 + MAXDISTANCE_XCALIBRATE__M2) / 2
+    max_width = (MAXWIDTH_XCALIBRATE__M1 + MAXWIDTH_XCALIBRATE__M2) / 2
+    max_radius = MAXRADIUS_XCALIBRATE__M2
+    h1 = 0.5
+    h2 = 0.3
+	current_length = length()
+	current_width1 = width1()
+	current_width2 = width2()
+	current_distance = distance()
+	current_distance2 = distance2()
+	corner = corner_index()
+    mr1s = h1 * h1 + current_distance2 * current_distance2 
+    mr2s = h2 * h2 + current_distance2 * current_distance2 
+    mr3s = (h1 + h2 + thickness1()) * (h1 + h2 + thickness1()) + current_distance2 * current_distance2
+    rus= radius_up() * radius_up()
+    rubs = radius_up_behind() * radius_up_behind() 
+    rds= radius_down() * radius_down()
+    rdbs = radius_down_behind() * radius_down_behind()    
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    model = 3214
+    if (current_distance2 <= 0) {
+    	act_delta1 = lookup1 (delta_tbl(),layer1(), corner, current_width1, max_caldistance)
+    	act_delta2 = lookup1 (delta_tbl(),layer2(), corner, current_width2, max_caldistance)
+    } else {
+    	act_delta1 = lookup1 (delta_tbl(),layer1(), corner, current_width1, current_distance2)
+        real_distance3 = current_distance + distance3()
+    	act_delta2 = lookup1 (delta_tbl(),layer2(), corner, current_width2, real_distance3)
+    }
+    act_width1 = current_width1 + act_delta1
+    act_width2 = current_width2 + act_delta2
+    act_width = 2 * act_width1 * act_width2 / (act_width1 + act_width2)
+    act_distance = current_distance - 0.5 * (act_delta1 + act_delta2)
+    act_distance2 = current_distance2 - act_delta1
+    if (act_distance2 < min_caldistance) {
+	act_distance2 = min_caldistance 
+    }
+    if (act_distance < 0) {
+	act_distance = 0
+    }
+    if (act_width < min_calwidth) {
+	act_width = min_calwidth 
+    }
+    C = 0
+    if (current_distance2 > 0 ) {
+        model = 214
+	model = 514
+        C = current_length * (0.00256875 * exp(-0.0130431 * act_distance) + 0.0455466 * exp(-1000 * act_distance)) * pow(act_width,0.167658) * (1 - exp((-m514k1 * act_distance2) / (act_distance + m514k2)))
+    }
+    if ((current_distance2 > 0) && (current_distance < current_distance2) && (radius_down() >= max_radius) && (radius_down_behind() >= max_radius) && (rubs < mr3s)) {
+	model = 814
+        C = current_length * (0.052849 * exp(-0.0536295 * act_distance) * (1 - exp((-217.415 * act_distance2) / (act_distance + 999.592))) * pow(act_width,0.137387))
+    }
+    if (current_distance2 <= 0 ) {
+	model = 214
+	C = current_length * (0.00256875 * exp(-0.0130431 * act_distance) + 0.0455466 * exp(-1000 * act_distance)) * pow(act_width,0.167658)  
+    }
+    if ((distance2_behind() > 0.0) && (distance2_behind() < max_distance) && (current_distance2 > 0) && (current_distance2 < current_distance)) {
+	C = 0
+    } 
+    C = C * scaleunits
+]
+
+
+
+#ENDCRYPT
+

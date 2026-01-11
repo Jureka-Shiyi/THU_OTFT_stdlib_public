@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1766403329 1766403389
+lvs_ExtOutFile RUNDIR /data/zhengyj/cadence/Calibre/INVD1/lvs
+lvs_ExtOutFile RULES_FILE _OTFT_LVS.cal_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST INVD1.sp
+lvs_ExtOutFile EXTRACTION_REPORT INVD1.lvs.report.ext

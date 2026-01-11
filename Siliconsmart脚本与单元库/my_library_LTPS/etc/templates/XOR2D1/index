@@ -1,0 +1,180 @@
+delay__IN1__hl__OUT__hl__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN1__hl__OUT__hl
+    Cin__IN1__hl
+    Tout__OUT__hl
+    energy1__IN1__hl__OUT__hl__VDD
+    energy1__IN1__hl__OUT__hl__VSS
+    energy__IN1__hl__OUT__hl
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__hl
+  } 
+  template delay__IN1__hl__OUT__hl__ACQ_1.t
+  test delay__IN1__hl__OUT__hl
+  when {1}
+} 
+delay__IN1__hl__OUT__lh__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN1__hl__OUT__lh
+    Cin__IN1__hl
+    Tout__OUT__lh
+    energy1__IN1__hl__OUT__lh__VDD
+    energy1__IN1__hl__OUT__lh__VSS
+    energy__IN1__hl__OUT__lh
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__lh
+  } 
+  template delay__IN1__hl__OUT__lh__ACQ_1.t
+  test delay__IN1__hl__OUT__lh
+  when {1}
+} 
+delay__IN1__lh__OUT__hl__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN1__lh__OUT__hl
+    Cin__IN1__lh
+    Tout__OUT__hl
+    energy1__IN1__lh__OUT__hl__VDD
+    energy1__IN1__lh__OUT__hl__VSS
+    energy__IN1__lh__OUT__hl
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__hl
+  } 
+  template delay__IN1__lh__OUT__hl__ACQ_1.t
+  test delay__IN1__lh__OUT__hl
+  when {1}
+} 
+delay__IN1__lh__OUT__lh__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN1__lh__OUT__lh
+    Cin__IN1__lh
+    Tout__OUT__lh
+    energy1__IN1__lh__OUT__lh__VDD
+    energy1__IN1__lh__OUT__lh__VSS
+    energy__IN1__lh__OUT__lh
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__lh
+  } 
+  template delay__IN1__lh__OUT__lh__ACQ_1.t
+  test delay__IN1__lh__OUT__lh
+  when {1}
+} 
+delay__IN2__hl__OUT__hl__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN2__hl__OUT__hl
+    Cin__IN2__hl
+    Tout__OUT__hl
+    energy1__IN2__hl__OUT__hl__VDD
+    energy1__IN2__hl__OUT__hl__VSS
+    energy__IN2__hl__OUT__hl
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__hl
+  } 
+  template delay__IN2__hl__OUT__hl__ACQ_1.t
+  test delay__IN2__hl__OUT__hl
+  when {1}
+} 
+delay__IN2__hl__OUT__lh__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN2__hl__OUT__lh
+    Cin__IN2__hl
+    Tout__OUT__lh
+    energy1__IN2__hl__OUT__lh__VDD
+    energy1__IN2__hl__OUT__lh__VSS
+    energy__IN2__hl__OUT__lh
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__lh
+  } 
+  template delay__IN2__hl__OUT__lh__ACQ_1.t
+  test delay__IN2__hl__OUT__lh
+  when {1}
+} 
+delay__IN2__lh__OUT__hl__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN2__lh__OUT__hl
+    Cin__IN2__lh
+    Tout__OUT__hl
+    energy1__IN2__lh__OUT__hl__VDD
+    energy1__IN2__lh__OUT__hl__VSS
+    energy__IN2__lh__OUT__hl
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__hl
+  } 
+  template delay__IN2__lh__OUT__hl__ACQ_1.t
+  test delay__IN2__lh__OUT__hl
+  when {1}
+} 
+delay__IN2__lh__OUT__lh__ACQ_1 {
+  measType delay
+  pred {
+  } 
+  targets {
+    delay__IN2__lh__OUT__lh
+    Cin__IN2__lh
+    Tout__OUT__lh
+    energy1__IN2__lh__OUT__lh__VDD
+    energy1__IN2__lh__OUT__lh__VSS
+    energy__IN2__lh__OUT__lh
+    leakage_power1__VDD
+    leakage_power1__VSS
+    leakage_power2__VDD
+    leakage_power2__VSS
+    cap_energy__OUT__lh
+  } 
+  template delay__IN2__lh__OUT__lh__ACQ_1.t
+  test delay__IN2__lh__OUT__lh
+  when {1}
+} 
+leakage_power__ACQ_1 {
+  measType leakage_power
+  pred {
+  } 
+  targets {
+    leakage_power
+  } 
+  template leakage_power__ACQ_1.t
+  test leakage_power
+  when {1}
+} 
+

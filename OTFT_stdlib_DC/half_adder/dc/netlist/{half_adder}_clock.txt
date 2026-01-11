@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : half_adder
+Version: T-2022.03-SP2
+Date   : Sat Dec 27 16:11:21 2025
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+CLK           20000000.000 {0 1e+07}                  {CLK}
+--------------------------------------------------------------------------------
+1

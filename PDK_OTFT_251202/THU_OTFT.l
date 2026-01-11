@@ -1,0 +1,140 @@
+
+*************************************************************
+*** EsimFPD Model ver: 2020.10                            ***
+***       Built at: 12/10/2020 16:11                      ***
+***   (C) Copyright 2020 Huada Empyrean Software Co.      ***
+*************************************************************
+.LIB ptft_model
+
+.model ptft_model pmos
++ level= 62             
++ version= 1              
++ capmod= 0              
++ shmod= 0              
++ isubmod= 0              
++ idsmod= 1              
++ vtmod= 1              
++ diblmod= 1              
++ acm= 0              
++ wmin= 0.0002         
++ wmax= 0.0002         
++ lmin= 1e-05          
++ lmax= 1e-05          
++ zeroc= 0              
++ cornermod= 0              
++ binmod= 0              
++ tox= 1e-07/2.3         
++ eps= 11.7           
++ epsi= 0.85           
++ ld= 0              
++ wd= 0              
++ ldif= 0              
++ hdif= 0              
++ wmlt= 1              
++ lmlt= 1              
++ xw= 0              
++ xl= 0              
++ xj= 1.5e-07        
++ del= 0              
++ vto= 0              
++ von= 0              
++ vfb= 0.1            
++ vsi= 2.05443        
++ vst= 0.586845       
++ at= 3.90001e-09    
++ bt= 6.88507e-07    
++ dvt= 1.0974         
++ cgso= 0              
++ cgdo= 0              
++ etac0= 7              
++ etac00= 0              
++ mc= 3              
++ kss= 0              
++ rsx= 0              
++ rdx= 0              
++ eta= 70             
++ delta= 9.31264        
++ mus= 0.0896169      
++ mu0= 6.56353        
++ mu1= 0.00146968     
++ mmu= 1.49179        
++ meta= 1              
++ theta= 1e-09          
++ ad= 1.75877e+06    
++ ag= 2.95078e+06    
++ dd= 5.68578e-07    
++ dg= 3.38893e-07    
++ blk= 0.000732303    
++ i0= 4.66693        
++ eb= 0.68           
++ i00= 150            
++ alphasat= 1.10751        
++ lasat= 1.12951e-07    
++ me= 2.5            
++ mss= 3              
++ vmax= 40000          
++ lambda= 0.00562914     
++ ls= 3.5e-08        
++ vp= 0.2            
++ lkink= 1e-05          
++ mk= 1              
++ vkink= 93.947         
++ tnom= 27             
++ dvto= 0              
++ dmu1= 0              
++ dasat= 0              
++ kt1= 0              
++ teta= 0              
++ ute= 0              
++ mus1= 0              
++ vat= 0              
++ kat= 0              
++ kbt= 0              
++ prt= 0              
++ kasat= 0              
++ ki0= 0              
++ ki00= 0              
++ rth0= 0              
++ cth0= 0              
++ intdsnod= 0              
++ rsh= 0              
++ rd= 0              
++ rs= 0              
++ rdc= 0              
++ rsc= 0              
+
+************************************************************
+****                                     Data        Model
+**** Eff. Mobility(cm2/volt/sec)     0.374142     0.864878
+****                      Vth(V)     -0.85185     0.396944
+****  Sub-Threshold Slope(V/dec)      22.9822       28.212
+****          Ion(A) @ Vgs = 10V  2.51511e-06  2.77382e-06
+****        Ioff(A) @ Vgs = -10V  1.36268e-09  1.60821e-09
+************************************************************
+
+.ENDL ptft_model
+
+
+.LIB ptft
+
+.param a_vthmisp=0 a_mumisp=0 dvthp=0 dmup=0
+
+.subckt ptft n1 n2 n3 w=w l=l
+.param vthmisp='a_vthmisp*sqrt(10u*4u)/sqrt(w*l)' 
++ mumisp='a_mumisp*sqrt(10u*4u)/sqrt(w*l)'
+main n1 n2 n3 ptft_model w=w l=l
+.lib "THU_OTFT.l" ptft_model
+.ends ptft
+
+.ENDL ptft
+
+
+.LIB ptft_mac
+
+.lib "THU_OTFT.l" ptft
+
+.param
++dvthp=agauss(0,1,3) dmup=agauss(0,5,3)
++a_vthmisp=agauss(0,0.1,3) a_mumisp=agauss(0,0.5,3)
+
+.ENDL ptft_mac

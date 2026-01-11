@@ -1,0 +1,22 @@
+# Legend: N(newborn) R(running) F(failed) K(killed) C(complete)
+C initialization__ACQ_4 of DFFD1 T0 W1
+C leakage_power__ACQ_1 of DFFD1 T1 W1
+C initialization__ACQ_5 of DFFD1 T2 W1
+C energy__D__hl__ACQ_1 of DFFD1 T3 W1
+C energy__D__lh__ACQ_1 of DFFD1 T4 W1
+C initialization__ACQ_3 of DFFD1 T5 W1
+C energy__CK__hl__ACQ_1 of DFFD1 T6 W1
+C energy__CK__lh__ACQ_1 of DFFD1 T7 W1
+C initialization__ACQ_1 of DFFD1 T8 W1
+C setup_hbm__D__lh__CK__lh__ACQ_1 of DFFD1 T9 W1
+C setup_hbm__D__hl__CK__lh__ACQ_1 of DFFD1 T10 W1
+C initialization__ACQ_2 of DFFD1 T11 W1
+C delay__CK__lh__QN__hl__ACQ_1 of DFFD1 T12 W1
+C delay__CK__lh__QN__lh__ACQ_1 of DFFD1 T13 W1
+C initialization__ACQ_6 of DFFD1 T14 W1
+C delay__CK__lh__Q__hl__ACQ_1 of DFFD1 T15 W1
+C delay__CK__lh__Q__lh__ACQ_1 of DFFD1 T16 W1
+C ncmpw_hbm__CK__hl__CK__lh__ACQ_1 of DFFD1 T17 W1
+C hold_hbm__D__hl__CK__lh__ACQ_1 of DFFD1 T18 W1
+C hold_hbm__D__lh__CK__lh__ACQ_1 of DFFD1 T19 W1
+C cmpw_hbm__CK__lh__CK__hl__ACQ_1 of DFFD1 T20 W1

@@ -1,0 +1,10 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /data/zhengyj/cadence/Calibre/BOUNDARY_LEFT/lvs
+lvs_LvsfVersion 4
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {2 0 2 0}
+lvs_SourceCase YES
+lvs_LayoutCase YES
+lvs_LvsOutFile LVS_REPORT BOUNDARY_LEFT.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST BOUNDARY_LEFT.src.net
+lvs_LvsOutFile RULES_FILE _OTFT_LVS.cal_

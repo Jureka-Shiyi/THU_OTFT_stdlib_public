@@ -1,0 +1,41 @@
+* File: NAND2D2.cdl
+* Created: Mon Dec 22 20:47:18 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts_cdl/NAND2D2.cdl.pex"
+.subckt NAND2D2  VSS OUT VDD IN1 IN2
+* 
+* IN2	IN2
+* IN1	IN1
+* VDD	VDD
+* OUT	OUT
+* VSS	VSS
+XMI4 N_OUT_MI4_d N_IN1_MI4_g N_VDD_MI4_s ptft L=1e-05 W=0.0004
+XMI2 N_VSS_MI2_d N_VSS_MI2_g N_net14_MI2_s ptft L=1e-05 W=0.0001
+XMI4@4 N_OUT_MI4_d N_IN1_MI4@4_g N_VDD_MI4@4_s ptft L=1e-05 W=0.0004
+XMI2@2 N_VSS_MI2@2_d N_VSS_MI2@2_g N_net14_MI2_s ptft L=1e-05 W=0.0001
+XMI4@3 N_OUT_MI4@3_d N_IN1_MI4@3_g N_VDD_MI4@4_s ptft L=1e-05 W=0.0004
+XMI4@2 N_OUT_MI4@3_d N_IN1_MI4@2_g N_VDD_MI4@2_s ptft L=1e-05 W=0.0004
+XMI0 N_net14_MI0_d N_IN1_MI0_g N_VDD_MI4@2_s ptft L=1e-05 W=0.0004
+XMI5 N_VSS_MI5_d N_net14_MI5_g N_OUT_MI5_s ptft L=1e-05 W=0.0002
+XMI0@2 N_net14_MI0_d N_IN1_MI0@2_g N_VDD_MI0@2_s ptft L=1e-05 W=0.0004
+XMI5@8 N_VSS_MI5@8_d N_net14_MI5@8_g N_OUT_MI5_s ptft L=1e-05 W=0.0002
+XMI1 N_net14_MI1_d N_IN2_MI1_g N_VDD_MI0@2_s ptft L=1e-05 W=0.0004
+XMI5@7 N_VSS_MI5@8_d N_net14_MI5@7_g N_OUT_MI5@7_s ptft L=1e-05 W=0.0002
+XMI1@2 N_net14_MI1_d N_IN2_MI1@2_g N_VDD_MI1@2_s ptft L=1e-05 W=0.0004
+XMI5@6 N_VSS_MI5@6_d N_net14_MI5@6_g N_OUT_MI5@7_s ptft L=1e-05 W=0.0002
+XMI3 N_OUT_MI3_d N_IN2_MI3_g N_VDD_MI1@2_s ptft L=1e-05 W=0.0004
+XMI5@5 N_VSS_MI5@6_d N_net14_MI5@5_g N_OUT_MI5@5_s ptft L=1e-05 W=0.0002
+XMI3@4 N_OUT_MI3_d N_IN2_MI3@4_g N_VDD_MI3@4_s ptft L=1e-05 W=0.0004
+XMI5@4 N_VSS_MI5@4_d N_net14_MI5@4_g N_OUT_MI5@5_s ptft L=1e-05 W=0.0002
+XMI3@3 N_OUT_MI3@3_d N_IN2_MI3@3_g N_VDD_MI3@4_s ptft L=1e-05 W=0.0004
+XMI5@3 N_VSS_MI5@4_d N_net14_MI5@3_g N_OUT_MI5@3_s ptft L=1e-05 W=0.0002
+XMI3@2 N_OUT_MI3@3_d N_IN2_MI3@2_g N_VDD_MI3@2_s ptft L=1e-05 W=0.0004
+XMI5@2 N_VSS_MI5@2_d N_net14_MI5@2_g N_OUT_MI5@3_s ptft L=1e-05 W=0.0002
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts_cdl/NAND2D2.cdl.NAND2D2.pxi"
+*
+.ends
+*
+*

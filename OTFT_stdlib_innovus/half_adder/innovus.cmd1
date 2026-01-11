@@ -1,0 +1,170 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Dec 27 18:59:57 2025                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v19.13-s080_1 (64bit) 01/24/2020 18:10 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 19.13-s080_1 NR200109-1001/19_13-UB (database version 18.20, 500.7.1) {superthreading v1.52}
+#@(#)CDS: AAE 19.13-s032 (64bit) 01/24/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 19.13-s027_1 () Jan  7 2020 13:13:42 ( )
+#@(#)CDS: SYNTECH 19.13-s013_1 () Dec 11 2019 02:45:06 ( )
+#@(#)CDS: CPE v19.13-s058
+#@(#)CDS: IQuantus/TQuantus 19.1.3-s155 (64bit) Sun Nov 3 18:26:52 PST 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+        {-window "window coordinates" "" list optional}
+        {-window_size "window size in microns" "" string optional}
+    
+    }
+define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+win
+set init_verilog /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/netlist/half_adder.v
+set init_design_settop 1
+set init_top_cell half_adder
+set init_lef_file {/data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.tlef /data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.lef}
+set init_mmmc_file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/netlist/half_adder.view
+set init_pwr_net VDD
+set init_gnd_net VSS
+setGenerateViaMode -auto true
+init_design
+setDesignMode -process 250
+setPlaceMode -place_detail_legalization_inst_gap 2
+globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {} -override -verbose
+globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {} -override -verbose
+globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+floorPlan -site CoreSite -s 13500 8100 180 180 180 180
+setPinAssignMode -pinEditInBatch true
+editPin -pin in1 -assign {1350.0 8100.0} -layer M1 -snap USERGRID
+editPin -pin in2 -assign {1912.5 8100.0} -layer M1 -snap USERGRID
+editPin -pin sum -assign {3600.0 8100.0} -layer M1 -snap USERGRID
+editPin -pin cout -assign {4725.0 8100.0} -layer M1 -snap USERGRID
+editPin -pin reset -assign {0.0 1840.90909091} -layer M1 -snap USERGRID
+editPin -pin CLK -assign {3262.5 0.0} -layer M1 -snap USERGRID
+setPinAssignMode -pinEditInBatch false
+saveDesign /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer M2 -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog {
+    padcore_ring
+    block_ring
+  } -skip_via_on_pin {
+    standardcell
+  } -skip_via_on_wire_shape {
+    noshape
+  }
+addStripe -nets { VDD VSS } -layer M1 -direction horizontal -width 30 -spacing 870 -set_to_set_distance 1800 -start_from bottom -start_offset -15 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+addStripe -nets { VDD VSS } -layer M2 -direction vertical -width 60 -spacing 200 -set_to_set_distance 3000 -start_from left -start_offset 300 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+sroute -connect { corePin } -layerChangeRange { M1 M2 } -blockPinTarget { nearestTarget } -allowJogging false -crossoverViaLayerRange { M1 M2 }
+createPGPin VDD -net VDD -geom M2 180 500 280 600
+createPGPin VSS -net VSS -geom M2 180 200 280 300
+verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VDD
+verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VSS
+verify_PG_short -no_routing_blkg
+verify_drc
+saveDesign /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc
+fit
+fit
+zoomBox -1488.54000 -342.84000 13455.65000 7567.26000
+zoomBox -674.78000 -167.58000 8502.85000 4690.23000
+zoomBox -59.53000 -9.49000 4731.26000 2526.32000
+zoomBox 102.10000 30.91000 3563.45000 1863.04000
+zoomBox 327.70000 86.55000 2134.58000 1042.95000
+zoomBox 495.33000 120.67000 1438.54000 619.92000
+zoomBox 437.58000 114.89000 1547.24000 702.24000
+zoomBox 371.77000 108.43000 1677.25000 799.43000
+fit
+zoomBox -40.16000 489.86000 5596.07000 3473.17000
+zoomBox 231.81000 698.57000 3693.17000 2530.70000
+zoomBox 462.79000 879.59000 2269.67000 1835.99000
+fit
+zoomBox -629.18000 -97.03000 6001.65000 3412.73000
+zoomBox -329.22000 22.95000 3742.95000 2178.39000
+zoomBox -249.92000 55.83000 3211.43000 1887.96000
+zoomBox -30.10000 140.93000 1776.76000 1097.32000
+zoomBox 77.90000 189.68000 1021.10000 688.92000
+zoomBox 32.29000 169.15000 1141.94000 756.50000
+zoomBox -2.91000 80.21000 1302.56000 771.21000
+zoomBox 32.89000 107.93000 1142.54000 695.28000
+zoomBox 63.31000 131.49000 1006.52000 630.74000
+uiSetTool ruler
+uiSetTool ruler
+uiSetTool ruler
+zoomBox 200.17000 143.66000 779.42000 450.26000
+uiSetTool ruler
+zoomBox 52.86000 102.40000 996.09000 601.66000
+zoomBox -81.33000 62.74000 1224.18000 753.76000
+zoomBox -384.10000 -7.79000 1741.73000 1117.43000
+zoomBox -882.90000 -117.42000 2578.67000 1714.82000
+zoomBox -1311.84000 -269.25000 3479.27000 2266.73000
+zoomBox -828.64000 -171.12000 2632.95000 1661.13000
+zoomBox -685.03000 -142.04000 2257.33000 1415.38000
+zoomBox -360.63000 -41.96000 1446.35000 914.49000
+zoomBox -154.46000 -28.04000 955.27000 559.35000
+zoomBox -105.25000 -24.72000 838.04000 474.57000
+uiSetTool ruler
+zoomBox 11.50000 80.54000 590.80000 387.17000
+zoomBox 84.87000 142.07000 440.65000 330.39000
+zoomBox 171.23000 205.06000 305.44000 276.10000
+fit
+zoomBox -474.07000 3751.53000 8703.55000 8609.33000
+zoomBox -299.52000 4425.21000 7501.45000 8554.34000
+zoomBox 240.31000 6552.63000 3701.65000 8384.75000
+fit
+zoomBox -1412.96000 -361.16000 13531.22000 7548.94000
+zoomBox 316.07000 -78.48000 5106.84000 2457.32000
+zoomBox 563.20000 133.70000 4635.36000 2289.13000
+zoomBox 271.14000 -121.86000 5061.91000 2413.94000
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer M2 -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog {
+    padcore_ring
+    block_ring
+  } -skip_via_on_pin {
+    standardcell
+  } -skip_via_on_wire_shape {
+    noshape
+  }
+addStripe -nets { VSS VDD  } -layer M1 -direction horizontal -width 30 -spacing 870 -set_to_set_distance 1800 -start_from bottom -start_offset -15 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+addStripe -nets { VDD VSS } -layer M2 -direction vertical -width 60 -spacing 200 -set_to_set_distance 3000 -start_from left -start_offset 300 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+sroute -connect { corePin } -layerChangeRange { M1 M2 } -blockPinTarget { nearestTarget } -allowJogging false -crossoverViaLayerRange { M1 M2 }
+createPGPin VDD -net VDD -geom M2 180 500 280 600
+createPGPin VSS -net VSS -geom M2 180 200 280 300
+verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VDD
+verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VSS
+verify_PG_short -no_routing_blkg
+verify_drc
+saveDesign /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc
+fit
+zoomBox 231.20000 -16.48000 5021.99000 2519.33000

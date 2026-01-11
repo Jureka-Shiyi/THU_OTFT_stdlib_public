@@ -1,0 +1,16 @@
+OK
+VERSION          2
+TIME_NUMBER 6225595283
+LAYER_COUNT          7
+VIACOR_COUNT          2
+FIELD_NAMES drc_layer_nb layer_name
+         1 M1
+         3 MC
+         7 Gate
+         9 Source_Drain
+        12 Via1_MC
+        14 Via1_M1
+        16 M2
+VIACOR_FIELD_NAMES VIA_drc_layer_nb LAYER1_drc_layer_nb LAYER2_drc_layer_nb
+14  1  16
+12  3  16

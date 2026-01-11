@@ -1,0 +1,909 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v19.13-s080_1, built Fri Jan 24 18:10:46 PST 2020
+Options:	
+Date:		Sat Dec 27 18:59:26 2025
+Host:		cad52 (x86_64 w/Linux 3.10.0-1160.el7.x86_64) (32cores*128cpus*Intel(R) Xeon(R) Platinum 8358 CPU @ 2.60GHz 49152KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	19.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (1288 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> getVersion
+<CMD> define_proc_arguments ViaFillQor -info {This procedure extracts Viafill details from innovus db} -define_args {
+        {-window "window coordinates" "" list optional}
+        {-window_size "window size in microns" "" string optional}
+    
+    }
+[INFO] Loading Pegasus 23.14 fill procedures
+<CMD> define_proc_arguments ProcessFills -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+<CMD> define_proc_arguments FillQor -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+<CMD> define_proc_arguments ProcessFills_fast -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+				{-csvName "File path for Fill Data csv file" "Path of CSV file" string required}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list required}
+    {-output_data "Boolean Flag to output Fill Data for further processing" "" string required}
+}
+<CMD> define_proc_arguments FillQor_fast -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+				{-selectFill "type of fill to be selected in session" "list of BRIDGE/EXTENSION/STAMP/FLOATING" list optional}
+				{-outData "Boolean Flag to output Fill Data for further processing" "" boolean optional}
+    {-outDataFile "File path for Fill Data csv file" "Path of CSV file" string optional}
+}
+<CMD> define_proc_arguments ProcessFills_fast_stampOnly -info {This procedure processes Fill types} -define_args {
+    {-fillInfo "Design Fill data" "" list required}
+	
+}
+<CMD> define_proc_arguments FillQor_fast_stampOnly -info {This procedure extracts fill details from innovus db} -define_args {
+    {-layers "Fills Cleanup on which all layers" "list of Metal/Routing layers" list optional}
+}
+<CMD> win
+<CMD> set init_verilog /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/netlist/half_adder.v
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell half_adder
+<CMD> set init_lef_file {/data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.tlef /data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.lef}
+<CMD> set init_mmmc_file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/netlist/half_adder.view
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> setGenerateViaMode -auto true
+<CMD> init_design
+#% Begin Load MMMC data ... (date=12/27 19:00:21, mem=501.0M)
+#% End Load MMMC data ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=501.2M, current mem=501.2M)
+typical
+
+Loading LEF file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.tlef ...
+
+Loading LEF file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.lef ...
+Set DBUPerIGU to M2 pitch 3000.
+**WARN: (IMPLF-90):	No DATABASE MICRONS statement has been specified, default 100 is used.
+
+viaInitial starts at Sat Dec 27 19:00:21 2025
+viaInitial ends at Sat Dec 27 19:00:21 2025
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/netlist/half_adder.view
+Reading tt timing library '/data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_16/OTFT_stdlib_16.lib' ...
+Read 16 cells in library 'OTFT_stdlib' 
+*** End library_loading (cpu=0.00min, real=0.00min, mem=18.0M, fe_cpu=0.17min, fe_real=0.92min, fe_mem=817.2M) ***
+#% Begin Load netlist data ... (date=12/27 19:00:21, mem=512.8M)
+*** Begin netlist parsing (mem=817.2M) ***
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR2D8' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR2D8' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR2D4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR2D4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR2D2' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR2D2' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NOR2D1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NOR2D1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND2D8' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND2D8' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND2D4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND2D4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND2D2' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND2D2' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'NAND2D1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'NAND2D1' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'INVD8' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'INVD8' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VSS' of cell 'INVD4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (IMPVL-159):	Pin 'VDD' of cell 'INVD4' is defined in LEF but not in the timing library.
+Type 'man IMPVL-159' for more detail.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Created 16 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '/data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/netlist/half_adder.v'
+
+*** Memory Usage v#1 (Current mem = 817.242M, initial mem = 275.539M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=817.2M) ***
+#% End Load netlist data ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=515.6M, current mem=515.6M)
+Set top cell to half_adder.
+Hooked 16 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell half_adder ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite CoreSite width 1000.
+** info: there are 27 modules.
+** info: there are 8 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 857.668M, initial mem = 275.539M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers POLY and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.076 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: func_typical
+    RC-Corner Name        : typical
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file './netlist/half_adder.sdc' ...
+Current (total cpu=0:00:10.4, real=0:00:55.0, peak res=700.5M, current mem=700.5M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ./netlist/half_adder.sdc, Line 9).
+
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Innovus setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ./netlist/half_adder.sdc, Line 10).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ./netlist/half_adder.sdc, Line 19).
+
+**WARN: (TCLNL-330):	set_input_delay on clock root 'CLK' is not supported. You should use the -source option to set_clock_latency to provide this offset. You can also use the global timing_allow_input_delay_on_clock_source to allow set_input_delay assertion to have an effect on clock source paths beginning at this clock root. (File ./netlist/half_adder.sdc, Line 20).
+
+INFO (CTE): Reading of timing constraints file ./netlist/half_adder.sdc completed, with 4 WARNING
+WARNING (CTE-25): Line: 11 of File ./netlist/half_adder.sdc : Skipped unsupported command: set_max_area
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.0, real=0:00:00.0, peak res=718.2M, current mem=718.2M)
+Current (total cpu=0:00:10.5, real=0:00:55.0, peak res=718.2M, current mem=718.2M)
+Total number of combinational cells: 15
+Total number of sequential cells: 1
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFD2 BUFD4 BUFD8
+Total number of usable buffers: 3
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVD1 INVD2 INVD4 INVD8
+Total number of usable inverters: 4
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+#% Begin Load MMMC data ... (date=12/27 19:00:21, mem=739.3M)
+#% End Load MMMC data ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=739.3M, current mem=739.3M)
+Start generating vias ...
+**WARN: (IMPRM-143):	ENCLOSURE is not defined on cut layer "Via1" in the technology DB. VIARULE GENERATE values will be used instead. The generated vias, using the VIARULE GENERATE values, are probably not optimal for signal routing and pin access.
+Type 'man IMPRM-143' for more detail.
+Generating vias for default rule ...
+**WARN: (IMPRM-143):	ENCLOSURE is not defined on cut layer "Via1" in the technology DB. VIARULE GENERATE values will be used instead. The generated vias, using the VIARULE GENERATE values, are probably not optimal for signal routing and pin access.
+Type 'man IMPRM-143' for more detail.
+Total 5 vias inserted to default rule.
+Via generation for default rule completed.
+Found no NONDEFAULTRULE.
+Via generation completed successfully.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-90             1  No DATABASE MICRONS statement has been s...
+WARNING   IMPEXT-2766          2  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773          2  The via resistance between layers %s and...
+WARNING   IMPVL-159           32  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   IMPRM-143            2  %s is not defined on cut layer "%s" in t...
+WARNING   TCLCMD-1013          1  The SDC set_operating_conditions asserti...
+WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+WARNING   TCLNL-330            2  set_input_delay on clock root '%s' is no...
+*** Message Summary: 43 warning(s), 0 error(s)
+
+<CMD> setDesignMode -process 250
+##  Process: 250           (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 250nm process node: total_c_th=5, relative_c_th=0.03 and coupling_c_th=3.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	For postRoute effortLevel low extraction, the coupling_c_th value will be used only when the -capFilterMode parameter of the setExtractRCMode command is set to relAndCoup or relOrCoup. Default value of -capFilterMode parameter in postRoute extraction effortLevel low is relOnly.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'standard'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode is 'low'.
+<CMD> setPlaceMode -place_detail_legalization_inst_gap 2
+<CMD> globalNetConnect VDD -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {} -override -verbose
+8 new pwr-pin connections were made to global net 'VDD'.
+<CMD> globalNetConnect VSS -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {} -override -verbose
+8 new gnd-pin connections were made to global net 'VSS'.
+<CMD> globalNetConnect VDD -type tiehi -instanceBasename * -hierarchicalInstance {}
+<CMD> globalNetConnect VSS -type tielo -instanceBasename * -hierarchicalInstance {}
+<CMD> floorPlan -site CoreSite -s 13500 8100 180 180 180 180
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pin in1 -assign {1350.0 8100.0} -layer M1 -snap USERGRID
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1077.8M).
+<CMD> editPin -pin in2 -assign {1912.5 8100.0} -layer M1 -snap USERGRID
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1077.8M).
+<CMD> editPin -pin sum -assign {3600.0 8100.0} -layer M1 -snap USERGRID
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1077.8M).
+<CMD> editPin -pin cout -assign {4725.0 8100.0} -layer M1 -snap USERGRID
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1077.8M).
+<CMD> editPin -pin reset -assign {0.0 1840.90909091} -layer M1 -snap USERGRID
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1077.8M).
+<CMD> editPin -pin CLK -assign {3262.5 0.0} -layer M1 -snap USERGRID
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 1077.8M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> saveDesign /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc
+#% Begin save design ... (date=12/27 19:00:21, mem=741.5M)
+% Begin Save ccopt configuration ... (date=12/27 19:00:21, mem=744.5M)
+% End Save ccopt configuration ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=745.2M, current mem=745.2M)
+% Begin Save netlist data ... (date=12/27 19:00:21, mem=745.3M)
+Writing Binary DB to /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc.dat.tmp/half_adder.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=745.6M, current mem=745.6M)
+Saving congestion map file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc.dat.tmp/half_adder.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/27 19:00:21, mem=746.2M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=746.3M, current mem=746.3M)
+% Begin Save clock tree data ... (date=12/27 19:00:21, mem=746.8M)
+% End Save clock tree data ... (date=12/27 19:00:21, total cpu=0:00:00.0, real=0:00:00.0, peak res=746.8M, current mem=746.8M)
+Saving preference file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/27 19:00:22, mem=747.5M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/27 19:00:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=747.5M, current mem=747.5M)
+Saving PG file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc.dat.tmp/half_adder.pg.gz
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1073.8M) ***
+Saving Drc markers ...
+... No Drc file written since there is no markers found.
+% Begin Save placement data ... (date=12/27 19:00:22, mem=747.6M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruing View Names to Binary file
+% End Save placement data ... (date=12/27 19:00:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=747.7M, current mem=747.7M)
+% Begin Save routing data ... (date=12/27 19:00:22, mem=747.7M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1077.8M) ***
+% End Save routing data ... (date=12/27 19:00:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=752.9M, current mem=751.9M)
+Saving property file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/floorplan.enc.dat.tmp/half_adder.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1080.8M) ***
+% Begin Save power constraints data ... (date=12/27 19:00:22, mem=752.5M)
+% End Save power constraints data ... (date=12/27 19:00:22, total cpu=0:00:00.0, real=0:00:00.0, peak res=752.6M, current mem=752.6M)
+typical
+Generated self-contained design floorplan.enc.dat.tmp
+#% End save design ... (date=12/27 19:00:23, total cpu=0:00:01.0, real=0:00:02.0, peak res=755.9M, current mem=755.9M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer M2 -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog {
+    padcore_ring
+    block_ring
+  } -skip_via_on_pin {
+    standardcell
+  } -skip_via_on_wire_shape {
+    noshape
+  }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets { VDD VSS } -layer M1 -direction horizontal -width 30 -spacing 870 -set_to_set_distance 1800 -start_from bottom -start_offset -15 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=12/27 19:00:27, mem=769.4M)
+
+Initialize fgc environment(mem: 1117.5M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 9 wires.
+ViaGen created 0 via, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M1   |        9       |       NA       |
++--------+----------------+----------------+
+#% End addStripe (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=770.7M, current mem=770.7M)
+<CMD> addStripe -nets { VDD VSS } -layer M2 -direction vertical -width 60 -spacing 200 -set_to_set_distance 3000 -start_from left -start_offset 300 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=12/27 19:00:27, mem=770.7M)
+
+Initialize fgc environment(mem: 1117.5M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1117.5M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+Stripe generation is complete.
+vias are now being generated.
+addStripe created 10 wires.
+ViaGen created 45 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|  Via1  |       45       |        0       |
+|   M2   |       10       |       NA       |
++--------+----------------+----------------+
+#% End addStripe (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=771.2M, current mem=771.2M)
+<CMD> sroute -connect { corePin } -layerChangeRange { M1 M2 } -blockPinTarget { nearestTarget } -allowJogging false -crossoverViaLayerRange { M1 M2 }
+#% Begin sroute (date=12/27 19:00:27, mem=771.2M)
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Sat Dec 27 19:00:27 2025 ***
+SPECIAL ROUTE ran on directory: /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder
+SPECIAL ROUTE ran on machine: cad52 (Linux 3.10.0-1160.el7.x86_64 Xeon 2.60Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 2
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteStraightConnections set to "straightWithChanges"
+srouteTopLayerLimit set to 2
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2102.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 5 layers, 2 routing layers, 1 overlap layer
+Read in 1 nondefault rule, 0 used
+Read in 26 macros, 4 used
+Read in 4 components
+  4 core components: 4 unplaced, 0 placed, 0 fixed
+Read in 6 physical pins
+  6 physical pins: 0 unplaced, 6 placed, 0 fixed
+Read in 6 nets
+Read in 2 special nets, 2 routed
+Read in 14 terminals
+Begin power routing ...
+CPU time for FollowPin 0 seconds
+CPU time for FollowPin 0 seconds
+  Number of Core ports routed: 0  open: 2
+  Number of Followpin connections: 10
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 2106.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 6 io pins ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+sroute created 10 wires.
+ViaGen created 50 vias, deleted 45 vias to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+|   M1   |       10       |       NA       |
+|  Via1  |       50       |       45       |
++--------+----------------+----------------+
+#% End sroute (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=779.8M, current mem=774.7M)
+<CMD> createPGPin VDD -net VDD -geom M2 180 500 280 600
+<CMD> createPGPin VSS -net VSS -geom M2 180 200 280 300
+<CMD> verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VDD
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sat Dec 27 19:00:27 2025
+
+Design Name: half_adder
+Database Units: 100
+Design Boundary: (0.0000, 0.0000) (13860.0000, 8460.0000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+*** Checking Net VDD
+Net VDD: has an unconnected terminal, has special routes with opens.
+
+Begin Summary 
+    1 Problem(s) (IMPVFC-96): Terminal(s) are not connected.
+    1 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    2 total info(s) created.
+End Summary
+
+End Time: Sat Dec 27 19:00:27 2025
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 2 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VSS
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sat Dec 27 19:00:27 2025
+
+Design Name: half_adder
+Database Units: 100
+Design Boundary: (0.0000, 0.0000) (13860.0000, 8460.0000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+*** Checking Net VSS
+Net VSS: has an unconnected terminal, has special routes with opens.
+
+Begin Summary 
+    1 Problem(s) (IMPVFC-96): Terminal(s) are not connected.
+    1 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    2 total info(s) created.
+End Summary
+
+End Time: Sat Dec 27 19:00:27 2025
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 2 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verify_PG_short -no_routing_blkg
+ *** Starting VERIFY PG SHORT(MEM: 1122.8) ***
+
+  VERIFY PG SHORT ...... Initializing
+  VERIFY PG SHORT ...... Deleting Existing Violations
+  VERIFY PG SHORT ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY PG SHORT ...... SubArea : 1 of 1
+  VERIFY PG SHORT ...... Short:  0 Viols.
+  Verification Complete : 0 Short Viols.
+
+**********End: VERIFY PG SHORT**********
+ *** verify PG short (CPU: 0:00:00.0  MEM: 29.2M)
+
+<CMD> verify_drc
+ *** Starting Verify DRC (MEM: 1152.1) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 137.0M) ***
+
+<CMD> saveDesign /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc
+#% Begin save design ... (date=12/27 19:00:27, mem=790.2M)
+% Begin Save ccopt configuration ... (date=12/27 19:00:27, mem=790.2M)
+% End Save ccopt configuration ... (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=790.5M, current mem=790.5M)
+% Begin Save netlist data ... (date=12/27 19:00:27, mem=790.5M)
+Writing Binary DB to /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=790.6M, current mem=790.6M)
+Saving congestion map file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/27 19:00:27, mem=790.6M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=790.6M, current mem=790.6M)
+% Begin Save clock tree data ... (date=12/27 19:00:27, mem=790.7M)
+% End Save clock tree data ... (date=12/27 19:00:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=790.7M, current mem=790.7M)
+Saving preference file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/27 19:00:27, mem=787.2M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/27 19:00:28, total cpu=0:00:00.0, real=0:00:01.0, peak res=787.2M, current mem=787.2M)
+Saving PG file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.pg.gz
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1156.1M) ***
+Saving Drc markers ...
+... 2 markers are saved ...
+... 0 geometry drc markers are saved ...
+... 0 antenna drc markers are saved ...
+% Begin Save placement data ... (date=12/27 19:00:28, mem=787.2M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruing View Names to Binary file
+% End Save placement data ... (date=12/27 19:00:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=787.2M, current mem=787.2M)
+% Begin Save routing data ... (date=12/27 19:00:28, mem=787.2M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1156.1M) ***
+% End Save routing data ... (date=12/27 19:00:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=787.2M, current mem=787.2M)
+Saving property file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1159.1M) ***
+% Begin Save power constraints data ... (date=12/27 19:00:28, mem=787.3M)
+% End Save power constraints data ... (date=12/27 19:00:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=787.3M, current mem=787.3M)
+typical
+Generated self-contained design pg.enc.dat.tmp
+#% End save design ... (date=12/27 19:00:29, total cpu=0:00:01.1, real=0:00:02.0, peak res=790.7M, current mem=787.9M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> fit
+<CMD> fit
+<CMD> zoomBox -1488.54000 -342.84000 13455.65000 7567.26000
+<CMD> zoomBox -674.78000 -167.58000 8502.85000 4690.23000
+<CMD> zoomBox -59.53000 -9.49000 4731.26000 2526.32000
+<CMD> zoomBox 102.10000 30.91000 3563.45000 1863.04000
+<CMD> zoomBox 327.70000 86.55000 2134.58000 1042.95000
+<CMD> zoomBox 495.33000 120.67000 1438.54000 619.92000
+<CMD> zoomBox 437.58000 114.89000 1547.24000 702.24000
+<CMD> zoomBox 371.77000 108.43000 1677.25000 799.43000
+<CMD> fit
+<CMD> zoomBox -40.16000 489.86000 5596.07000 3473.17000
+<CMD> zoomBox 231.81000 698.57000 3693.17000 2530.70000
+<CMD> zoomBox 462.79000 879.59000 2269.67000 1835.99000
+<CMD> fit
+<CMD> zoomBox -629.18000 -97.03000 6001.65000 3412.73000
+<CMD> zoomBox -329.22000 22.95000 3742.95000 2178.39000
+<CMD> zoomBox -249.92000 55.83000 3211.43000 1887.96000
+<CMD> zoomBox -30.10000 140.93000 1776.76000 1097.32000
+<CMD> zoomBox 77.90000 189.68000 1021.10000 688.92000
+<CMD> zoomBox 32.29000 169.15000 1141.94000 756.50000
+<CMD> zoomBox -2.91000 80.21000 1302.56000 771.21000
+<CMD> zoomBox 32.89000 107.93000 1142.54000 695.28000
+<CMD> zoomBox 63.31000 131.49000 1006.52000 630.74000
+<CMD> uiSetTool ruler
+<CMD> uiSetTool ruler
+<CMD> uiSetTool ruler
+<CMD> zoomBox 200.17000 143.66000 779.42000 450.26000
+<CMD> uiSetTool ruler
+<CMD> zoomBox 52.86000 102.40000 996.09000 601.66000
+<CMD> zoomBox -81.33000 62.74000 1224.18000 753.76000
+<CMD> zoomBox -384.10000 -7.79000 1741.73000 1117.43000
+<CMD> zoomBox -882.90000 -117.42000 2578.67000 1714.82000
+<CMD> zoomBox -1311.84000 -269.25000 3479.27000 2266.73000
+<CMD> zoomBox -828.64000 -171.12000 2632.95000 1661.13000
+<CMD> zoomBox -685.03000 -142.04000 2257.33000 1415.38000
+<CMD> zoomBox -360.63000 -41.96000 1446.35000 914.49000
+<CMD> zoomBox -154.46000 -28.04000 955.27000 559.35000
+<CMD> zoomBox -105.25000 -24.72000 838.04000 474.57000
+<CMD> uiSetTool ruler
+<CMD> zoomBox 11.50000 80.54000 590.80000 387.17000
+<CMD> zoomBox 84.87000 142.07000 440.65000 330.39000
+<CMD> zoomBox 171.23000 205.06000 305.44000 276.10000
+<CMD> fit
+<CMD> zoomBox -474.07000 3751.53000 8703.55000 8609.33000
+<CMD> zoomBox -299.52000 4425.21000 7501.45000 8554.34000
+<CMD> zoomBox 240.31000 6552.63000 3701.65000 8384.75000
+<CMD> fit
+<CMD> zoomBox -1412.96000 -361.16000 13531.22000 7548.94000
+<CMD> zoomBox 316.07000 -78.48000 5106.84000 2457.32000
+<CMD> zoomBox 563.20000 133.70000 4635.36000 2289.13000
+<CMD> zoomBox 271.14000 -121.86000 5061.91000 2413.94000
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer M2 -stacked_via_bottom_layer M1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog {
+    padcore_ring
+    block_ring
+  } -skip_via_on_pin {
+    standardcell
+  } -skip_via_on_wire_shape {
+    noshape
+  }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets { VSS VDD  } -layer M1 -direction horizontal -width 30 -spacing 870 -set_to_set_distance 1800 -start_from bottom -start_offset -15 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=12/27 19:04:27, mem=887.5M)
+
+Initialize fgc environment(mem: 1258.1M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 180.000000 13680.000000 180.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 1080.000000 13680.000000 1080.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 1980.000000 13680.000000 1980.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 2880.000000 13680.000000 2880.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 3780.000000 13680.000000 3780.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 4680.000000 13680.000000 4680.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 5580.000000 13680.000000 5580.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 6480.000000 13680.000000 6480.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+**WARN: (IMPPP-354):	The power planner did not generate horizontal stripe at 180.000000 7380.000000 13680.000000 7380.000000 with width 30.000000 either because the stripe would merge with rings, or because stripe could not be connected to any legal targets, or because stripe would break design rule. 
+Type 'man IMPPP-354' for more detail.
+#% End addStripe (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=887.5M, current mem=887.5M)
+<CMD> addStripe -nets { VDD VSS } -layer M2 -direction vertical -width 60 -spacing 200 -set_to_set_distance 3000 -start_from left -start_offset 300 -switch_layer_over_obs false -max_same_layer_jog_length 3 -padcore_ring_top_layer_limit M2 -padcore_ring_bottom_layer_limit M1 -block_ring_top_layer_limit M2 -block_ring_bottom_layer_limit M1 -use_wire_group 0 -snap_wire_center_to_grid None
+#% Begin addStripe (date=12/27 19:04:27, mem=887.5M)
+
+Initialize fgc environment(mem: 1258.1M) ...  fail and won't use fgc to check drc(cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Loading wires (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Loading via instances (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1258.1M)
+Starting stripe generation ...
+Non-Default Mode Option Settings :
+  NONE
+The core ring for VDD is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+The core ring for VSS is incomplete. The core ring will not be used as a boundary for stripes. In this situation, the power planner will generate stripes only within the core area.
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**DIAG[/icd/cm_t1nb_001/INNOVUS191/Rel/19.13/main/lnx86_64_opt/19.13-s080_1/fe/src/prtools/viaGen/vgViaUtil.c:3026:vuGetMaxCutLayerSpacing]: Assert "db_layer && vgIsCutLayer(db_layer)"
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (510.000000, 180.000000) (510.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (3510.000000, 180.000000) (3510.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (6510.000000, 180.000000) (6510.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (9510.000000, 180.000000) (9510.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (12510.000000, 180.000000) (12510.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (770.000000, 180.000000) (770.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (3770.000000, 180.000000) (3770.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (6770.000000, 180.000000) (6770.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (9770.000000, 180.000000) (9770.000000, 8280.000000) because same wire already exists.
+**WARN: (IMPPP-170):	The power planner failed to create a wire at (12770.000000, 180.000000) (12770.000000, 8280.000000) because same wire already exists.
+Stripe generation is complete.
+#% End addStripe (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=887.5M, current mem=887.5M)
+<CMD> sroute -connect { corePin } -layerChangeRange { M1 M2 } -blockPinTarget { nearestTarget } -allowJogging false -crossoverViaLayerRange { M1 M2 }
+#% Begin sroute (date=12/27 19:04:27, mem=887.5M)
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Sat Dec 27 19:04:27 2025 ***
+SPECIAL ROUTE ran on directory: /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder
+SPECIAL ROUTE ran on machine: cad52 (Linux 3.10.0-1160.el7.x86_64 Xeon 2.60Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 2
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteStraightConnections set to "straightWithChanges"
+srouteTopLayerLimit set to 2
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2241.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 5 layers, 2 routing layers, 1 overlap layer
+Read in 1 nondefault rule, 0 used
+Read in 26 macros, 4 used
+Read in 4 components
+  4 core components: 4 unplaced, 0 placed, 0 fixed
+Read in 8 physical pins
+  8 physical pins: 0 unplaced, 6 placed, 2 fixed
+Read in 6 nets
+Read in 2 special nets, 2 routed
+Read in 16 terminals
+Begin power routing ...
+CPU time for FollowPin 0 seconds
+CPU time for FollowPin 0 seconds
+  Number of Core ports routed: 0  open: 2
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 2244.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 8 io pins ...
+ Updating DB with 0 via definition ...
+sroute created 0 wire.
+ViaGen created 0 via, deleted 0 via to avoid violation.
+#% End sroute (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=887.5M, current mem=886.7M)
+<CMD> createPGPin VDD -net VDD -geom M2 180 500 280 600
+<CMD> createPGPin VSS -net VSS -geom M2 180 200 280 300
+<CMD> verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VDD
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sat Dec 27 19:04:27 2025
+
+Design Name: half_adder
+Database Units: 100
+Design Boundary: (0.0000, 0.0000) (13860.0000, 8460.0000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+*** Checking Net VDD
+Net VDD: has an unconnected terminal, has special routes with opens.
+
+Begin Summary 
+    1 Problem(s) (IMPVFC-96): Terminal(s) are not connected.
+    1 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    2 total info(s) created.
+End Summary
+
+End Time: Sat Dec 27 19:04:27 2025
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 2 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verifyConnectivity -noAntenna -noSoftPGConnect -noUnroutedNet -net VSS
+VERIFY_CONNECTIVITY use new engine.
+
+******** Start: VERIFY CONNECTIVITY ********
+Start Time: Sat Dec 27 19:04:27 2025
+
+Design Name: half_adder
+Database Units: 100
+Design Boundary: (0.0000, 0.0000) (13860.0000, 8460.0000)
+Error Limit = 1000; Warning Limit = 50
+Check specified nets
+*** Checking Net VSS
+Net VSS: has an unconnected terminal, has special routes with opens.
+
+Begin Summary 
+    1 Problem(s) (IMPVFC-96): Terminal(s) are not connected.
+    1 Problem(s) (IMPVFC-200): Special Wires: Pieces of the net are not connected together.
+    2 total info(s) created.
+End Summary
+
+End Time: Sat Dec 27 19:04:27 2025
+Time Elapsed: 0:00:00.0
+
+******** End: VERIFY CONNECTIVITY ********
+  Verification Complete : 2 Viols.  0 Wrngs.
+  (CPU Time: 0:00:00.0  MEM: 0.000M)
+
+<CMD> verify_PG_short -no_routing_blkg
+ *** Starting VERIFY PG SHORT(MEM: 1258.3) ***
+
+  VERIFY PG SHORT ...... Initializing
+  VERIFY PG SHORT ...... Deleting Existing Violations
+  VERIFY PG SHORT ...... Creating Sub-Areas
+                  ...... bin size: 8000
+  VERIFY PG SHORT ...... SubArea : 1 of 1
+  VERIFY PG SHORT ...... Short:  0 Viols.
+  Verification Complete : 0 Short Viols.
+
+**********End: VERIFY PG SHORT**********
+ *** verify PG short (CPU: 0:00:00.0  MEM: 29.2M)
+
+<CMD> verify_drc
+ *** Starting Verify DRC (MEM: 1287.6) ***
+
+  VERIFY DRC ...... Starting Verification
+  VERIFY DRC ...... Initializing
+  VERIFY DRC ...... Deleting Existing Violations
+  VERIFY DRC ...... Creating Sub-Areas
+  VERIFY DRC ...... Using new threading
+
+  Verification Complete : 0 Viols.
+
+ *** End Verify DRC (CPU: 0:00:00.1  ELAPSED TIME: 0.00  MEM: 87.0M) ***
+
+<CMD> saveDesign /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc
+#% Begin save design ... (date=12/27 19:04:27, mem=893.8M)
+% Begin Save ccopt configuration ... (date=12/27 19:04:27, mem=893.8M)
+% End Save ccopt configuration ... (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.0M, current mem=894.0M)
+% Begin Save netlist data ... (date=12/27 19:04:27, mem=894.0M)
+Writing Binary DB to /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.v.bin in single-threaded mode...
+% End Save netlist data ... (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.1M, current mem=894.1M)
+Saving congestion map file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.route.congmap.gz ...
+% Begin Save AAE data ... (date=12/27 19:04:27, mem=894.1M)
+Saving AAE Data ...
+% End Save AAE data ... (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.1M, current mem=894.1M)
+% Begin Save clock tree data ... (date=12/27 19:04:27, mem=894.1M)
+% End Save clock tree data ... (date=12/27 19:04:27, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.1M, current mem=894.1M)
+Saving preference file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/gui.pref.tcl ...
+Saving mode setting ...
+Saving global file ...
+% Begin Save floorplan data ... (date=12/27 19:04:28, mem=894.1M)
+Saving floorplan file ...
+% End Save floorplan data ... (date=12/27 19:04:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.1M, current mem=894.1M)
+Saving PG file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.pg.gz
+*** Completed savePGFile (cpu=0:00:00.0 real=0:00:00.0 mem=1298.6M) ***
+Saving Drc markers ...
+... 2 markers are saved ...
+... 0 geometry drc markers are saved ...
+... 0 antenna drc markers are saved ...
+% Begin Save placement data ... (date=12/27 19:04:28, mem=894.1M)
+** Saving stdCellPlacement_binary (version# 2) ...
+Save Adaptive View Pruing View Names to Binary file
+% End Save placement data ... (date=12/27 19:04:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.1M, current mem=894.1M)
+% Begin Save routing data ... (date=12/27 19:04:28, mem=894.1M)
+Saving route file ...
+*** Completed saveRoute (cpu=0:00:00.0 real=0:00:00.0 mem=1298.6M) ***
+% End Save routing data ... (date=12/27 19:04:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.2M, current mem=894.2M)
+Saving property file /data/zhengyj/OTFT_stdlib/OTFT_stdlib_innovus/half_adder/saved/pg.enc.dat.tmp/half_adder.prop
+*** Completed saveProperty (cpu=0:00:00.0 real=0:00:00.0 mem=1301.6M) ***
+% Begin Save power constraints data ... (date=12/27 19:04:28, mem=894.2M)
+% End Save power constraints data ... (date=12/27 19:04:28, total cpu=0:00:00.0, real=0:00:00.0, peak res=894.2M, current mem=894.2M)
+typical
+Generated self-contained design pg.enc.dat.tmp
+#% End save design ... (date=12/27 19:04:29, total cpu=0:00:01.0, real=0:00:02.0, peak res=894.2M, current mem=889.7M)
+*** Message Summary: 0 warning(s), 0 error(s)
+
+<CMD> fit
+<CMD> zoomBox 231.20000 -16.48000 5021.99000 2519.33000
+
+*** Memory Usage v#1 (Current mem = 1270.039M, initial mem = 275.539M) ***
+*** Message Summary: 65 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:21.1, real=0:05:18, mem=1270.0M) ---

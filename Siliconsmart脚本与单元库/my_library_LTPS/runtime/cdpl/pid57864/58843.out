@@ -1,0 +1,68 @@
+Reading  /tools/Synopsys/siliconsmart/T-2022.03-SP2-1/etc/sis.err...done
+
+                                SiliconSmart (R)
+
+          Version T-2022.03-SP2-1 for linux64 - Jun 27, 2022 10:33:00 
+
+                    Copyright (c) 1998 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+PID : 58846
+User: zhengyj
+Dir : /data/zhengyj/OTFT_stdlib
+Host: cad52
+Command-line: /tools/Synopsys/siliconsmart/T-2022.03-SP2-1/linux64/bin/siliconsmart -server /data/zhengyj/OTFT_stdlib/my_library_LTPS/runtime/cdpl/pid57864/driver_57864.tcl
+Fri Dec 19 13:06:24 2025: Establishing connection to license server
+Fri Dec 19 13:06:25 2025: Testing server connection using feature SIS_CORE
+Fri Dec 19 13:06:45 2025: License server connection established
+The char directory is /data/zhengyj/OTFT_stdlib/my_library_LTPS
+Loading /data/zhengyj/OTFT_stdlib/my_library_LTPS/etc/cell.stat.gz
+Fri Dec 19 13:06:45 CST 2025: Sourcing environment settings
+Warning: Operating condition 'LTPS_TFT_stdlib' already exists, skipped.
+Fri Dec 19 13:06:45 CST 2025: Environment set up done (0 seconds)
+Create and link tmpdir /var/tmp/sis.cad52.1040.58843 -> /var/tmp/siliconsmart.cad52.1040.58846 
+[CDPL] Loading settings for stage: characterization.0
+The char directory is /data/zhengyj/OTFT_stdlib/my_library_LTPS
+Fri Dec 19 13:06:45 CST 2025: Sourcing environment settings
+Warning: Operating condition 'LTPS_TFT_stdlib' already exists, skipped.
+Fri Dec 19 13:06:45 CST 2025: Environment set up done (0 seconds)
+[CDPL] Done loading settings for stage: characterization.0
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN1__lh__OUT__lh__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Host cad52 load average 0.06 (1min) 0.05 (5min) 0.05 (15min)
+Error:   Simulation delay__IN1__lh__OUT__lh__ACQ_1.sif for cell AND2D1 failed: deck.lis: **error** (/data/zhengyj/OTFT_stdlib/my_library_LTPS/netlists/AND2D1.cdl:6) unable to open file "subckts/AND2D1.cdl.pex" . Either the file doesn't exist or the path is wrong. Please enter the correct file location.  . (SC-59) (SMSC-95)
+----------------------
+__recordTaskStats__ AND2D1 delay__IN1__lh__OUT__lh__ACQ_1 0.12 0.02 1.13 0.14 1 53.4123139381 cad52 1766120805.57 1766120858.99 1
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN1__hl__OUT__hl__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Host cad52 load average 0.09 (1min) 0.06 (5min) 0.05 (15min)
+Error:   Simulation delay__IN1__hl__OUT__hl__ACQ_1.sif for cell AND2D1 failed: deck.lis: **error** (/data/zhengyj/OTFT_stdlib/my_library_LTPS/netlists/AND2D1.cdl:6) unable to open file "subckts/AND2D1.cdl.pex" . Either the file doesn't exist or the path is wrong. Please enter the correct file location.  . (SC-59) (SMSC-95)
+----------------------
+__recordTaskStats__ AND2D1 delay__IN1__hl__OUT__hl__ACQ_1 0.06 0.0 1.09 0.1 1 53.2599449158 cad52 1766120858.99 1766120912.25 1
+Loading information for cell AND2D1
+work dir: '/var/tmp/siliconsmart.cad52.1040.58846/AND2D1/delay__IN2__lh__OUT__lh__ACQ_1.sif_0' (SIM-69)
+Executing 'hspice deck.cir -o deck' (SIM-30)
+Host cad52 load average 0.04 (1min) 0.05 (5min) 0.05 (15min)
+Error:   Simulation delay__IN2__lh__OUT__lh__ACQ_1.sif for cell AND2D1 failed: deck.lis: **error** (/data/zhengyj/OTFT_stdlib/my_library_LTPS/netlists/AND2D1.cdl:6) unable to open file "subckts/AND2D1.cdl.pex" . Either the file doesn't exist or the path is wrong. Please enter the correct file location.  . (SC-59) (SMSC-95)
+----------------------
+__recordTaskStats__ AND2D1 delay__IN2__lh__OUT__lh__ACQ_1 0.07 0.01 1.09 0.1 1 53.257365942 cad52 1766120912.25 1766120965.51 1
+Loading information for cell AND2D1
+Interrupting process group 58846 with SIGINT
+Trapped signal Interrupt
+Exit status 255
+Exit status 255

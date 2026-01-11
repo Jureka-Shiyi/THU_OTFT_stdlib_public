@@ -1,0 +1,27 @@
+* File: NOR2D8.cdl
+* Created: Sat Aug 17 15:01:22 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/NOR2D8.cdl.pex"
+.subckt NOR2D8  IN1 IN2 OUT VDD VSS
+* 
+* VSS	VSS
+* VDD	VDD
+* OUT	OUT
+* IN2	IN2
+* IN1	IN1
+XMI0 N_OUT_MI0_d N_IN1_MI0_g N_VSS_MI0_s ntft L=4e-06 W=8e-05
+XMI0@2 N_OUT_MI0_d N_IN1_MI0@2_g N_VSS_MI0@2_s ntft L=4e-06 W=8e-05
+XMI1 N_OUT_MI1_d N_IN2_MI1_g N_VSS_MI1_s ntft L=4e-06 W=8e-05
+XMI1@2 N_OUT_MI1_d N_IN2_MI1@2_g N_VSS_MI1@2_s ntft L=4e-06 W=8e-05
+XMI7 N_OUT_MI7_d N_IN2_MI7_g N_net9_MI7_s ptft L=4e-06 W=8e-05
+XMI7@2 N_OUT_MI7_d N_IN2_MI7@2_g N_net9_MI7@2_s ptft L=4e-06 W=8e-05
+XMI6 N_net9_MI6_d N_IN1_MI6_g N_VDD_MI6_s ptft L=4e-06 W=8e-05
+XMI6@2 N_net9_MI6_d N_IN1_MI6@2_g N_VDD_MI6@2_s ptft L=4e-06 W=8e-05
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/NOR2D8.cdl.NOR2D8.pxi"
+*
+.ends
+*
+*

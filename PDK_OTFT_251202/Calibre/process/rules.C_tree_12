@@ -1,0 +1,48 @@
+
+#ENCRYPT
+VARIABLE m514k1 0.558227
+VARIABLE m514k2 3
+
+#ENDCRYPT
+
+
+#ENCRYPT
+VARIABLE m43ink1 0.777311
+VARIABLE m43ink2 0.00294711
+VARIABLE m43ink3 9.49195e-05
+VARIABLE m43ink4 1
+VARIABLE m43ink5 0
+VARIABLE m43ink6 0.000115212
+VARIABLE m43nbk1 1
+VARIABLE m43nbk2 0.0330718
+VARIABLE m43nbk3 0
+VARIABLE m43nbk4 0.484152
+VARIABLE m43nbk5 0
+VARIABLE m43nbk6 0
+
+#ENDCRYPT
+
+
+#ENCRYPT
+//
+//  model: 20  target: crossover  profile: ultra  layers: ultra_base,XCALIBRATE__M1,XCALIBRATE__M2,XCALIBRATE__MC
+//
+CAPACITANCE CROSSOVER FRINGE XCALIBRATE__M1 XCALIBRATE__MC INSIDE OF XCALIBRATE__M2 MASK
+[
+    PROPERTY C
+    max_radius = MAXRADIUS_XCALIBRATE__M1
+    scaleunits = 1e-15/1e-15
+    profile = ultra_profileid
+    C = 0.0
+    model = 20
+    if (radius_up() < max_radius) {
+        C = length() * 0.0625572 * (1 - exp(-141.122 * (radius_up() + 1000)))
+    }
+    if (C < 0.0) {
+        C = 0
+    }
+    C = C * scaleunits
+]
+
+#ENDCRYPT
+

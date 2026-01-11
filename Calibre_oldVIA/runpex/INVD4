@@ -1,0 +1,34 @@
+//  Runset file generated on Mon Dec 22 20:25:33 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+xrc.rulesFile.value = "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_PEX.cal"
+xrc.runDir.value = "/data/zhengyj/cadence/Calibre/INVD4/pex_cdl"
+xrc.layout.layoutFile.value = "INVD4.calibre.db"
+cmn.layout.defFiles.value = [ "INVD4.def" ]
+xrc.layout.topCellLibrary.value = "OTFT_stdlib_cells"
+cmn.layout.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+xrc.layout.topCell.value = "INVD4"
+xrc.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+xrc.source.sourceFile.value = "INVD4.src.net"
+xrc.source.topCellLibrary.value = "OTFT_stdlib_cells"
+xrc.source.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+xrc.source.topCell.value = "INVD4"
+xrc.source.topCellFDI.value = "INVD4"
+xrc.source.topCellView.value = "schematic"
+xrc.source.topCellViewFDI.value = "schematic"
+xrc.pexNetlist.netlistFile.value = "INVD4.cdl"
+xrc.pexNetlist.netlistFormat.value = "HSPICE"
+xrc.reports.lvsReport.value = "INVD4.lvs.report"
+xrc.reports.pexReport.value = "INVD4.pex.report"
+
+xrc.blockExtraction.setADMSNetlistOutputFiles("{INVD4 INVD4.cdl} ")
+xrc.blockExtraction.setADMSNetlistOutputVerilogModules("{INVD4 INVD4} ")
+
+cmn.runsetPrefs.saveOnClose.value = "AUTOSAVE"
+cmn.miscPrefs.overwriteLayoutPref.value = false
+cmn.miscPrefs.overwriteSourcePref.value = false

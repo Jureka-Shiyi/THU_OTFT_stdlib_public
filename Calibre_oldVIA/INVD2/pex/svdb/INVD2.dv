@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/INVD2.dv
+dv_start matched                                  
+dv_cell {INVD2} {INVD2} matched
+dv_obj_count -transformed_nets {5 5} -transformed_inst {4 4} -transformed_port {4 4}
+dv_end

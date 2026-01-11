@@ -1,0 +1,30 @@
+* File: BUFD16.cdl
+* Created: Fri Dec  6 23:07:20 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/BUFD16.cdl.pex"
+.subckt BUFD16  IN VDD VSS OUT
+* 
+* OUT	OUT
+* VSS	VSS
+* VDD	VDD
+* IN	IN
+XMI1 N_net1_MI1_d N_IN_MI1_g N_VSS_MI1_s ntft L=4e-06 W=8e-05
+XMI1@2 N_net1_MI1_d N_IN_MI1@2_g N_VSS_MI1@2_s ntft L=4e-06 W=8e-05
+XMI6 N_OUT_MI6_d N_net1_MI6_g N_VSS_MI6_s ntft L=4e-06 W=8e-05
+XMI5@2 N_OUT_MI6_d N_net1_MI5@2_g N_VSS_MI5@2_s ntft L=4e-06 W=8e-05
+XMI5 N_OUT_MI5_d N_net1_MI5_g N_VSS_MI5_s ntft L=4e-06 W=8e-05
+XMI3@2 N_OUT_MI5_d N_net1_MI3@2_g N_VSS_MI3@2_s ntft L=4e-06 W=8e-05
+XMI3 N_OUT_MI3_d N_net1_MI3_g N_VSS_MI3_s ntft L=4e-06 W=8e-05
+XMI6@2 N_OUT_MI3_d N_net1_MI6@2_g N_VSS_MI6@2_s ntft L=4e-06 W=8e-05
+XMI0 N_net1_MI0_d N_IN_MI0_g N_VDD_MI0_s ptft L=4e-06 W=8e-05
+XMI7 N_OUT_MI7_d N_net1_MI7_g N_VDD_MI7_s ptft L=4e-06 W=8e-05
+XMI4 N_OUT_MI4_d N_net1_MI4_g N_VDD_MI4_s ptft L=4e-06 W=8e-05
+XMI2 N_OUT_MI2_d N_net1_MI2_g N_VDD_MI2_s ptft L=4e-06 W=8e-05
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/BUFD16.cdl.BUFD16.pxi"
+*
+.ends
+*
+*

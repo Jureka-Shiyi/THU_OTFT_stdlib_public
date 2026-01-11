@@ -1,0 +1,496 @@
+1766812819.663616: 68719-7fe3a3f110c0: cdpl_log.c:231: in cdpl_log_open(): info: @@start_of_log@@
+1766812819.663632: 68719-7fe3a3f110c0: cdpl_log.c:869: in cdpl_log_dump_sysinfo(): info: time: 2025/12/27 13:20:19 CST +0800
+1766812819.663636: 68719-7fe3a3f110c0: cdpl_log.c:871: in cdpl_log_dump_sysinfo(): info: version: T-2022.03-SP1-1 
+1766812819.663637: 68719-7fe3a3f110c0: cdpl_log.c:873: in cdpl_log_dump_sysinfo(): info: system: Linux 3.10.0-1160.el7.x86_64 #1 SMP Mon Oct 19 16:18:59 UTC 2020
+1766812819.663639: 68719-7fe3a3f110c0: cdpl_log.c:878: in cdpl_log_dump_sysinfo(): info: processor: x86_64 64-bits
+1766812819.663640: 68719-7fe3a3f110c0: cdpl_log.c:882: in cdpl_log_dump_sysinfo(): info: hostname: cad52
+1766812819.663642: 68719-7fe3a3f110c0: cdpl_log.c:233: in cdpl_log_open(): debug: path: /data/zhengyj/OTFT_stdlib/my_library/runtime/cdpl/pid68719/master.cad52.68719.log
+1766812819.663644: 68719-7fe3a3f110c0: cdpl_log.c:234: in cdpl_log_open(): debug: dir: /data/zhengyj/OTFT_stdlib/my_library/runtime/cdpl/pid68719
+1766812819.663649: 68719-7fe3a3f110c0: cdpl_log.c:761: in cdpl_log_set_filter(): info: filter level 1
+1766812819.663658: 68719-7fe3a3f110c0: cdpl_server.c:543: in cdpl_sv_init(): info: new server S1613271720
+1766812819.663663: 68719-7fe3a3f110c0: cdpl_ipc.c:3090: in cdpl_ipc_init(): info: requesting IPv4 protocol
+1766812819.663852: 68719-7fe3a3f110c0: cdpl_ipc.c:807: in _selectaddrfamily(): info: selected IPv4 protocol
+1766812819.664433: 68719-7fe3a3f110c0: cdpl_server.c:657: in cdpl_sv_new_master(): info: new master M1
+1766812819.664450: 68719-7fe3a3f110c0: cdpl_server.c:5494: in cdpl_sv_ctl_master(): info: Setting worker heartbeat to 60 seconds
+1766812819.664452: 68719-7fe3a3f110c0: cdpl_server.c:5503: in cdpl_sv_ctl_master(): info: Setting worker heartbeat timeout to 3 heartbeats
+1766812819.664456: 68719-7fe3a3f110c0: cdpl_compat_master.c:2436: in cdplInitMaster(): info: bcast dir is `/dev/null'
+1766812819.664493: 68719-7fe3a3f110c0: cdpl_server.c:5394: in cdpl_sv_ctl_master(): info: farm worker timeout set to 36000
+1766812819.664495: 68719-7fe3a3f110c0: cdpl_server.c:5410: in cdpl_sv_ctl_master(): info: grid worker timeout set to 36000
+1766812819.664497: 68719-7fe3a3f110c0: cdpl_server.c:5438: in cdpl_sv_ctl_master(): info: farm submit command failure threshold set to 100
+1766812819.664517: 68719-7fe3a3f110c0: cdpl_farm.c:2334: in cdpl_farm_new_sh(): info: creating SH farm on localhost
+1766812819.664529: 68719-7fe3a3f110c0: cdpl_compat_master.c:207: in _set_farm_env(): info: exporting CDPL_LOGDIR as `/data/zhengyj/OTFT_stdlib/my_library/runtime/cdpl/pid68719'
+1766812819.664532: 68719-7fe3a3f110c0: cdpl_compat_master.c:213: in _set_farm_env(): info: exporting CDPL_TMPDIR as `/var/tmp'
+1766812819.664534: 68719-7fe3a3f110c0: cdpl_compat_master.c:220: in _set_farm_env(): info: exporting CDPL_HOME as `/tools/Synopsys/siliconsmart/T-2022.03-SP2-1/cdpl_runtime_linux64'
+1766812819.664536: 68719-7fe3a3f110c0: cdpl_compat_master.c:231: in _set_farm_env(): info: SNPSLMD_LICENSE_FILE is not set
+1766812819.664538: 68719-7fe3a3f110c0: cdpl_compat_master.c:247: in _set_farm_env(): info: exporting CDPL_OPTIONS as `[filter][nowlogs]'
+1766812819.664540: 68719-7fe3a3f110c0: cdpl_compat_master.c:254: in _set_farm_env(): info: exporting DISPLAY as `localhost:34.0'
+1766812819.664541: 68719-7fe3a3f110c0: cdpl_compat_master.c:262: in _set_farm_env(): info: exporting CDPL_HEARTBEAT as `60'
+1766812819.664545: 68719-7fe3a3f110c0: cdpl_compat_master.c:348: in _set_farm_env(): info: exporting SIS_CDPL as `1'
+1766812820.124820: 68719-7fe3a3f110c0: cdpl_server.c:738: in cdpl_sv_new_job(): info: new job J1 in M1
+1766812820.124833: 68719-7fe3a3f110c0: cdpl_compat_master.c:1340: in _add_worker(): info: new worker type 100, min:1, max:1, cmd:`/data/zhengyj/OTFT_stdlib/my_library/runtime/cdpl/pid68719/run_68719.sh'
+1766812820.124837: 68719-7fe3a3f110c0: cdpl_server.c:900: in cdpl_sv_new_bin_withfarm(): info: new bin B1 in J1
+1766812820.124860: 68719-7fe3a3f110c0: cdpl_server.c:3116: in cdpl_sv_start_job(): info: starting job J1
+1766812820.133058: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T0 in B1 (prio -1)
+1766812820.133075: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T0 label to "initialization__ACQ_4 of DFFD1"
+1766812820.133162: 68719-7fe38c258700: cdpl_server_sched.c:700: in _sv_launch_worker(): info: started worker W1 (as C1) in bin B1
+1766812820.133172: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T1 in B1 (prio 3)
+1766812820.133177: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T1 label to "leakage_power__ACQ_1 of DFFD1"
+1766812820.133179: 68719-7fe38ba57700: cdpl_farm.c:1959: in _schedule(): info: worker submit failure threshold set to 100
+1766812820.133191: 68719-7fe38ba57700: cdpl_sh.c:49: in _sh_detached_submit(): info: SH : /data/zhengyj/OTFT_stdlib/my_library/runtime/cdpl/pid68719/run_68719.sh
+1766812820.134563: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T2 in B1 (prio -1)
+1766812820.134575: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T2 label to "initialization__ACQ_5 of DFFD1"
+1766812820.134733: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T3 in B1 (prio 5)
+1766812820.134737: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T3 label to "energy__D__hl__ACQ_1 of DFFD1"
+1766812820.134823: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T4 in B1 (prio 5)
+1766812820.134826: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T4 label to "energy__D__lh__ACQ_1 of DFFD1"
+1766812820.134861: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T5 in B1 (prio -1)
+1766812820.134864: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T5 label to "initialization__ACQ_3 of DFFD1"
+1766812820.134909: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T6 in B1 (prio 5)
+1766812820.134911: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T6 label to "energy__CK__hl__ACQ_1 of DFFD1"
+1766812820.134951: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T7 in B1 (prio 5)
+1766812820.134954: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T7 label to "energy__CK__lh__ACQ_1 of DFFD1"
+1766812820.134982: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T8 in B1 (prio -1)
+1766812820.134984: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T8 label to "initialization__ACQ_1 of DFFD1"
+1766812820.135029: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T9 in B1 (prio -1)
+1766812820.135032: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T9 label to "setup_hbm__D__lh__CK__lh__ACQ_1 of DFFD1"
+1766812820.135086: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T10 in B1 (prio -1)
+1766812820.135088: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T10 label to "setup_hbm__D__hl__CK__lh__ACQ_1 of DFFD1"
+1766812820.135114: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T11 in B1 (prio -1)
+1766812820.135116: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T11 label to "initialization__ACQ_2 of DFFD1"
+1766812820.135161: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T12 in B1 (prio 2)
+1766812820.135163: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T12 label to "delay__CK__lh__QN__hl__ACQ_1 of DFFD1"
+1766812820.135220: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T13 in B1 (prio 2)
+1766812820.135223: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T13 label to "delay__CK__lh__QN__lh__ACQ_1 of DFFD1"
+1766812820.135252: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T14 in B1 (prio -1)
+1766812820.135255: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T14 label to "initialization__ACQ_6 of DFFD1"
+1766812820.135293: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T15 in B1 (prio 2)
+1766812820.135295: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T15 label to "delay__CK__lh__Q__hl__ACQ_1 of DFFD1"
+1766812820.135340: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T16 in B1 (prio 2)
+1766812820.135342: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T16 label to "delay__CK__lh__Q__lh__ACQ_1 of DFFD1"
+1766812820.135379: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T17 in B1 (prio -1)
+1766812820.135382: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T17 label to "ncmpw_hbm__CK__hl__CK__lh__ACQ_1 of DFFD1"
+1766812820.135414: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T18 in B1 (prio -1)
+1766812820.135706: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T18 label to "hold_hbm__D__hl__CK__lh__ACQ_1 of DFFD1"
+1766812820.135741: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T19 in B1 (prio -1)
+1766812820.135744: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T19 label to "hold_hbm__D__lh__CK__lh__ACQ_1 of DFFD1"
+1766812820.135777: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T20 in B1 (prio -1)
+1766812820.135780: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T20 label to "cmpw_hbm__CK__lh__CK__hl__ACQ_1 of DFFD1"
+1766812820.139630: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T21 in B1 (prio 3)
+1766812820.139638: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T21 label to "leakage_power__ACQ_1 of NAND2D1"
+1766812820.139673: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T22 in B1 (prio 5)
+1766812820.139676: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T22 label to "energy__IN1__lh__ACQ_1 of NAND2D1"
+1766812820.139700: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T23 in B1 (prio 5)
+1766812820.139703: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T23 label to "energy__IN1__hl__ACQ_1 of NAND2D1"
+1766812820.139725: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T24 in B1 (prio 5)
+1766812820.139727: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T24 label to "energy__IN2__lh__ACQ_1 of NAND2D1"
+1766812820.139748: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T25 in B1 (prio 5)
+1766812820.139750: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T25 label to "energy__IN2__hl__ACQ_1 of NAND2D1"
+1766812820.139773: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T26 in B1 (prio 2)
+1766812820.139775: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T26 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NAND2D1"
+1766812820.139798: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T27 in B1 (prio 2)
+1766812820.139800: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T27 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NAND2D1"
+1766812820.139821: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T28 in B1 (prio 2)
+1766812820.139824: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T28 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NAND2D1"
+1766812820.139845: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T29 in B1 (prio 2)
+1766812820.139850: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T29 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NAND2D1"
+1766812820.142456: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T30 in B1 (prio 3)
+1766812820.142464: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T30 label to "leakage_power__ACQ_1 of NAND2D2"
+1766812820.142496: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T31 in B1 (prio 5)
+1766812820.142499: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T31 label to "energy__IN1__lh__ACQ_1 of NAND2D2"
+1766812820.142525: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T32 in B1 (prio 5)
+1766812820.142527: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T32 label to "energy__IN1__hl__ACQ_1 of NAND2D2"
+1766812820.142549: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T33 in B1 (prio 5)
+1766812820.142552: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T33 label to "energy__IN2__lh__ACQ_1 of NAND2D2"
+1766812820.142573: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T34 in B1 (prio 5)
+1766812820.142575: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T34 label to "energy__IN2__hl__ACQ_1 of NAND2D2"
+1766812820.142604: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T35 in B1 (prio 2)
+1766812820.142607: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T35 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NAND2D2"
+1766812820.142630: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T36 in B1 (prio 2)
+1766812820.142633: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T36 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NAND2D2"
+1766812820.142654: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T37 in B1 (prio 2)
+1766812820.142656: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T37 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NAND2D2"
+1766812820.142677: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T38 in B1 (prio 2)
+1766812820.142680: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T38 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NAND2D2"
+1766812820.145283: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T39 in B1 (prio 3)
+1766812820.145291: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T39 label to "leakage_power__ACQ_1 of NAND2D4"
+1766812820.145324: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T40 in B1 (prio 5)
+1766812820.145327: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T40 label to "energy__IN1__lh__ACQ_1 of NAND2D4"
+1766812820.145353: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T41 in B1 (prio 5)
+1766812820.145355: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T41 label to "energy__IN1__hl__ACQ_1 of NAND2D4"
+1766812820.145378: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T42 in B1 (prio 5)
+1766812820.145380: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T42 label to "energy__IN2__lh__ACQ_1 of NAND2D4"
+1766812820.145402: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T43 in B1 (prio 5)
+1766812820.145404: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T43 label to "energy__IN2__hl__ACQ_1 of NAND2D4"
+1766812820.145428: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T44 in B1 (prio 2)
+1766812820.145432: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T44 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NAND2D4"
+1766812820.145456: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T45 in B1 (prio 2)
+1766812820.145458: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T45 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NAND2D4"
+1766812820.145480: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T46 in B1 (prio 2)
+1766812820.145482: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T46 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NAND2D4"
+1766812820.145504: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T47 in B1 (prio 2)
+1766812820.145506: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T47 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NAND2D4"
+1766812820.148097: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T48 in B1 (prio 4)
+1766812820.148105: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T48 label to "leakage_power__ACQ_1 of NAND2D8"
+1766812820.148138: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T49 in B1 (prio 6)
+1766812820.148141: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T49 label to "energy__IN1__lh__ACQ_1 of NAND2D8"
+1766812820.148166: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T50 in B1 (prio 6)
+1766812820.148168: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T50 label to "energy__IN1__hl__ACQ_1 of NAND2D8"
+1766812820.148190: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T51 in B1 (prio 6)
+1766812820.148193: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T51 label to "energy__IN2__lh__ACQ_1 of NAND2D8"
+1766812820.148215: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T52 in B1 (prio 6)
+1766812820.148217: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T52 label to "energy__IN2__hl__ACQ_1 of NAND2D8"
+1766812820.148240: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T53 in B1 (prio 3)
+1766812820.148243: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T53 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NAND2D8"
+1766812820.148265: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T54 in B1 (prio 3)
+1766812820.148268: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T54 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NAND2D8"
+1766812820.148289: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T55 in B1 (prio 3)
+1766812820.148291: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T55 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NAND2D8"
+1766812820.148312: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T56 in B1 (prio 3)
+1766812820.148315: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T56 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NAND2D8"
+1766812820.150947: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T57 in B1 (prio 4)
+1766812820.150954: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T57 label to "leakage_power__ACQ_1 of NOR2D1"
+1766812820.150987: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T58 in B1 (prio 6)
+1766812820.150990: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T58 label to "energy__IN1__lh__ACQ_1 of NOR2D1"
+1766812820.151015: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T59 in B1 (prio 6)
+1766812820.151020: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T59 label to "energy__IN1__hl__ACQ_1 of NOR2D1"
+1766812820.151042: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T60 in B1 (prio 6)
+1766812820.151045: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T60 label to "energy__IN2__lh__ACQ_1 of NOR2D1"
+1766812820.151065: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T61 in B1 (prio 6)
+1766812820.151068: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T61 label to "energy__IN2__hl__ACQ_1 of NOR2D1"
+1766812820.151091: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T62 in B1 (prio 3)
+1766812820.151093: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T62 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NOR2D1"
+1766812820.151116: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T63 in B1 (prio 3)
+1766812820.151118: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T63 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NOR2D1"
+1766812820.151140: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T64 in B1 (prio 3)
+1766812820.151142: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T64 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NOR2D1"
+1766812820.151162: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T65 in B1 (prio 3)
+1766812820.151165: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T65 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NOR2D1"
+1766812820.153752: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T66 in B1 (prio 4)
+1766812820.153760: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T66 label to "leakage_power__ACQ_1 of NOR2D2"
+1766812820.153793: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T67 in B1 (prio 6)
+1766812820.153796: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T67 label to "energy__IN1__lh__ACQ_1 of NOR2D2"
+1766812820.153820: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T68 in B1 (prio 6)
+1766812820.153823: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T68 label to "energy__IN1__hl__ACQ_1 of NOR2D2"
+1766812820.153845: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T69 in B1 (prio 6)
+1766812820.153848: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T69 label to "energy__IN2__lh__ACQ_1 of NOR2D2"
+1766812820.153869: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T70 in B1 (prio 6)
+1766812820.153871: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T70 label to "energy__IN2__hl__ACQ_1 of NOR2D2"
+1766812820.153895: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T71 in B1 (prio 3)
+1766812820.153897: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T71 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NOR2D2"
+1766812820.153920: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T72 in B1 (prio 3)
+1766812820.153923: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T72 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NOR2D2"
+1766812820.153944: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T73 in B1 (prio 3)
+1766812820.153947: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T73 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NOR2D2"
+1766812820.153968: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T74 in B1 (prio 3)
+1766812820.153970: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T74 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NOR2D2"
+1766812820.156563: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T75 in B1 (prio 4)
+1766812820.156571: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T75 label to "leakage_power__ACQ_1 of NOR2D4"
+1766812820.156612: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T76 in B1 (prio 6)
+1766812820.156615: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T76 label to "energy__IN1__lh__ACQ_1 of NOR2D4"
+1766812820.156641: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T77 in B1 (prio 6)
+1766812820.156644: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T77 label to "energy__IN1__hl__ACQ_1 of NOR2D4"
+1766812820.156667: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T78 in B1 (prio 6)
+1766812820.156669: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T78 label to "energy__IN2__lh__ACQ_1 of NOR2D4"
+1766812820.156690: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T79 in B1 (prio 6)
+1766812820.156692: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T79 label to "energy__IN2__hl__ACQ_1 of NOR2D4"
+1766812820.156716: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T80 in B1 (prio 3)
+1766812820.156718: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T80 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NOR2D4"
+1766812820.156741: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T81 in B1 (prio 3)
+1766812820.156744: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T81 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NOR2D4"
+1766812820.156765: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T82 in B1 (prio 3)
+1766812820.156768: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T82 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NOR2D4"
+1766812820.156789: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T83 in B1 (prio 3)
+1766812820.156792: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T83 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NOR2D4"
+1766812820.159365: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T84 in B1 (prio 4)
+1766812820.159372: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T84 label to "leakage_power__ACQ_1 of NOR2D8"
+1766812820.159406: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T85 in B1 (prio 6)
+1766812820.159409: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T85 label to "energy__IN1__lh__ACQ_1 of NOR2D8"
+1766812820.159434: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T86 in B1 (prio 6)
+1766812820.159436: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T86 label to "energy__IN1__hl__ACQ_1 of NOR2D8"
+1766812820.159458: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T87 in B1 (prio 6)
+1766812820.159461: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T87 label to "energy__IN2__lh__ACQ_1 of NOR2D8"
+1766812820.159482: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T88 in B1 (prio 6)
+1766812820.159484: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T88 label to "energy__IN2__hl__ACQ_1 of NOR2D8"
+1766812820.159507: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T89 in B1 (prio 3)
+1766812820.159510: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T89 label to "delay__IN1__lh__OUT__hl__ACQ_1 of NOR2D8"
+1766812820.159536: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T90 in B1 (prio 3)
+1766812820.159538: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T90 label to "delay__IN1__hl__OUT__lh__ACQ_1 of NOR2D8"
+1766812820.159560: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T91 in B1 (prio 3)
+1766812820.159563: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T91 label to "delay__IN2__lh__OUT__hl__ACQ_1 of NOR2D8"
+1766812820.159585: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T92 in B1 (prio 3)
+1766812820.159587: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T92 label to "delay__IN2__hl__OUT__lh__ACQ_1 of NOR2D8"
+1766812820.162164: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T93 in B1 (prio 5)
+1766812820.162172: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T93 label to "leakage_power__ACQ_1 of BUFD2"
+1766812820.162206: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T94 in B1 (prio 4)
+1766812820.162209: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T94 label to "delay__IN__lh__OUT__lh__ACQ_1 of BUFD2"
+1766812820.162233: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T95 in B1 (prio 4)
+1766812820.162236: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T95 label to "delay__IN__hl__OUT__hl__ACQ_1 of BUFD2"
+1766812820.164799: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T96 in B1 (prio 5)
+1766812820.164806: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T96 label to "leakage_power__ACQ_1 of BUFD4"
+1766812820.164840: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T97 in B1 (prio 4)
+1766812820.164843: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T97 label to "delay__IN__lh__OUT__lh__ACQ_1 of BUFD4"
+1766812820.164868: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T98 in B1 (prio 4)
+1766812820.164871: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T98 label to "delay__IN__hl__OUT__hl__ACQ_1 of BUFD4"
+1766812820.167408: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T99 in B1 (prio 5)
+1766812820.167415: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T99 label to "leakage_power__ACQ_1 of BUFD8"
+1766812820.167449: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T100 in B1 (prio 4)
+1766812820.167452: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T100 label to "delay__IN__lh__OUT__lh__ACQ_1 of BUFD8"
+1766812820.167478: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T101 in B1 (prio 4)
+1766812820.167480: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T101 label to "delay__IN__hl__OUT__hl__ACQ_1 of BUFD8"
+1766812820.170012: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T102 in B1 (prio 5)
+1766812820.170019: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T102 label to "leakage_power__ACQ_1 of INVD1"
+1766812820.170053: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T103 in B1 (prio 4)
+1766812820.170056: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T103 label to "delay__IN__lh__OUT__hl__ACQ_1 of INVD1"
+1766812820.170081: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T104 in B1 (prio 4)
+1766812820.170084: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T104 label to "delay__IN__hl__OUT__lh__ACQ_1 of INVD1"
+1766812820.172627: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T105 in B1 (prio 5)
+1766812820.172634: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T105 label to "leakage_power__ACQ_1 of INVD2"
+1766812820.172670: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T106 in B1 (prio 4)
+1766812820.172673: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T106 label to "delay__IN__lh__OUT__hl__ACQ_1 of INVD2"
+1766812820.172699: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T107 in B1 (prio 4)
+1766812820.172701: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T107 label to "delay__IN__hl__OUT__lh__ACQ_1 of INVD2"
+1766812820.175239: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T108 in B1 (prio 5)
+1766812820.175247: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T108 label to "leakage_power__ACQ_1 of INVD4"
+1766812820.175280: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T109 in B1 (prio 4)
+1766812820.175283: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T109 label to "delay__IN__lh__OUT__hl__ACQ_1 of INVD4"
+1766812820.175309: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T110 in B1 (prio 4)
+1766812820.175312: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T110 label to "delay__IN__hl__OUT__lh__ACQ_1 of INVD4"
+1766812820.177847: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T111 in B1 (prio 5)
+1766812820.177855: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T111 label to "leakage_power__ACQ_1 of INVD8"
+1766812820.177889: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T112 in B1 (prio 4)
+1766812820.177892: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T112 label to "delay__IN__lh__OUT__hl__ACQ_1 of INVD8"
+1766812820.177919: 68719-7fe3a3f110c0: cdpl_server.c:1824: in _sv_gen_task(): info: new task T113 in B1 (prio 4)
+1766812820.177921: 68719-7fe3a3f110c0: cdpl_server.c:2558: in cdpl_sv_label_task_va(): info: setting task T113 label to "delay__IN__hl__OUT__lh__ACQ_1 of INVD8"
+1766812841.268127: 68719-7fe38ca59700: cdpl_server_ipc.c:452: in _sv_on_hello(): info: W1 is `101.6.68.226:50652'
+1766812841.268214: 68719-7fe38ca59700: cdpl_server_ipc.c:454: in _sv_on_hello(): info: W1 log file is /dev/null
+1766812841.268221: 68719-7fe38ca59700: cdpl_server_ipc.c:481: in _sv_on_hello(): info: up to 1 alive workers in B1
+1766812841.268241: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T0 to worker W1
+1766812892.005833: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T0
+1766812892.005922: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T2 to worker W1
+1766812942.462423: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T2
+1766812942.462513: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T5 to worker W1
+1766812992.867893: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T5
+1766812992.867974: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T8 to worker W1
+1766813043.386163: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T8
+1766813043.386259: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T11 to worker W1
+1766813093.897541: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T11
+1766813093.897629: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T14 to worker W1
+1766813144.344682: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T14
+1766813144.344778: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T9 to worker W1
+1766813397.989100: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T9
+1766813397.989193: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T10 to worker W1
+1766813598.355486: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T10
+1766813598.355568: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T19 to worker W1
+1766813776.014537: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T19
+1766813776.014634: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T20 to worker W1
+1766813858.518219: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T20
+1766813858.518309: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T18 to worker W1
+1766814040.819269: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T18
+1766814040.819360: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T17 to worker W1
+1766814135.528343: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T17
+1766814135.528429: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T26 to worker W1
+1766814186.334343: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T26
+1766814186.334432: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T27 to worker W1
+1766814237.035659: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T27
+1766814237.035744: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T28 to worker W1
+1766814287.797333: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T28
+1766814287.797422: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T29 to worker W1
+1766814338.498708: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T29
+1766814338.498818: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T35 to worker W1
+1766814389.869630: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T35
+1766814389.869799: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T36 to worker W1
+1766814442.128922: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T36
+1766814442.129100: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T37 to worker W1
+1766814493.538416: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T37
+1766814493.538603: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T38 to worker W1
+1766814545.024189: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T38
+1766814545.024357: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T44 to worker W1
+1766814597.230024: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T44
+1766814597.230198: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T45 to worker W1
+1766814648.676956: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T45
+1766814648.677140: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T46 to worker W1
+1766814700.703449: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T46
+1766814700.703640: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T47 to worker W1
+1766814752.690802: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T47
+1766814752.690972: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T13 to worker W1
+1766814808.888748: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T13
+1766814808.888933: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T15 to worker W1
+1766814864.697812: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T15
+1766814864.697984: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T12 to worker W1
+1766814920.076749: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T12
+1766814920.076843: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T16 to worker W1
+1766814974.202897: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T16
+1766814974.202985: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T21 to worker W1
+1766815024.446070: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T21
+1766815024.446160: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T30 to worker W1
+1766815074.695634: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T30
+1766815074.695755: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T39 to worker W1
+1766815124.948230: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T39
+1766815124.948324: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T53 to worker W1
+1766815177.571342: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T53
+1766815177.571438: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T54 to worker W1
+1766815229.994984: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T54
+1766815229.995082: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T55 to worker W1
+1766815282.662495: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T55
+1766815282.662582: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T56 to worker W1
+1766815335.056900: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T56
+1766815335.056993: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T62 to worker W1
+1766815385.816179: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T62
+1766815385.816270: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T63 to worker W1
+1766815436.533086: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T63
+1766815436.533176: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T64 to worker W1
+1766815487.336036: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T64
+1766815487.336126: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T65 to worker W1
+1766815538.085328: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T65
+1766815538.085429: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T71 to worker W1
+1766815589.282448: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T71
+1766815589.282531: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T72 to worker W1
+1766815640.399471: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T72
+1766815640.399564: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T73 to worker W1
+1766815691.669433: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T73
+1766815691.669528: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T74 to worker W1
+1766815742.897088: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T74
+1766815742.897171: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T80 to worker W1
+1766815794.976671: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T80
+1766815794.976758: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T81 to worker W1
+1766815846.955040: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T81
+1766815846.955130: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T82 to worker W1
+1766815899.193938: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T82
+1766815899.194036: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T83 to worker W1
+1766815951.265405: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T83
+1766815951.265497: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T89 to worker W1
+1766816005.361385: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T89
+1766816005.361468: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T90 to worker W1
+1766816059.273647: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T90
+1766816059.273729: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T91 to worker W1
+1766816113.883848: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T91
+1766816113.883941: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T92 to worker W1
+1766816168.089122: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T92
+1766816168.089221: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T1 to worker W1
+1766816218.395562: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T1
+1766816218.395658: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T48 to worker W1
+1766816268.786738: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T48
+1766816268.786834: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T57 to worker W1
+1766816319.040929: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T57
+1766816319.041020: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T66 to worker W1
+1766816369.305898: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T66
+1766816369.305985: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T75 to worker W1
+1766816419.594334: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T75
+1766816419.594437: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T84 to worker W1
+1766816469.955893: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T84
+1766816469.955993: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T94 to worker W1
+1766816521.012463: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T94
+1766816521.012558: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T95 to worker W1
+1766816572.037235: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T95
+1766816572.037331: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T97 to worker W1
+1766816623.749543: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T97
+1766816623.749634: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T98 to worker W1
+1766816675.417722: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T98
+1766816675.417823: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T100 to worker W1
+1766816728.443657: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T100
+1766816728.443750: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T101 to worker W1
+1766816781.479238: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T101
+1766816781.479343: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T103 to worker W1
+1766816831.986555: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T103
+1766816831.986644: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T104 to worker W1
+1766816882.444261: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T104
+1766816882.444361: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T106 to worker W1
+1766816933.057126: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T106
+1766816933.057237: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T107 to worker W1
+1766816983.636021: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T107
+1766816983.636107: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T109 to worker W1
+1766817034.493238: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T109
+1766817034.493323: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T110 to worker W1
+1766817085.261482: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T110
+1766817085.261582: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T112 to worker W1
+1766817136.567934: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T112
+1766817136.568038: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T113 to worker W1
+1766817187.845415: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T113
+1766817187.845514: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T22 to worker W1
+1766817238.147646: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T22
+1766817238.147733: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T23 to worker W1
+1766817288.447361: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T23
+1766817288.447456: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T24 to worker W1
+1766817338.746461: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T24
+1766817338.746566: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T25 to worker W1
+1766817389.044073: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T25
+1766817389.044160: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T31 to worker W1
+1766817439.354820: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T31
+1766817439.354928: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T32 to worker W1
+1766817489.663586: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T32
+1766817489.663695: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T33 to worker W1
+1766817540.019559: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T33
+1766817540.019662: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T34 to worker W1
+1766817590.319902: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T34
+1766817590.319995: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T40 to worker W1
+1766817640.661938: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T40
+1766817640.662039: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T41 to worker W1
+1766817691.016004: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T41
+1766817691.016094: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T42 to worker W1
+1766817741.354948: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T42
+1766817741.355038: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T43 to worker W1
+1766817791.856373: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T43
+1766817791.856463: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T93 to worker W1
+1766817842.111898: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T93
+1766817842.112018: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T96 to worker W1
+1766817892.370729: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T96
+1766817892.370827: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T99 to worker W1
+1766817942.659479: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T99
+1766817942.659572: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T102 to worker W1
+1766817992.911694: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T102
+1766817992.911816: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T105 to worker W1
+1766818043.152000: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T105
+1766818043.152099: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T108 to worker W1
+1766818093.401636: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T108
+1766818093.401740: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T111 to worker W1
+1766818143.664439: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T111
+1766818143.664560: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T4 to worker W1
+1766818194.407797: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T4
+1766818194.407892: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T7 to worker W1
+1766818245.127602: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T7
+1766818245.127700: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T3 to worker W1
+1766818295.903462: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T3
+1766818295.903557: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T6 to worker W1
+1766818346.655868: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T6
+1766818346.655972: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T49 to worker W1
+1766818397.136441: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T49
+1766818397.136566: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T50 to worker W1
+1766818447.681126: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T50
+1766818447.681228: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T51 to worker W1
+1766818498.208711: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T51
+1766818498.208839: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T52 to worker W1
+1766818548.701510: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T52
+1766818548.701608: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T58 to worker W1
+1766818599.020591: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T58
+1766818599.020685: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T59 to worker W1
+1766818649.333885: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T59
+1766818649.333977: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T60 to worker W1
+1766818699.700206: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T60
+1766818699.700291: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T61 to worker W1
+1766818750.026585: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T61
+1766818750.026687: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T67 to worker W1
+1766818800.384451: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T67
+1766818800.384545: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T68 to worker W1
+1766818850.772477: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T68
+1766818850.772578: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T69 to worker W1
+1766818901.173547: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T69
+1766818901.173637: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T70 to worker W1
+1766818951.561050: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T70
+1766818951.561136: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T76 to worker W1
+1766819002.067318: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T76
+1766819002.067412: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T77 to worker W1
+1766819052.548313: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T77
+1766819052.548402: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T78 to worker W1
+1766819103.245589: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T78
+1766819103.245681: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T79 to worker W1
+1766819153.765211: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T79
+1766819153.765303: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T85 to worker W1
+1766819204.538345: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T85
+1766819204.538442: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T86 to worker W1
+1766819255.423119: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T86
+1766819255.423204: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T87 to worker W1
+1766819306.358317: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T87
+1766819306.358412: 68719-7fe38c258700: cdpl_server_sched.c:955: in _assign(): info: assigning task T88 to worker W1
+1766819330.804771: 68719-7fe3a3f110c0: cdpl_compat_master.c:5181: in cdplMasterLogInfo(): info: [non-CDPL log entry] Releasing core licenses
+1766819357.206288: 68719-7fe38ca59700: cdpl_server_ipc.c:857: in _sv_on_finish(): info: worker W1 completed task T88
+1766819958.308008: 68719-7fe38d25a700: cdpl_ipc.c:745: in _readv(): warning: read(): EOF

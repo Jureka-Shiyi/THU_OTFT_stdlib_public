@@ -1,0 +1,27 @@
+set vectors ""
+
+## delay__IN1__lh__OUT__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 000  101  "
+
+## delay__IN1__hl__OUT__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 101  000  "
+
+## delay__IN2__lh__OUT__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 000  011  "
+
+## delay__IN2__hl__OUT__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 011  000  "
+
+## energy__IN1__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 011  111  "
+
+## energy__IN1__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 111  011  "
+
+## energy__IN2__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 101  111  "
+
+## energy__IN2__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 111  101  "
+
+return $vectors

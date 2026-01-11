@@ -1,0 +1,14 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/NOR2D2.dv
+dv_start unmatched                                
+dv_cell {NOR2D2} {NOR2D2} unmatched
+dv_obj_count -transformed_nets {6 6} -transformed_inst {4 4} -transformed_port {5 5}
+dv_discrep 1 {Property Errors}
+dv_discrep_line {} -ldev {M0} {} -lloc {(60.000,160.000)} {  MP(ptft)                              } -sdev {MI4} {  MP(ptft)}
+dv_discrep_line {}  {w} {: }  {200 u} {                                                  }  {w} {: }  {100 u} {              }  {       100%} {}
+dv_discrep_line {}
+dv_discrep 2 {Property Errors}
+dv_discrep_line {} -ldev {M21} {} -lloc {(525.000,120.000)} {  MP(ptft)                            } -sdev {MI5} {  MP(ptft)}
+dv_discrep_line {}  {w} {: }  {200 u} {                                                  }  {w} {: }  {100 u} {              }  {       100%} {}
+dv_discrep_line {}
+dv_end

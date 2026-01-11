@@ -1,0 +1,27 @@
+set vectors ""
+
+## delay__IN1__lh__OUT__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 000  101  "
+
+## delay__IN1__lh__OUT__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 011  110  "
+
+## delay__IN1__hl__OUT__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 110  011  "
+
+## delay__IN1__hl__OUT__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 101  000  "
+
+## delay__IN2__lh__OUT__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 000  011  "
+
+## delay__IN2__lh__OUT__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 101  110  "
+
+## delay__IN2__hl__OUT__lh__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 110  101  "
+
+## delay__IN2__hl__OUT__hl__ACQ_1
+append vectors " {pins { IN1 IN2 } { OUT }} 011  000  "
+
+return $vectors

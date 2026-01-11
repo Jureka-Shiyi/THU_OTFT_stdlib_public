@@ -1,0 +1,17 @@
+#Layer Name          Layer Purpose  Stream Number  Datatype 
+
+M1                   drawing         5            0
+M1d                  drawing         95           0
+MC                   drawing         1            0
+Via1                 drawing         3            0
+M2                   drawing         4            0
+M2d                  drawing         94           0
+SU8                  drawing         6            0
+Text                 drawing         2            0
+PTFT                 drawing         90           0
+
+M1                   pin           105            0
+MC                   pin           101            0
+Via1                 pin           103            0
+M2                   pin           104            0
+SU8                  pin           106            0

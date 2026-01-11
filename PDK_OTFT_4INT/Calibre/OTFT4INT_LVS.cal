@@ -1,0 +1,73 @@
+//	Setup Info
+// PRECISION	1000
+// RESOLUTION	1
+LAYOUT USE DATABASE PRECISION YES
+UNIT LENGTH	U
+UNIT CAPACITANCE ff
+UNIT RESISTANCE OHM
+
+// Input Layers
+LAYER M1 1
+LAYER MC 2
+LAYER Via1 3
+LAYER M2 4
+LAYER Via2 5
+LAYER M3 6
+LAYER Via3 7
+LAYER M4 8
+LAYER Via4 9
+LAYER M5 10
+LAYER PTFT 90
+LAYER SU8 91
+LAYER Text 92
+
+port layer text M1
+port layer text MC
+port layer text M2
+port layer text M3
+port layer text M4
+port layer text M5
+port layer text Via1
+port layer text Via2
+port layer text Via3
+port layer text Via4
+text layer M1 M2 MC M3 M4 M5 Via1 Via2 Via3 Via4
+text depth primary
+
+// Device Recognition Layers
+Gate = PTFT AND (MC NOT M1)
+Source_Drain = (PTFT AND M1) NOT Gate
+PTran = PTFT AND (MC NOT M1)
+Via1_MC = Via1 AND MC
+Via1_M1 = Via1 AND (M1 NOT MC)
+
+// Connections
+connect M1 M2 BY Via1_M1
+connect MC M2 BY Via1_MC
+connect Source_Drain M1
+connect Gate MC
+connect M2 M3 BY Via2
+connect M3 M4 BY Via3
+connect M4 M5 BY Via4
+
+device MP(ptft) PTran Gate(G) Source_Drain(S) Source_Drain(D) netlist model ptft netlist element "X"
+[
+	PROPERTY L, W
+
+	W=(perim_co(S, PTran) + perim_co(D, PTran)) / 2
+	L=area(PTran) / W
+	//L=0.000002 + area(PTran) / W
+]
+
+VARIABLE  MOS_Werr      0.0001
+VARIABLE  MOS_Lerr  	0.0001
+TRACE PROPERTY MP(ptft) L L MOS_Lerr
+TRACE PROPERTY MP(ptft) W W MOS_Werr
+LVS FILTER R(RP) SOURCE SHORT
+LVS FILTER C(CP) SOURCE OPEN
+LVS ISOLATE SHORTS YES
+LVS REPORT OPTION N
+SOURCE CASE YES
+LAYOUT CASE YES
+LVS CHECK PORT NAMES YES
+

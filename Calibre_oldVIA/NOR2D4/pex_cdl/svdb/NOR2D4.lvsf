@@ -1,0 +1,11 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /data/zhengyj/cadence/Calibre/NOR2D4/pex_cdl
+lvs_LvsfVersion 4
+lvs_LvsInputSummary {0 0 0}
+lvs_LvsComparisonSummary {3 0 0 0}
+lvs_SourceCase YES
+lvs_LayoutCase YES
+lvs_LvsOutFile LVS_REPORT NOR2D4.lvs.report
+lvs_LvsOutFile SOURCE_NETLIST NOR2D4.src.net
+lvs_LvsOutFile RULES_FILE _OTFT_PEX.cal_
+lvs_LvsRunTimes 1766409376 1766409376

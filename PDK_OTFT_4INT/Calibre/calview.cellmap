@@ -1,0 +1,27 @@
+(ptft
+	(PDK_OTFT_4INT ptft symbol)
+	(
+		(g G)
+		(s S)
+		(d D)
+	)
+	(
+          ( nil m 1 )
+	) 
+)
+
+((p cap c)  
+	(analogLib cap symbol)  
+	(    
+	        (PLUS)
+        	(MINUS)
+        )
+)
+
+((p res r)
+        (analogLib res symbol)
+        (
+                (PLUS)
+                (MINUS)
+        )
+)

@@ -1,0 +1,26 @@
+* File: AND2D2.cdl
+* Created: Wed Jan 15 17:24:47 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/AND2D2.cdl.pex"
+.subckt AND2D2  IN1 IN2 VSS VDD OUT
+* 
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+* IN2	IN2
+* IN1	IN1
+XMI4 N_OUT_MI4_d N_net11_MI4_g N_VDD_MI4_s ptft L=4e-06 W=4e-05
+XMI7 net12 N_IN2_MI7_g N_VSS_MI7_s ntft L=4e-06 W=8e-05
+XMI6 N_net11_MI6_d N_IN1_MI6_g net12 ntft L=4e-06 W=8e-05
+XMI5 N_OUT_MI5_d N_net11_MI5_g N_VSS_MI5_s ntft L=4e-06 W=8e-05
+XMI0 N_net11_MI0_d N_IN1_MI0_g N_VDD_MI0_s ptft L=4e-06 W=2e-05
+XMI1 N_net11_MI1_d N_IN2_MI1_g N_VDD_MI1_s ptft L=4e-06 W=2e-05
+c_151 net12 0 0.493621f
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/AND2D2.cdl.AND2D2.pxi"
+*
+.ends
+*
+*

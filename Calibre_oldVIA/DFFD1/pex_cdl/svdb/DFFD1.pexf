@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /data/zhengyj/cadence/Calibre/DFFD1/pex_cdl
+pex_PexParam LAYOUT_PRIMARY DFFD1
+pex_PexParam TOOL xRC
+pex_PexParam CORNER_PDBS { {DFFD1 "" DFFD1.pdb "" } } 

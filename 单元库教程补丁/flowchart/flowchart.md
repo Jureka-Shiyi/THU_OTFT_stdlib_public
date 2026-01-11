@@ -1,0 +1,16 @@
+flowchart TD
+    A[设计规格定义<br/>（OTFT电路功能/性能/工艺约束）] --> B[OTFT单元库开发]
+    B --> B1[OTFT器件特性表征]
+    B1 --> B2[单元库时序/功耗表征<br/>工具：Siliconsmart]
+    B2 --> B3[单元库格式编译<br/>工具：Library Compiler]
+    B3 --> B4[提取单元库LEF文件<br/>工具：abstract]
+    B4 --> C[RTL设计<br/>（Verilog硬件描述语言编写）]
+    C --> D[逻辑综合<br/>（映射至OTFT单元库<br/>工具：Design Compiler）]
+    D --> E[后端物理设计]
+    E --> E1[布局规划<br/>工具：Innovus]
+    E1 --> E2[单元布局<br/>工具：Innovus]
+    E2 --> E3[时钟树综合<br/>工具：Innovus]
+    E3 --> E4[布线<br/>工具：Innovus]
+    E4 --> F[物理验证<br/>（DRC/LVS/ERC检查<br/>工具：Calibre）]
+    F --> G[OTFT数字电路流片与测试]
+

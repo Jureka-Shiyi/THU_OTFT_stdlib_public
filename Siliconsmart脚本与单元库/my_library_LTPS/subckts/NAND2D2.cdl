@@ -1,0 +1,24 @@
+* File: NAND2D2.cdl
+* Created: Sat Aug 17 14:15:50 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/NAND2D2.cdl.pex"
+.subckt NAND2D2  IN1 IN2 VSS VDD OUT
+* 
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+* IN2	IN2
+* IN1	IN1
+XMI5 net7 N_IN2_MI5_g N_VSS_MI5_s ntft L=4e-06 W=8e-05
+XMI4 N_OUT_MI4_d N_IN1_MI4_g net7 ntft L=4e-06 W=8e-05
+XMI2 N_OUT_MI2_d N_IN1_MI2_g N_VDD_MI2_s ptft L=4e-06 W=2e-05
+XMI3 N_OUT_MI3_d N_IN2_MI3_g N_VDD_MI3_s ptft L=4e-06 W=2e-05
+c_97 net7 0 0.488467f
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/NAND2D2.cdl.NAND2D2.pxi"
+*
+.ends
+*
+*

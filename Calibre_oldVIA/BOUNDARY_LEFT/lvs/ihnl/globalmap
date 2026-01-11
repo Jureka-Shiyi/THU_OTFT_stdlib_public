@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+OTFT_stdlib_cells/BOUNDARY_LEFT/schematic BOUNDARY_LEFT
+$endmodel
+$net
+$endnet
+$param
+$endparam

@@ -1,0 +1,10 @@
+catch { setDesignMode -process 250 }
+catch { setAnalysisMode -analysisType single }
+catch { setExtractRCMode  -engine preRoute -total_c_th 5 -relative_c_th 0.03 -coupling_c_th 3 }
+catch { setPlaceMode -place_detail_legalization_inst_gap 2 }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setDelayCalMode -engine aae }
+catch { setPinAssignMode -pinEditInBatch false }
+catch { setGenerateViaMode -auto true }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -powerRailLayer {} }

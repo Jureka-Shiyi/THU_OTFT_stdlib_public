@@ -1,0 +1,53 @@
+* File: NOR2D2.pex.netlist
+* Created: Sat Dec 13 12:32:47 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "NOR2D2.pex.netlist.pex"
+.subckt NOR2D2  VSS OUT VDD IN2 IN1
+* 
+* IN1	IN1
+* IN2	IN2
+* VDD	VDD
+* OUT	OUT
+* VSS	VSS
+XMI4 N_VSS_MI4_d N_VSS_MI4_g N_net11_MI4_s ptft L=1e-05 W=0.0002
+XMI1 N_net11_MI1_d N_IN2_MI1_g N_net10_MI1_s ptft L=1e-05 W=0.0002
+XMI0 N_net10_MI0_d N_IN1_MI0_g N_VDD_MI0_s ptft L=1e-05 W=0.0002
+XMI1@8 N_net11_MI1_d N_IN2_MI1@8_g N_net10_MI1@8_s ptft L=1e-05 W=0.0002
+XMI0@8 N_net10_MI0@8_d N_IN1_MI0@8_g N_VDD_MI0_s ptft L=1e-05 W=0.0002
+XMI1@7 N_net11_MI1@7_d N_IN2_MI1@7_g N_net10_MI1@8_s ptft L=1e-05 W=0.0002
+XMI0@7 N_net10_MI0@8_d N_IN1_MI0@7_g N_VDD_MI0@7_s ptft L=1e-05 W=0.0002
+XMI1@6 N_net11_MI1@7_d N_IN2_MI1@6_g N_net10_MI1@6_s ptft L=1e-05 W=0.0002
+XMI0@6 N_net10_MI0@6_d N_IN1_MI0@6_g N_VDD_MI0@7_s ptft L=1e-05 W=0.0002
+XMI1@5 N_net11_MI1@5_d N_IN2_MI1@5_g N_net10_MI1@6_s ptft L=1e-05 W=0.0002
+XMI0@5 N_net10_MI0@6_d N_IN1_MI0@5_g N_VDD_MI0@5_s ptft L=1e-05 W=0.0002
+XMI1@4 N_net11_MI1@5_d N_IN2_MI1@4_g N_net10_MI1@4_s ptft L=1e-05 W=0.0002
+XMI0@4 N_net10_MI0@4_d N_IN1_MI0@4_g N_VDD_MI0@5_s ptft L=1e-05 W=0.0002
+XMI1@3 N_net11_MI1@3_d N_IN2_MI1@3_g N_net10_MI1@4_s ptft L=1e-05 W=0.0002
+XMI0@3 N_net10_MI0@4_d N_IN1_MI0@3_g N_VDD_MI0@3_s ptft L=1e-05 W=0.0002
+XMI1@2 N_net11_MI1@3_d N_IN2_MI1@2_g N_net10_MI1@2_s ptft L=1e-05 W=0.0002
+XMI0@2 N_net10_MI0@2_d N_IN1_MI0@2_g N_VDD_MI0@3_s ptft L=1e-05 W=0.0002
+XMI3 N_OUT_MI3_d N_IN2_MI3_g N_net12_MI3_s ptft L=1e-05 W=0.0002
+XMI2 N_net12_MI2_d N_IN1_MI2_g N_VDD_MI2_s ptft L=1e-05 W=0.0002
+XMI3@8 N_OUT_MI3_d N_IN2_MI3@8_g N_net12_MI3@8_s ptft L=1e-05 W=0.0002
+XMI2@8 N_net12_MI2@8_d N_IN1_MI2@8_g N_VDD_MI2_s ptft L=1e-05 W=0.0002
+XMI5 N_VSS_MI5_d N_net11_MI5_g N_OUT_MI5_s ptft L=1e-05 W=0.0002
+XMI3@7 N_OUT_MI3@7_d N_IN2_MI3@7_g N_net12_MI3@8_s ptft L=1e-05 W=0.0002
+XMI2@7 N_net12_MI2@8_d N_IN1_MI2@7_g N_VDD_MI2@7_s ptft L=1e-05 W=0.0002
+XMI3@6 N_OUT_MI3@7_d N_IN2_MI3@6_g N_net12_MI3@6_s ptft L=1e-05 W=0.0002
+XMI2@6 N_net12_MI2@6_d N_IN1_MI2@6_g N_VDD_MI2@7_s ptft L=1e-05 W=0.0002
+XMI3@5 N_OUT_MI3@5_d N_IN2_MI3@5_g N_net12_MI3@6_s ptft L=1e-05 W=0.0002
+XMI2@5 N_net12_MI2@6_d N_IN1_MI2@5_g N_VDD_MI2@5_s ptft L=1e-05 W=0.0002
+XMI3@4 N_OUT_MI3@5_d N_IN2_MI3@4_g N_net12_MI3@4_s ptft L=1e-05 W=0.0002
+XMI2@4 N_net12_MI2@4_d N_IN1_MI2@4_g N_VDD_MI2@5_s ptft L=1e-05 W=0.0002
+XMI3@3 N_OUT_MI3@3_d N_IN2_MI3@3_g N_net12_MI3@4_s ptft L=1e-05 W=0.0002
+XMI2@3 N_net12_MI2@4_d N_IN1_MI2@3_g N_VDD_MI2@3_s ptft L=1e-05 W=0.0002
+XMI3@2 N_OUT_MI3@3_d N_IN2_MI3@2_g N_net12_MI3@2_s ptft L=1e-05 W=0.0002
+XMI2@2 N_net12_MI2@2_d N_IN1_MI2@2_g N_VDD_MI2@3_s ptft L=1e-05 W=0.0002
+*
+.include "NOR2D2.pex.netlist.NOR2D2.pxi"
+*
+.ends
+*
+*

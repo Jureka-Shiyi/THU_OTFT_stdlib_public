@@ -1,0 +1,63 @@
+# MIPT file for 2024 CJ OTFT process
+mipt_version = 2.0
+process = OTFT
+calibration_type = ALL # where ALL is one of 4 keyword choices
+# base layer:
+
+dielectric = Glass {
+    diel_type = planar
+    thickness = 1000
+    eps = 5
+}
+conductor = M1 {
+    thickness = 0.05
+    min_width = 12
+    min_spacing = 8
+    r_sheet = 0.5
+}
+dielectric = ParC1 {
+    diel_type = planar
+    thickness = 0.55
+    eps = 3.1
+}
+conductor = M2 {
+    thickness = 0.12
+    min_width = 12
+    min_spacing = 8
+    r_sheet = 0.5
+}
+dielectric = ParC2 {
+    diel_type = planar
+    thickness = 0.42
+    eps = 3.1
+}
+conductor = MC {
+    thickness = 0.05
+    min_width = 12
+    min_spacing = 8
+    r_sheet = 0.5
+}
+dielectric = SU8 {
+    diel_type = planar
+    thickness = 10
+    eps = 3.2
+}
+
+via = Via1_12 {
+    measured_from = M1
+    measured_to = M2
+    min_width = 8
+    min_spacing = 5
+    resistance = 100
+    enclosure_down = 6
+    enclosure_up = 6
+}
+via = Via1_2C {
+    measured_from = M2
+    measured_to = MC
+    min_width = 8
+    min_spacing = 5
+    resistance = 100
+    enclosure_down = 6
+    enclosure_up = 6
+}

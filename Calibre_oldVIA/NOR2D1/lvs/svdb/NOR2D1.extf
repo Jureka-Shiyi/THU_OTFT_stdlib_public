@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1765595759 1765595759
+lvs_ExtOutFile RUNDIR /data/zhengyj/cadence/Calibre/NOR2D1/lvs
+lvs_ExtOutFile RULES_FILE _OTFT_LVS.cal_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST NOR2D1.sp
+lvs_ExtOutFile EXTRACTION_REPORT NOR2D1.lvs.report.ext

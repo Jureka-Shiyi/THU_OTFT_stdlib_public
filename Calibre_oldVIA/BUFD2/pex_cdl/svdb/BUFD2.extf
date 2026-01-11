@@ -1,0 +1,10 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1766811164 1766811224
+lvs_ExtOutFile RUNDIR /data/zhengyj/cadence/Calibre/BUFD2/pex_cdl
+lvs_ExtOutFile RULES_FILE _OTFT_PEX.cal_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST svdb/BUFD2.sp
+lvs_ExtOutFile EXTRACTION_REPORT BUFD2.lvs.report.ext
+lvs_ExtOutFile LAYOUT_PDSP {  svdb/BUFD2.pdsp }

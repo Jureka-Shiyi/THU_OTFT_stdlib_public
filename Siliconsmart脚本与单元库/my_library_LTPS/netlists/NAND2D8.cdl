@@ -1,0 +1,29 @@
+* File: NAND2D8.cdl
+* Created: Sat Aug 17 14:21:51 2024
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "/data/zhengyj/OTFT_stdlib/subckts/NAND2D8.cdl.pex"
+.subckt NAND2D8  IN1 IN2 VDD OUT VSS
+* 
+* VSS	VSS
+* OUT	OUT
+* VDD	VDD
+* IN2	IN2
+* IN1	IN1
+XMI4 N_OUT_MI4_d N_IN1_MI4_g N_net11_MI4_s ntft L=4e-06 W=8e-05
+XMI4@2 N_OUT_MI4_d N_IN1_MI4@2_g N_net11_MI4@2_s ntft L=4e-06 W=8e-05
+XMI5 N_net11_MI5_d N_IN2_MI5_g N_VSS_MI5_s ntft L=4e-06 W=8e-05
+XMI5@2 N_net11_MI5_d N_IN2_MI5@2_g N_VSS_MI5@2_s ntft L=4e-06 W=8e-05
+XMI1 N_net10_MI1_d N_IN1_MI1_g N_VSS_MI1_s ntft L=4e-06 W=8e-05
+XMI1@2 N_net10_MI1_d N_IN1_MI1@2_g N_VSS_MI1@2_s ntft L=4e-06 W=8e-05
+XMI0 N_OUT_MI0_d N_IN2_MI0_g N_net10_MI0_s ntft L=4e-06 W=8e-05
+XMI0@2 N_OUT_MI0_d N_IN2_MI0@2_g N_net10_MI0@2_s ntft L=4e-06 W=8e-05
+XMI2 N_OUT_MI2_d N_IN1_MI2_g N_VDD_MI2_s ptft L=4e-06 W=8e-05
+XMI3 N_OUT_MI3_d N_IN2_MI3_g N_VDD_MI3_s ptft L=4e-06 W=8e-05
+*
+.include "/data/zhengyj/OTFT_stdlib/subckts/NAND2D8.cdl.NAND2D8.pxi"
+*
+.ends
+*
+*

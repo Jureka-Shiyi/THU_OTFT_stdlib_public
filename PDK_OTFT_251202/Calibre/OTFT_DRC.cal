@@ -1,0 +1,101 @@
+TITLE "DRC Command File"
+
+// ENVIRONMENT SETUP
+PRECISION  1000
+RESOLUTION 10
+
+
+// Input Layers
+LAYER M1 5
+LAYER MC 1
+LAYER Via1 3
+LAYER M2 4
+//LAYER Text 2
+LAYER PTFT 90
+
+Gate = PTFT AND MC
+Source_Drain = PTFT AND M1
+
+Via1_core = Via1 NOT (AREA Via1 > 1000000)
+Via1_MC = Via1_core AND MC
+Via1_M1 = Via1_core AND (M1 NOT MC)
+
+M1_MC = M1 AND MC
+
+// Connections
+connect M1 M2 BY Via1_M1
+connect MC M2 BY Via1_MC
+connect Source_Drain M1
+connect Gate MC
+
+// CONTACT WIDTH DRC RULES
+M1.W.1 {@Minium M1 width >= 12
+  INT M1 < 12 SINGULAR REGION // ABUT < 90
+}
+M2.W.1 {@Minium M2 width >= 12
+  INT M2 < 12 SINGULAR REGION // ABUT < 90
+}
+MC.W.1 {@Minium MC width >= 12
+  INT MC < 12 SINGULAR REGION // ABUT < 90
+}
+Via1.W.1 {@Minium Via1 hole width >= 8
+  INT Via1 < 8 SINGULAR REGION // ABUT < 90
+}
+
+M1.S.1 {@Minium M1 space >= 8
+  EXT M1 < 8 SINGULAR REGION // ABUT < 90
+}
+M1.S.2 {@Minium M1 space in MC >= 40
+  x = EXT M1_MC < 40 SPACE NOT CONNECTED SINGULAR REGION CENTERLINE // ABUT < 90
+  PTFT_EXT = EXPAND EDGE PTFT OUTSIDE BY 20
+  x AND (MC NOT (PTFT OR PTFT_EXT))
+}
+M2.S.1 {@Minium M2 space >= 8
+  EXT M2 < 8 SINGULAR REGION // ABUT < 90
+}
+M2.S.1.1 {@Recommended M2 minium space >= 10
+  EXT M2 < 10 SINGULAR REGION // ABUT < 90
+}
+M2.S.1.2 {@Recommended M2 minium space >= 9
+  EXT M2 < 9 SINGULAR REGION // ABUT < 90
+}
+MC.S.1 {@Minium MC space >= 8
+  EXT MC < 8 SINGULAR REGION // ABUT < 90
+}
+Via1.S.1 {@Minium Via1 hole space >= 5
+  EXT Via1 < 5 SINGULAR REGION // ABUT < 90
+}
+
+Via1.EN.1 {@No floating Via1
+  Via1_core NOT (M1 OR MC)
+}
+Via1.EN.3 {@Minium M1 to Via space >= 6
+  ENC Via1_M1 M1 < 6 SINGULAR REGION // ABUT < 90
+} 
+Via1.EN.4 {@Minium MC to Via space >= 6
+  ENC Via1_MC MC < 6 SINGULAR REGION // ABUT < 90
+} 
+M2.EN.1 {@Minium M2 to Via space >= 6
+  ENC Via1_core M2 < 6 SINGULAR REGION // ABUT < 90
+  Via1_core NOT M2
+} 
+M2.EN.2 {@No MC-M2 overlap when not connected
+  MC AND M2 NOT CONNECTED
+}
+M2.EN.3 {@No M1-MC-M2 overlap in core area
+  M2_MC_M1 = M2 AND (MC AND M1)
+  AREA M2_MC_M1 < 50000
+}
+
+G.1.M1 { @ grid must be an integer multiple of 0.05 um
+  OFFGRID M1 50
+}
+G.1.MC { @ grid must be an integer multiple of 0.05 um
+  OFFGRID MC 50
+}
+G.1.Via1 { @ grid must be an integer multiple of 0.05 um
+  OFFGRID Via1 50
+}
+G.1.M2 { @ grid must be an integer multiple of 0.05 um
+  OFFGRID M2 50
+}

@@ -1,0 +1,24 @@
+* File: INVD1.pex.netlist
+* Created: Sat Dec 13 10:46:18 2025
+* Program "Calibre xRC"
+* Version "v2023.1_18.8"
+* 
+.include "INVD1.pex.netlist.pex"
+.subckt INVD1  VSS VDD OUT IN
+* 
+* IN	IN
+* OUT	OUT
+* VDD	VDD
+* VSS	VSS
+XMI5 N_VSS_MI5_d N_VSS_MI5_g N_net10_MI5_s ptft L=4e-05 W=0.0001
+XMI4 N_net10_MI4_d N_IN_MI4_g N_VDD_MI4_s ptft L=1e-05 W=0.0002
+XMI7 N_VSS_MI7_d N_net10_MI7_g N_OUT_MI7_s ptft L=1e-05 W=0.0002
+XMI6 N_OUT_MI6_d N_IN_MI6_g N_VDD_MI6_s ptft L=1e-05 W=0.0002
+XMI7@2 N_VSS_MI7_d N_net10_MI7@2_g N_OUT_MI7@2_s ptft L=1e-05 W=0.0002
+XMI6@2 N_OUT_MI6_d N_IN_MI6@2_g N_VDD_MI6_s ptft L=1e-05 W=0.0002
+*
+.include "INVD1.pex.netlist.INVD1.pxi"
+*
+.ends
+*
+*

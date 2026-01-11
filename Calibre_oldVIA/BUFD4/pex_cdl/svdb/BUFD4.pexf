@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /data/zhengyj/cadence/Calibre/BUFD4/pex_cdl
+pex_PexParam LAYOUT_PRIMARY BUFD4
+pex_PexParam TOOL xRC
+pex_PexParam CORNER_PDBS { {BUFD4 "" BUFD4.pdb "" } } 

@@ -1,0 +1,38 @@
+//  Runset file generated on Mon Dec 22 20:44:41 2025
+//  by Calibre Interactive v2023.1_18.8    Tue Jan 3 18:10:40 PST 2023
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+lvs.rulesFile.value = "/data/zhengyj/cadence/PDK_OTFT_251202/Calibre/OTFT_LVS.cal"
+lvs.runDir.value = "/data/zhengyj/cadence/Calibre/INVD8/lvs"
+lvs.layout.layoutFile.value = "INVD8.calibre.db"
+cmn.layout.defFiles.value = [ "INVD8.def" ]
+lvs.layout.topCellLibrary.value = "OTFT_stdlib_cells"
+cmn.layout.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+lvs.layout.topCell.value = "INVD8"
+lvs.layout.topCellView.value = "layout"
+cmn.layout.topCellViewFDI.value = "layout"
+lvs.layout.layoutNetlist.value = "INVD8.sp"
+lvs.source2.sourceFile.value = "INVD8.sp"
+lvs.source2.topCellLibrary.value = "OTFT_stdlib_cells"
+lvs.source2.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+lvs.source2.topCell.value = "INVD8"
+lvs.source2.topCellFDI.value = "INVD8"
+lvs.source2.topCellView.value = "schematic"
+lvs.source2.topCellViewFDI.value = "schematic"
+lvs.source.sourceFile.value = "INVD8.src.net"
+lvs.source.topCellLibrary.value = "OTFT_stdlib_cells"
+lvs.source.topCellLibraryFDI.value = "OTFT_stdlib_cells"
+lvs.source.topCell.value = "INVD8"
+lvs.source.topCellFDI.value = "INVD8"
+lvs.source.topCellView.value = "schematic"
+lvs.source.topCellViewFDI.value = "schematic"
+lvs.reports.lvsReport.value = "INVD8.lvs.report"
+lvs.ercdb.resultsFile.value = "INVD8.erc.results"
+lvs.ercSummaryReport.report.value = "INVD8.erc.summary"
+
+cmn.runsetPrefs.saveOnClose.value = "AUTOSAVE"
+cmn.miscPrefs.overwriteLayoutPref.value = false
+cmn.miscPrefs.overwriteSourcePref.value = false

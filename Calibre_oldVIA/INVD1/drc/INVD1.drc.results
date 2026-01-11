@@ -1,0 +1,106 @@
+INVD1 1000
+M1.W.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M1 width >= 12
+M2.W.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M2 width >= 12
+MC.W.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium MC width >= 12
+Via1.W.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium Via1 hole width >= 8
+M1.S.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M1 space >= 8
+M1.S.2
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M1 space in MC >= 40
+M2.S.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M2 space >= 8
+M2.S.1.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Recommended M2 minium space >= 10
+M2.S.1.2
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Recommended M2 minium space >= 9
+MC.S.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium MC space >= 8
+Via1.S.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium Via1 hole space >= 5
+Via1.EN.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+No floating Via1
+Via1.EN.3
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M1 to Via space >= 6
+Via1.EN.4
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium MC to Via space >= 6
+M2.EN.1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+Minium M2 to Via space >= 6
+M2.EN.2
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+No MC-M2 overlap when not connected
+M2.EN.3
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+No M1-MC-M2 overlap in core area
+G.1.M1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+grid must be an integer multiple of 0.05 um
+G.1.MC
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+grid must be an integer multiple of 0.05 um
+G.1.Via1
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+grid must be an integer multiple of 0.05 um
+G.1.M2
+0 0 3 Dec 13 10:25:40 2025                     
+Rule File Pathname: _OTFT_DRC.cal_
+Rule File Title: DRC Command File
+grid must be an integer multiple of 0.05 um

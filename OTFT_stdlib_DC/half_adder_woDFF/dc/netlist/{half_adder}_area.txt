@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : half_adder
+Version: T-2022.03-SP2
+Date   : Tue Dec 23 10:46:53 2025
+****************************************
+
+Library(s) Used:
+
+    OTFT_stdlib (File: /data/zhengyj/OTFT_stdlib/OTFT_stdlib_lib/OTFT_stdlib_12.db)
+
+Number of ports:                            6
+Number of nets:                            13
+Number of cells:                            9
+Number of combinational cells:              6
+Number of sequential cells:                 2
+Number of macros/black boxes:               0
+Number of buf/inv:                          1
+Number of references:                       4
+
+Combinational area:            2889000.000000
+Buf/Inv area:                   387000.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:               2889000.000000
+Total area:                 undefined
+
+Information: This design contains unmapped logic. (RPT-7)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area               Local cell area
+                                  ---------------------  ------------------------------- 
+Hierarchical cell                 Absolute      Percent  Combi-        Noncombi-  Black-
+                                  Total         Total    national      national   boxes   Design
+--------------------------------  ------------  -------  ------------  ---------  ------  ---------
+half_adder                        2889000.0000    100.0  2889000.0000     0.0000  0.0000  half_adder
+--------------------------------  ------------  -------  ------------  ---------  ------  ---------
+Total                                                    2889000.0000     0.0000  0.0000
+
+1

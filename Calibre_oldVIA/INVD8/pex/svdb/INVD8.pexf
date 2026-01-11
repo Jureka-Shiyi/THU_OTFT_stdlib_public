@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /data/zhengyj/cadence/Calibre/INVD8/pex
+pex_PexParam LAYOUT_PRIMARY INVD8
+pex_PexParam TOOL xRC
+pex_PexParam CORNER_PDBS { {INVD8 "" INVD8.pdb "" } } 

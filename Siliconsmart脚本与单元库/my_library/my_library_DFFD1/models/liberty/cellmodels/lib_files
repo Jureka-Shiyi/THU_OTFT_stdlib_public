@@ -1,0 +1,1 @@
+inputLibertyFile /data/zhengyj/OTFT_stdlib/lib_template/OTFT_stdlib_DFF_wo.lib cells {DFFD1} use_default_whens 0 inputLibMultiRailFormat v1 inputCellLeakagePower present importWithSkeleton 0 use_default_loads 0 use_default_slews 1

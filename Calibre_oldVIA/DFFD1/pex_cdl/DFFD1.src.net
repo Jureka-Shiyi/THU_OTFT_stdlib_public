@@ -1,0 +1,86 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  OTFT_stdlib_cells
+* Top Cell Name: DFFD1
+* View Name:     schematic
+* Netlisted on:  Dec 27 12:44:42 2025
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: OTFT_stdlib_cells
+* Cell Name:    DFFD1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT DFFD1 CK D Q QN VDD VSS
+*.PININFO CK:I D:I VDD:I VSS:I Q:O QN:O
+MI73 VSS VSS net153 ptft W=40u L=18u
+MI72 VSS net153 QN ptft W=480u L=18u
+MI71 net153 F2N VDD ptft W=120u L=18u
+MI70 net153 Q VDD ptft W=120u L=18u
+MI69 QN Q VDD ptft W=240u L=18u
+MI68 QN F2N VDD ptft W=240u L=18u
+MI67 Q F2 VDD ptft W=240u L=18u
+MI66 Q QN VDD ptft W=240u L=18u
+MI65 net155 QN VDD ptft W=120u L=18u
+MI64 net155 F2 VDD ptft W=120u L=18u
+MI63 VSS net155 Q ptft W=480u L=18u
+MI62 VSS VSS net155 ptft W=40u L=18u
+MI61 F2N F1ON VDD ptft W=240u L=18u
+MI60 F2N ~~CK VDD ptft W=240u L=18u
+MI59 net154 ~~CK VDD ptft W=120u L=18u
+MI58 net154 F1ON VDD ptft W=120u L=18u
+MI57 VSS net154 F2N ptft W=480u L=18u
+MI56 VSS VSS net154 ptft W=40u L=18u
+MI55 F2 F1O VDD ptft W=240u L=18u
+MI54 F2 ~~CK VDD ptft W=240u L=18u
+MI53 net158 ~~CK VDD ptft W=120u L=18u
+MI52 net158 F1O VDD ptft W=120u L=18u
+MI51 VSS net158 F2 ptft W=480u L=18u
+MI50 VSS VSS net158 ptft W=40u L=18u
+MI45 ~~CK ~CK VDD ptft W=320u L=18u
+MI44 net156 ~CK VDD ptft W=160u L=18u
+MI43 VSS net156 ~~CK ptft W=320u L=18u
+MI42 VSS VSS net156 ptft W=40u L=18u
+MI41 VSS VSS net160 ptft W=40u L=18u
+MI40 VSS net160 F1ON ptft W=480u L=18u
+MI39 net160 F1N VDD ptft W=120u L=18u
+MI38 net160 F1O VDD ptft W=120u L=18u
+MI37 F1ON F1O VDD ptft W=240u L=18u
+MI36 F1ON F1N VDD ptft W=240u L=18u
+MI35 F1O F1 VDD ptft W=240u L=18u
+MI34 F1O F1ON VDD ptft W=240u L=18u
+MI33 net159 F1ON VDD ptft W=120u L=18u
+MI32 net159 F1 VDD ptft W=120u L=18u
+MI31 VSS net159 F1O ptft W=480u L=18u
+MI30 VSS VSS net159 ptft W=40u L=18u
+MI29 F1N ~D VDD ptft W=240u L=18u
+MI28 F1N ~CK VDD ptft W=240u L=18u
+MI27 net168 ~CK VDD ptft W=120u L=18u
+MI26 net168 ~D VDD ptft W=120u L=18u
+MI25 VSS net168 F1N ptft W=480u L=18u
+MI24 VSS VSS net168 ptft W=40u L=18u
+MI23 ~CK CK VDD ptft W=320u L=18u
+MI22 net167 CK VDD ptft W=160u L=18u
+MI21 VSS net167 ~CK ptft W=320u L=18u
+MI20 VSS VSS net167 ptft W=40u L=18u
+MI9 F1 D VDD ptft W=240u L=18u
+MI8 F1 ~CK VDD ptft W=240u L=18u
+MI3 net170 ~CK VDD ptft W=120u L=18u
+MI1 net170 D VDD ptft W=120u L=18u
+MI0 VSS net170 F1 ptft W=480u L=18u
+MI2 VSS VSS net170 ptft W=40u L=18u
+MI6 ~D D VDD ptft W=320u L=18u
+MI4 net169 D VDD ptft W=160u L=18u
+MI7 VSS net169 ~D ptft W=320u L=18u
+MI5 VSS VSS net169 ptft W=40u L=18u
+.ENDS
+

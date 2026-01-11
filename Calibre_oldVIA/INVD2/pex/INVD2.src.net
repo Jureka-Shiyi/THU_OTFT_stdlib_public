@@ -1,0 +1,30 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  OTFT_stdlib_cells
+* Top Cell Name: INVD2
+* View Name:     schematic
+* Netlisted on:  Dec 13 10:53:09 2025
+************************************************************************
+
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: OTFT_stdlib_cells
+* Cell Name:    INVD2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INVD2 IN OUT VDD VSS
+*.PININFO IN:I VDD:I VSS:I OUT:O
+MI6 OUT IN VDD ptft W=800u L=10u
+MI4 net10 IN VDD ptft W=400u L=10u
+MI7 VSS net10 OUT ptft W=800u L=10u
+MI5 VSS VSS net10 ptft W=200u L=40u
+.ENDS
+

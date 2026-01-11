@@ -1,0 +1,103 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 3
+        -sort_by group
+Design : half_adder
+Version: T-2022.03-SP2
+Date   : Tue Dec 23 10:46:53 2025
+****************************************
+
+Operating Conditions: OTFT_stdlib   Library: OTFT_stdlib
+Wire Load Model Mode: top
+
+  Startpoint: in2 (input port clocked by CLK)
+  Endpoint: sum_reg (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  input external delay                 10000000.000
+                                                  10000000.000 f
+  in2 (in)                             5027.000   10005027.000 f
+  U10/OUT (NOR2D1)                     174043.000 10179070.000 r
+  U14/OUT (NOR2D1)                     8754.000   10187824.000 f
+  sum_reg/next_state (**FFGEN**)          0.000   10187824.000 f
+  data arrival time                               10187824.000
+
+  clock CLK (rise edge)                20000000.000
+                                                  20000000.000
+  clock network delay (ideal)             0.000   20000000.000
+  sum_reg/clocked_on (**FFGEN**)          0.000   20000000.000 r
+  library setup time                      0.000   20000000.000
+  data required time                              20000000.000
+  -----------------------------------------------------------
+  data required time                              20000000.000
+  data arrival time                               -10187824.000
+  -----------------------------------------------------------
+  slack (MET)                                     9812176.000
+
+
+  Startpoint: in1 (input port clocked by CLK)
+  Endpoint: cout_reg (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  input external delay                 10000000.000
+                                                  10000000.000 f
+  in1 (in)                             3537.000   10003537.000 f
+  U12/OUT (NAND2D1)                    21335.000  10024872.000 r
+  U16/OUT (NOR2D1)                     1012.000   10025884.000 f
+  cout_reg/next_state (**FFGEN**)         0.000   10025884.000 f
+  data arrival time                               10025884.000
+
+  clock CLK (rise edge)                20000000.000
+                                                  20000000.000
+  clock network delay (ideal)             0.000   20000000.000
+  cout_reg/clocked_on (**FFGEN**)         0.000   20000000.000 r
+  library setup time                      0.000   20000000.000
+  data required time                              20000000.000
+  -----------------------------------------------------------
+  data required time                              20000000.000
+  data arrival time                               -10025884.000
+  -----------------------------------------------------------
+  slack (MET)                                     9974116.000
+
+
+  Startpoint: cout_reg (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: cout (output port clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                   0.000      0.000
+  clock network delay (ideal)             0.000      0.000
+  cout_reg/clocked_on (**FFGEN**)         0.000      0.000 r
+  cout_reg/Q (**FFGEN**)                  0.000      0.000 r
+  cout (out)                              0.000      0.000 r
+  data arrival time                                  0.000
+
+  clock CLK (rise edge)                20000000.000
+                                                  20000000.000
+  clock network delay (ideal)             0.000   20000000.000
+  output external delay                -10000000.000
+                                                  10000000.000
+  data required time                              10000000.000
+  -----------------------------------------------------------
+  data required time                              10000000.000
+  data arrival time                                  0.000
+  -----------------------------------------------------------
+  slack (MET)                                     10000000.000
+
+
+1

@@ -1,0 +1,63 @@
+
+
+//	Setup Info
+// PRECISION	1000
+// RESOLUTION	1
+LAYOUT USE DATABASE PRECISION YES
+UNIT LENGTH	U
+UNIT CAPACITANCE ff
+UNIT RESISTANCE OHM
+
+//	Input Layers
+LAYER M1 5
+LAYER MC 1
+LAYER Via1 3
+LAYER M2 4
+//LAYER Text 2
+LAYER PTFT 90
+
+port layer text M1
+port layer text M2
+port layer text MC
+port layer text Via1
+text layer M1 M2 MC Via1
+text depth primary
+
+// Device Recognition Layers
+Gate = PTFT AND (MC NOT M1)
+Source_Drain = (PTFT AND M1) NOT Gate
+PTran = PTFT AND (MC NOT M1)
+
+Via1_MC = Via1 AND MC
+Via1_M1 = Via1 AND (M1 NOT MC)
+
+// Connections
+connect M1 M2 BY Via1_M1
+connect MC M2 BY Via1_MC
+connect Source_Drain M1
+connect Gate MC
+
+device MP(ptft) PTran Gate(G) Source_Drain(S) Source_Drain(D) netlist model ptft netlist element "X"
+//[
+//	PROPERTY L, W
+//
+//	W=(perim_co(S, PTran) + perim_co(D, PTran)) / 2
+//	L=area(PTran) / W
+//]
+
+VARIABLE  MOS_Werr      0.0001
+VARIABLE  MOS_Lerr  	0.0001
+TRACE PROPERTY MP(ptft) L L MOS_Lerr
+TRACE PROPERTY MP(ptft) W W MOS_Werr
+LVS FILTER R(RP) SOURCE SHORT
+LVS FILTER C(CP) SOURCE OPEN
+LVS ISOLATE SHORTS YES
+LVS REPORT OPTION N
+SOURCE CASE YES
+LAYOUT CASE YES
+LVS CHECK PORT NAMES YES
+
+UNIT CAPACITANCE ff
+UNIT RESISTANCE OHM
+include /home/tangwj/Cadence/CJ_OTFT2024/PDK_CJ_OTFT2024/Calibre/rules.R
+include /home/tangwj/Cadence/CJ_OTFT2024/PDK_CJ_OTFT2024/Calibre/rules.C

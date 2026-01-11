@@ -1,0 +1,10 @@
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.02s.
+
+Loading hnlInit.cxt 
+*WARNING* (TECH-2000203): The technology library 'PDK_OTFT_251202', which has a local technology file, is also attached to another technology library, 'cdsDefTechLib', which OpenAccess does not allow. The local technology file takes precedence. 
+Either detach the second library by using techUnattachTechFile(ddGetObj("PDK_OTFT_251202")) or, if appropriate, remove the local technology file by using techDeleteTechFile(techGetTechFile(ddGetObj("PDK_OTFT_251202")).
+
+Running Artist Hierarchical Netlisting ...
+
+End netlisting Dec 13 10:52:31 2025
+

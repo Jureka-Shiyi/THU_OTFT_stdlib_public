@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+pex_PexParam RUNDIR /data/zhengyj/cadence/Calibre/NAND2D1/pex
+pex_PexParam LAYOUT_PRIMARY NAND2D1
+pex_PexParam TOOL xRC
+pex_PexParam CORNER_PDBS { {NAND2D1 "" NAND2D1.pdb "" } } 

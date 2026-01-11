@@ -1,0 +1,9 @@
+set vectors ""
+
+## delay__IN__lh__OUT__lh__ACQ_1
+append vectors " {pins { IN } { OUT }} 00  11  "
+
+## delay__IN__hl__OUT__hl__ACQ_1
+append vectors " {pins { IN } { OUT }} 11  00  "
+
+return $vectors

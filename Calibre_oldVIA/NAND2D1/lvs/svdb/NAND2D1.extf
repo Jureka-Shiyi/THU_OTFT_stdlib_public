@@ -1,0 +1,9 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1766404072 1766404132
+lvs_ExtOutFile RUNDIR /data/zhengyj/cadence/Calibre/NAND2D1/lvs
+lvs_ExtOutFile RULES_FILE _OTFT_LVS.cal_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST NAND2D1.sp
+lvs_ExtOutFile EXTRACTION_REPORT NAND2D1.lvs.report.ext

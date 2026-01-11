@@ -1,0 +1,27 @@
+set vectors ""
+
+## delay__CK__lh__Q__lh__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 00xx  1001  1101  0101  1110  "
+
+## delay__CK__lh__QN__hl__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 00xx  1001  1101  0101  1110  "
+
+## delay__CK__lh__Q__hl__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 01xx  1110  1010  0010  1001  "
+
+## delay__CK__lh__QN__lh__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 01xx  1110  1010  0010  1001  "
+
+## energy__CK__lh__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 00xx  1001  0001  1001  "
+
+## energy__CK__hl__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 00xx  1001  0001  "
+
+## energy__D__lh__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 00xx  1001  0001  0101  "
+
+## energy__D__hl__ACQ_1
+append vectors " {pins { CK D } { Q QN }} 01xx  1110  0110  0010  "
+
+return $vectors
