@@ -3,9 +3,8 @@
 *** EsimFPD Model ver: 2021.10.hf1                        ***
 ***       Built at: 12/30/2021 20:15                      ***
 ***   (C) Copyright 2021 Huada Empyrean Software Co.      ***
-***   THU_OTFT_PAA_260112                                 ***
 *************************************************************
-.model otft_ito  pmos
+.model otft_ito_2  pmos
 + level= 62             
 + version= 1              
 + capmod= 0              
@@ -22,7 +21,7 @@
 + zeroc= 0              
 + cornermod= 0              
 + binmod= 0              
-+ tox= 1e-07/2.3          
++ tox= 1e-07          
 + eps= 11.7           
 + epsi= 2.82           
 + ld= 0              
@@ -102,6 +101,9 @@
 + rdc= 0              
 + rsc= 0              
 
+
+
+
 ************************************************************
 ****                                     Data        Model
 **** Eff. Mobility(cm2/volt/sec)      0.31777     0.723362
@@ -110,3 +112,4 @@
 ****          Ion(A) @ Vgs = 10V  1.38455e-05  2.12945e-05
 ****        Ioff(A) @ Vgs = -10V    6.562e-12  2.23731e-12
 ************************************************************
+

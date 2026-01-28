@@ -26,7 +26,7 @@ model ptft_model psitft type = p
 + zeroc= 0              
 + cornermod= 0              
 + binmod= 0              
-+ tox= 1e-07 /2.3         
++ tox= 1e-07/2.3          
 + eps= 11.7           
 + epsi= 2.82           
 + ld= 0              
@@ -39,14 +39,14 @@ model ptft_model psitft type = p
 + xl= 0              
 + xj= 1.5e-07        
 + del= 0              
-+ vto= -1.31228       
++ vto= -0.266616      
 + von= 0              
-+ vfb= 0.183588       
-+ vsi= 4.16898        
-+ vst= 9.54391        
-+ at= 2.31464e-08    
-+ bt= 1.499e-06      
-+ dvt= 0.0964         
++ vfb= 0.310911       
++ vsi= 2.0402         
++ vst= 1.65234        
++ at= 2.40489e-08    
++ bt= 1.55402e-06    
++ dvt= 0.1            
 + cgso= 0              
 + cgdo= 0              
 + etac0= 7              
@@ -55,33 +55,33 @@ model ptft_model psitft type = p
 + kss= 0              
 + rsx= 0              
 + rdx= 0              
-+ eta= 8.95259        
-+ delta= 10.5331        
-+ mus= 0.224589       
-+ mu0= 2.83273        
-+ mu1= 0.0027731      
-+ mmu= 1.10314        
++ eta= 2.78239        
++ delta= 1.61408        
++ mus= 0.0450607      
++ mu0= 81.7907        
++ mu1= 0.00112029     
++ mmu= 1.13725        
 + meta= 1              
-+ theta= 8.2e-10        
-+ ad= 1.99845e+06    
-+ ag= 8.60898e+06    
-+ dd= 5.00388e-07    
-+ dg= 1.16158e-07    
-+ blk= 9.33052e-05    
-+ i0= 1.38321        
-+ eb= 2              
++ theta= 1e-09          
++ ad= 593588         
++ ag= 1.1448e+07     
++ dd= 1.68467e-06    
++ dg= 8.73514e-08    
++ blk= 7.47963e-05    
++ i0= 0.811998       
++ eb= 0.880774       
 + i00= 150            
-+ alphasat= 1.1705         
-+ lasat= 3.04743e-07    
++ alphasat= 0.929645       
++ lasat= 2.5e-07        
 + me= 2.5            
 + mss= 3              
-+ vmax= 32800          
-+ lambda= 0.0259748      
++ vmax= 40000          
++ lambda= 0.048          
 + ls= 3.5e-08        
 + vp= 0.2            
-+ lkink= 2.72841e-05    
-+ mk= 1.34677        
-+ vkink= 24.6571        
++ lkink= 5e-05          
++ mk= 1              
++ vkink= 33.4701        
 + tnom= 27             
 + dvto= 0              
 + dmu1= 0              
@@ -106,16 +106,14 @@ model ptft_model psitft type = p
 + rdc= 0              
 + rsc= 0              
 
-
 ************************************************************
 ****                                     Data        Model
-**** Eff. Mobility(cm2/volt/sec)     0.264539     0.375025
-****                      Vth(V)     -1.47456     -1.53769
-****  Sub-Threshold Slope(V/dec)     0.461732     0.556681
-****          Ion(A) @ Vgs = 10V  9.29857e-06  1.20304e-05
-****        Ioff(A) @ Vgs = -10V   1.1472e-11    5.706e-12
+**** Eff. Mobility(cm2/volt/sec)      0.31777     0.723362
+****                      Vth(V)     -1.41457     -1.40463
+****  Sub-Threshold Slope(V/dec)     0.447397     0.456119
+****          Ion(A) @ Vgs = 10V  1.38455e-05  2.12945e-05
+****        Ioff(A) @ Vgs = -10V    6.562e-12  2.23731e-12
 ************************************************************
-
 
 endsection ptft_model
 
